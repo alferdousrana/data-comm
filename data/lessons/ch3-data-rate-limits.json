@@ -1,0 +1,361 @@
+{
+ "id": "ch3-data-rate-limits",
+ "chapterId": "fz-ch3",
+ "order": 4,
+ "title": "Data Rate Limits: Nyquist, Shannon and SNR",
+ "titleBn": "ডেটা রেটের সীমা: নাইকুইস্ট, শ্যানন ও SNR",
+ "source": {
+  "file": "Chapter-3-Data_and_Signals__2_.ppt",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 3 — Introduction to Physical Layer (Data and Signals)",
+  "slides": [
+   63,
+   71,
+   72,
+   73,
+   74,
+   75,
+   77,
+   78,
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91,
+   92
+  ]
+ },
+ "estMinutes": 40,
+ "difficulty": "medium",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "Nyquist appeared in the supplied midterm (Q1b, 3 marks)",
+   "Shannon min-SNR and SNR_dB appeared in the supplied midterm (Q2c, 3 marks)",
+   "Both formulas are reused across chapters"
+  ]
+ },
+ "topics": [
+  "Nyquist",
+  "Shannon",
+  "channel capacity",
+  "SNR",
+  "decibel",
+  "dB",
+  "noiseless",
+  "noisy",
+  "signal levels",
+  "log2"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "Two formulas answer “how fast can this channel go?” — Nyquist for a noiseless channel and Shannon for a noisy one. Both appeared in your midterm.",
+  "objectives": [
+   "Apply Nyquist: N = 2 × B × log₂L",
+   "Find the levels needed for a given bit rate",
+   "Apply Shannon: C = B log₂(1 + SNR)",
+   "Rearrange Shannon to find the minimum SNR, and convert SNR ↔ SNR_dB",
+   "Use both limits together"
+  ],
+  "prerequisites": [
+   "Bandwidth in Hz (composite signals lesson)",
+   "Logarithms (log₂, log₁₀)"
+  ]
+ },
+ "explain": [
+  {
+   "h": "ডেটা রেট কীসের উপর নির্ভর করে",
+   "bn": "চ্যানেলে কত দ্রুত ডেটা পাঠানো যাবে তা তিনটি জিনিসের উপর নির্ভর করে: (১) **উপলভ্য bandwidth**, (২) **সিগন্যালের লেভেল সংখ্যা**, (৩) **চ্যানেলের মান — নয়েজ কতটা**। লেভেল বাড়ালে বিট রেট বাড়ে, কিন্তু রিসিভারের জন্য লেভেল আলাদা করা কঠিন হয় — **reliability কমতে পারে**।"
+  },
+  {
+   "h": "নাইকুইস্ট (নয়েজমুক্ত চ্যানেল)",
+   "bn": "**Maximum bit rate = 2 × B × log₂L** bps। এখানে B = bandwidth (Hz), L = লেভেল সংখ্যা। প্রশ্নে “প্রতি লেভেলে ২ বিট” বললে L = 2² = 4 — L = 2 নয়! উল্টো প্রশ্নে (কত লেভেল লাগবে) log₂L = N/(2B) বের করে L = 2^(N/2B)। ফল ২ এর ঘাত না হলে লেভেল বাড়াতে হয় বা বিট রেট কমাতে হয় (Example 3.36)।"
+  },
+  {
+   "h": "শ্যানন (নয়েজযুক্ত চ্যানেল)",
+   "bn": "**C = B × log₂(1 + SNR)** — তাত্ত্বিক সর্বোচ্চ ডেটা রেট। SNR = signal power ÷ noise power (একটি সাধারণ অনুপাত, এককবিহীন)। SNR প্রায় শূন্য হলে C ≈ 0 — bandwidth যত বেশিই হোক কোনো ডেটা যায় না (Example 3.37)। শ্যানন সূত্রে লেভেলের কথা নেই — এটা চ্যানেলের সীমা, কোনো পদ্ধতির নয়।"
+  },
+  {
+   "h": "ন্যূনতম SNR বের করা (মিডটার্ম Q2c ধরন)",
+   "bn": "C = B log₂(1 + SNR) থেকে: log₂(1 + SNR) = C/B → **SNR = 2^(C/B) − 1**। তারপর **SNR_dB = 10 log₁₀ SNR**। উল্টো দিকে dB থেকে অনুপাত: SNR = 10^(SNR_dB/10)। শ্যানন সূত্রে কখনো dB মান সরাসরি বসাবে না।"
+  },
+  {
+   "h": "দুটো একসাথে",
+   "bn": "আগে **শ্যানন দিয়ে উপরের সীমা** বের করো, তারপর একটু কম একটি বিট রেট বেছে নিয়ে **নাইকুইস্ট দিয়ে লেভেল সংখ্যা** বের করো। যেমন B = 1 MHz, SNR = 63 → C = 6 Mbps; 4 Mbps বেছে নিলে L = 4।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "Data rate depends on three factors: the bandwidth available, the level of the signals we use, and the quality of the channel (the level of noise).",
+   "slide": 77
+  },
+  {
+   "text": "Increasing the levels of a signal may reduce the reliability of the system.",
+   "slide": 78
+  },
+  {
+   "text": "Maximum bit rate of a noiseless channel = 2 × F × log2(L) bps, where F = bandwidth and L = number of discrete levels.",
+   "slide": 80
+  },
+  {
+   "text": "Shannon (noisy channel): C = B × log2(1 + S/N), where S/N = SNR.",
+   "slide": 84
+  },
+  {
+   "text": "The Shannon capacity gives us the upper limit; the Nyquist formula tells us how many signal levels we need.",
+   "slide": 90
+  }
+ ],
+ "realLife": {
+  "title": "Why your mobile data slows down far from the tower",
+  "bn": "টাওয়ার থেকে দূরে গেলে সিগন্যাল দুর্বল হয় কিন্তু নয়েজ প্রায় একই থাকে — SNR কমে যায়। শ্যানন সূত্র অনুযায়ী একই bandwidth এ SNR কমলে সর্বোচ্চ ডেটা রেটও কমে।",
+  "link": "Lower SNR → lower Shannon capacity even when bandwidth is unchanged.",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "diagram",
+   "id": "nyquist-shannon",
+   "caption": "Which formula when?",
+   "alt": "Decision chart: noiseless channel with levels given → Nyquist; noisy channel with SNR given → Shannon; both → Shannon for limit then Nyquist for levels."
+  }
+ ],
+ "formulas": [
+  {
+   "name": "Nyquist bit rate",
+   "expr": "N_max = 2 × B × log₂ L",
+   "vars": [
+    [
+     "B",
+     "bandwidth (Hz)"
+    ],
+    [
+     "L",
+     "number of signal levels"
+    ]
+   ],
+   "units": "bps",
+   "source": "Ch3 slide 80"
+  },
+  {
+   "name": "Nyquist levels",
+   "expr": "L = 2^(N / 2B)",
+   "vars": [
+    [
+     "N",
+     "required bit rate"
+    ]
+   ],
+   "units": "levels",
+   "source": "Ch3 slide 83"
+  },
+  {
+   "name": "Shannon capacity",
+   "expr": "C = B × log₂(1 + SNR)",
+   "vars": [
+    [
+     "SNR",
+     "signal power / noise power (ratio)"
+    ]
+   ],
+   "units": "bps",
+   "source": "Ch3 slide 84"
+  },
+  {
+   "name": "Minimum SNR",
+   "expr": "SNR = 2^(C/B) − 1",
+   "vars": [
+    [
+     "C",
+     "required data rate"
+    ],
+    [
+     "B",
+     "bandwidth"
+    ]
+   ],
+   "units": "ratio",
+   "source": "Rearranged from slide 84 (supplementary algebra)"
+  },
+  {
+   "name": "SNR in decibels",
+   "expr": "SNR_dB = 10 log₁₀ SNR ;  SNR = 10^(SNR_dB/10)",
+   "vars": [],
+   "units": "dB",
+   "source": "Ch3 slides 72–74"
+  },
+  {
+   "name": "Decibel change",
+   "expr": "dB = 10 log₁₀(P₂ / P₁)",
+   "vars": [
+    [
+     "P₁",
+     "beginning power"
+    ],
+    [
+     "P₂",
+     "ending power"
+    ]
+   ],
+   "units": "dB",
+   "source": "Ch3 slide 63"
+  }
+ ],
+ "solved": [
+  {
+   "title": "Midterm Q1b — Nyquist",
+   "given": [
+    "Noiseless channel, B = 3000 Hz",
+    "2 bits per level ⇒ L = 2² = 4"
+   ],
+   "required": "Maximum bit rate",
+   "rule": "N = 2 × B × log₂L",
+   "substitution": [
+    "N = 2 × 3000 × log₂4 = 2 × 3000 × 2"
+   ],
+   "calc": [
+    "N = 12,000 bps"
+   ],
+   "answer": "12 kbps",
+   "bn": "L = 4 কারণ ২ বিট দিয়ে ৪টি লেভেল আলাদা করা যায়।"
+  },
+  {
+   "title": "Midterm Q2c — minimum SNR",
+   "given": [
+    "B = 4 kHz = 4000 Hz",
+    "C = 100 kbps = 100,000 bps"
+   ],
+   "required": "Minimum SNR and SNR_dB",
+   "rule": "SNR = 2^(C/B) − 1; SNR_dB = 10 log₁₀ SNR",
+   "substitution": [
+    "C/B = 100,000 / 4000 = 25",
+    "SNR = 2²⁵ − 1"
+   ],
+   "calc": [
+    "SNR = 33,554,432 − 1 = 33,554,431",
+    "SNR_dB = 10 log₁₀(33,554,431) = 10 × 7.5257 ≈ 75.26 dB"
+   ],
+   "answer": "SNR_min ≈ 3.36 × 10⁷; SNR_dB ≈ 75.26 dB",
+   "bn": "C/B = 25 মানে প্রতি হার্জে ২৫ বিট — এর জন্য অনেক বেশি SNR লাগে।"
+  },
+  {
+   "title": "Example 3.39 — SNR in dB",
+   "given": [
+    "SNR_dB = 36",
+    "B = 2 MHz"
+   ],
+   "required": "Capacity",
+   "rule": "SNR = 10^(36/10); C = B log₂(1+SNR)",
+   "substitution": [
+    "SNR = 10^3.6 ≈ 3981"
+   ],
+   "calc": [
+    "C = 2×10⁶ × log₂(3982) ≈ 2×10⁶ × 11.96 ≈ 23.9 Mbps"
+   ],
+   "answer": "≈ 24 Mbps",
+   "bn": "আগে dB থেকে সাধারণ অনুপাতে।"
+  },
+  {
+   "title": "Using both limits (slide 91)",
+   "given": [
+    "B = 100 MHz, SNR = 63"
+   ],
+   "required": "Appropriate bit rate and levels",
+   "rule": "Shannon upper limit, then Nyquist",
+   "substitution": [
+    "C = 100×10⁶ × log₂64 = 600 Mbps",
+    "Choose 400 Mbps: 400×10⁶ = 2 × 100×10⁶ × log₂L"
+   ],
+   "calc": [
+    "log₂L = 2 ⇒ L = 4"
+   ],
+   "answer": "400 Mbps with 4 levels",
+   "bn": "শ্যানন সীমা ছোঁয়া যায় না, তাই কম রেট বেছে নিই।"
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 3,
+   "question": "A noiseless channel with a bandwidth of 3000 Hz transmits a signal that sends 2 bits for each level. Calculate the maximum bit rate supported by the channel.",
+   "answer": "Since the channel is noiseless, Nyquist’s formula applies.\nBits per level = 2 ⇒ L = 2² = 4 levels.\nN_max = 2 × B × log₂L = 2 × 3000 × log₂4 = 2 × 3000 × 2 = 12,000 bps.\nThe maximum bit rate is 12 kbps."
+  },
+  {
+   "marks": 3,
+   "question": "A channel has a bandwidth of 4 kHz and must support 100 kbps. Determine the minimum SNR and SNR_dB.",
+   "answer": "Using Shannon’s capacity, C = B log₂(1 + SNR).\nlog₂(1 + SNR) = C/B = 100,000/4000 = 25\n1 + SNR = 2²⁵ ⇒ SNR = 2²⁵ − 1 = 33,554,431 (≈ 3.36 × 10⁷).\nSNR_dB = 10 log₁₀(33,554,431) ≈ 75.26 dB."
+  }
+ ],
+ "keywords": [
+  {
+   "term": "noiseless channel — Nyquist",
+   "bn": "নয়েজ নেই, লেভেল দেওয়া"
+  },
+  {
+   "term": "noisy channel — Shannon",
+   "bn": "SNR দেওয়া"
+  },
+  {
+   "term": "signal levels (L)",
+   "bn": "আলাদা ভোল্টেজ লেভেল"
+  },
+  {
+   "term": "channel capacity (C)",
+   "bn": "তাত্ত্বিক সর্বোচ্চ রেট"
+  },
+  {
+   "term": "SNR",
+   "bn": "signal power ÷ noise power"
+  },
+  {
+   "term": "SNR_dB = 10 log₁₀ SNR",
+   "bn": "ডেসিবেলে SNR"
+  },
+  {
+   "term": "reliability",
+   "bn": "লেভেল বাড়লে কমতে পারে"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Using L = 2 when “2 bits per level” is given.",
+   "fix": "L = 2^(bits per level) = 4."
+  },
+  {
+   "m": "Putting SNR_dB directly into Shannon.",
+   "fix": "Convert: SNR = 10^(dB/10) first."
+  },
+  {
+   "m": "Using log₁₀ instead of log₂ in Nyquist/Shannon.",
+   "fix": "Both use log₂; dB uses log₁₀."
+  },
+  {
+   "m": "Mixing kHz and kbps without converting.",
+   "fix": "Convert to Hz and bps, or make sure the k’s cancel."
+  },
+  {
+   "m": "Forgetting the “− 1” in SNR = 2^(C/B) − 1.",
+   "fix": "It comes from (1 + SNR)."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "Data rate depends on bandwidth, levels and noise.",
+   "Nyquist: N = 2B log₂L (noiseless).",
+   "Shannon: C = B log₂(1 + SNR) (noisy).",
+   "SNR_min = 2^(C/B) − 1; SNR_dB = 10 log₁₀ SNR.",
+   "Shannon gives the limit; Nyquist gives the levels."
+  ],
+  "card": "Nyquist: 2B·log₂L | Shannon: B·log₂(1+SNR) | dB: 10·log₁₀",
+  "recall": {
+   "q": "B = 4000 Hz, L = 2. Maximum bit rate?",
+   "a": "2 × 4000 × 1 = 8000 bps (slide 80 example)"
+  }
+ }
+}

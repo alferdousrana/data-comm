@@ -1,0 +1,25 @@
+.reader { max-width: 760px; }
+.reader-progress { position: sticky; top: 57px; z-index: 15; height: 3px; background: transparent; margin: -1rem -1rem 1rem; }
+.reader-progress i { display: block; height: 100%; width: 0; background: var(--trace); }
+@media (min-width: 900px) { .reader-progress { margin: -1.5rem -2rem 1.5rem; } }
+.reader section { margin: 2rem 0; scroll-margin-top: 80px; }
+.reader section > h2 { font-size: var(--step-1); display: flex; align-items: baseline; gap: .5rem; padding-bottom: .35rem; border-bottom: 1px solid var(--line); }
+.reader section > h2 .part { color: var(--trace); font-family: var(--mono); font-size: .8em; }
+.reader .explain h3 { font-size: var(--step-0); margin-top: 1.2rem; }
+.reader .explain p { line-height: 1.85; }
+.slide-def { border-left: 3px solid var(--primary); padding: .4rem .9rem; margin: .7rem 0; background: var(--surface); }
+.slide-def cite { display: block; font-style: normal; font-size: var(--step--1); color: var(--ink-2); margin-top: .2rem; }
+.formula-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-m); padding: .8rem 1rem; margin: .6rem 0; }
+.formula-card .expr { font-family: var(--mono); font-size: 1.08em; color: var(--ink); background: var(--surface-2); padding: .4rem .6rem; border-radius: var(--radius-s); display: inline-block; margin: .3rem 0; }
+.exam-answer { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 1rem; margin: .8rem 0; white-space: pre-wrap; font-size: .97em; }
+.exam-answer .marks { font-weight: 700; color: var(--primary); }
+.kw-list { display: flex; flex-wrap: wrap; gap: .5rem; }
+.kw { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-s); padding: .35rem .6rem; }
+.kw b { display: block; }
+.kw small { color: var(--ink-2); }
+.solved ol { padding-left: 1.2rem; }
+.revision-card { background: var(--ink); color: var(--bg); border-radius: var(--radius-m); padding: 1rem 1.2rem; font-family: var(--mono); }
+.label-supp { font-size: .75rem; color: var(--warn); background: var(--warn-soft); padding: .05rem .45rem; border-radius: 999px; }
+.lesson-nav { display: flex; justify-content: space-between; gap: .5rem; margin-top: 2rem; flex-wrap: wrap; }
+.toc { display: flex; gap: .35rem; flex-wrap: wrap; margin: .5rem 0 1rem; }
+.toc a { font-size: var(--step--1); padding: .15rem .55rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); text-decoration: none; color: var(--ink-2); }

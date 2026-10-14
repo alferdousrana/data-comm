@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DataComm Academy — CSE 311</title>
+  <meta name="description" content="Personal Data Communications tutor for CSE 311: Bangla explanations, English exam answers, practice and offline study.">
+  <meta name="theme-color" content="#1f5bd8">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&display=swap">
+  <script>
+    // Apply saved theme and text size before first paint (small prefs only live in localStorage).
+    try {
+      var th = localStorage.getItem('dca.theme'); if (th === 'light' || th === 'dark') document.documentElement.setAttribute('data-theme', th);
+      var sc = parseFloat(localStorage.getItem('dca.textScale')); if (sc > 0.8 && sc < 1.5) document.documentElement.style.setProperty('--scale', sc);
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/lessons.css">
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--primary)"/><path d="M5 20h5v-9h6v11h5v-7h6" fill="none" stroke="var(--primary-ink)" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/></svg>DataComm Academy</a>
+      <span class="spacer"></span>
+      <span id="status" class="status-pill" role="status" aria-live="polite"><span class="dot"></span>…</span>
+    </header>
+    <nav id="sidenav" class="sidenav" aria-label="Main"></nav>
+    <main id="view" tabindex="-1">
+      <p class="muted">Loading your course…</p>
+      <noscript><p>DataComm Academy needs JavaScript enabled.</p></noscript>
+    </main>
+  </div>
+  <nav id="bottomnav" class="bottomnav" aria-label="Main"></nav>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

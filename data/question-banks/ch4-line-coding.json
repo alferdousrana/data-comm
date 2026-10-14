@@ -1,0 +1,335 @@
+{
+ "lessonId": "ch4-line-coding",
+ "mcqs": [
+  {
+   "id": "lc1",
+   "q": "In NRZ-I, what represents a binary 1?",
+   "options": [
+    "A positive level",
+    "An inversion of the level at the start of the bit",
+    "A return to zero mid-bit",
+    "No change of level"
+   ],
+   "answer": 1,
+   "explainBn": "NRZ-I এ পরিবর্তন = 1।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch4 slide 15"
+  },
+  {
+   "id": "lc2",
+   "q": "Using the slide convention, NRZ-L for 0110 is:",
+   "options": [
+    "+ − − +",
+    "− + + −",
+    "+ + − −",
+    "0 + + 0"
+   ],
+   "answer": 0,
+   "explainBn": "0 = +, 1 = −।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "waveform",
+   "source": "Ch4 slide 16"
+  },
+  {
+   "id": "lc3",
+   "q": "Which schemes use a mid-bit transition for synchronization?",
+   "options": [
+    "NRZ-L and NRZ-I",
+    "Manchester and differential Manchester",
+    "AMI and pseudoternary",
+    "Unipolar NRZ only"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ২৩।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "conceptual",
+   "source": "Ch4 slide 23"
+  },
+  {
+   "id": "lc4",
+   "q": "The average signal rate of NRZ-L for bit rate N is:",
+   "options": [
+    "N",
+    "N/2",
+    "2N",
+    "N/4"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ১৮।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "formula",
+   "source": "Ch4 slide 18"
+  },
+  {
+   "id": "lc5",
+   "q": "In AMI, binary 0 is represented by:",
+   "options": [
+    "Alternating + and −",
+    "Zero voltage",
+    "A positive pulse",
+    "A mid-bit transition"
+   ],
+   "answer": 1,
+   "explainBn": "AMI: 0 = শূন্য।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch4 slide 25"
+  },
+  {
+   "id": "lc6",
+   "q": "RZ for the bit 0 (slide figure) is:",
+   "options": [
+    "+V for the whole bit",
+    "−V for the first half, then 0",
+    "0 then +V",
+    "+V for the first half, then 0"
+   ],
+   "answer": 1,
+   "explainBn": "Figure 4.7।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "waveform",
+   "source": "Ch4 slide 20"
+  },
+  {
+   "id": "lc7",
+   "q": "Which problem do both NRZ-L and NRZ-I have?",
+   "options": [
+    "They need three levels",
+    "DC component",
+    "Double bandwidth",
+    "No bits can be sent"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ১৮।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "conceptual",
+   "source": "Ch4 slide 18"
+  },
+  {
+   "id": "lc8",
+   "q": "NRZ-I starting from +V for bits 1 1 0 1 gives:",
+   "options": [
+    "− + + −",
+    "+ − − +",
+    "− − + −",
+    "− + − −"
+   ],
+   "answer": 0,
+   "explainBn": "1→−, 1→+, 0→+, 1→−।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "waveform",
+   "source": ""
+  },
+  {
+   "id": "lc9",
+   "q": "A data element is:",
+   "options": [
+    "The shortest unit of a digital signal",
+    "The smallest entity that can represent information — the bit",
+    "A group of 8 bits",
+    "A voltage level"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৪।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch4 slide 4"
+  },
+  {
+   "id": "lc10",
+   "q": "Main trade-off of Manchester compared with NRZ is:",
+   "options": [
+    "It has a DC component",
+    "Its minimum bandwidth is twice that of NRZ",
+    "It cannot synchronize",
+    "It uses only one level"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ২৪।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": "Ch4 slide 24"
+  }
+ ],
+ "written": [
+  {
+   "id": "lc-w1",
+   "marks": 3,
+   "marksSplit": "3",
+   "question": "Consider the bit sequence 1 0 1 1 0 0 0 1. Draw the waveform using NRZ-L, NRZ-I and RZ encoding. Assume the signal starts at a positive level and there is no transition for an initial reference bit while using NRZ-I.\n(Enter levels: one symbol per bit for NRZ-L/NRZ-I; two symbols per bit for RZ, e.g. +0 −0.)",
+   "type": "waveform",
+   "inputs": [
+    "levels:nrz-l",
+    "levels:nrz-i",
+    "levels:rz",
+    "canvas"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "nrzl",
+      "type": "sequence",
+      "label": "NRZ-L levels",
+      "marks": 1,
+      "expected": "- + - - + + + -",
+      "halves": false,
+      "scheme": "nrz-l",
+      "field": "nrz-l"
+     },
+     {
+      "id": "nrzi",
+      "type": "sequence",
+      "label": "NRZ-I levels",
+      "marks": 1,
+      "expected": "- - + - - - - +",
+      "halves": false,
+      "scheme": "nrz-i",
+      "field": "nrz-i"
+     },
+     {
+      "id": "rz",
+      "type": "sequence",
+      "label": "RZ half-bit levels",
+      "marks": 1,
+      "expected": "+0 -0 +0 +0 -0 -0 -0 +0",
+      "halves": true,
+      "scheme": "rz",
+      "field": "rz"
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "NRZ-L: − + − − + + + −. NRZ-I: − − + − − − − +. RZ: +0 −0 +0 +0 −0 −0 −0 +0."
+   },
+   "hintBn": "",
+   "tags": [
+    "line-coding",
+    "waveform"
+   ],
+   "source": "Summer 2026 midterm Q1(b) OR"
+  },
+  {
+   "id": "lc-w2",
+   "marks": 2,
+   "marksSplit": "2",
+   "question": "Draw the Manchester and differential Manchester waveforms for 0 1 0 0 1 1 (differential Manchester: assume the line was low before the first bit).",
+   "type": "waveform",
+   "inputs": [
+    "levels:manchester",
+    "levels:diff-manchester",
+    "canvas"
+   ],
+   "rubric": {
+    "totalMarks": 2,
+    "criteria": [
+     {
+      "id": "m",
+      "type": "sequence",
+      "label": "Manchester",
+      "marks": 1,
+      "expected": "+- -+ +- +- -+ -+",
+      "halves": true,
+      "scheme": "manchester",
+      "field": "manchester"
+     },
+     {
+      "id": "dm",
+      "type": "sequence",
+      "label": "Differential Manchester",
+      "marks": 1,
+      "expected": "+- -+ -+ -+ +- -+",
+      "halves": true,
+      "scheme": "diff-manchester",
+      "field": "diff-manchester"
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "Manchester: +− −+ +− +− −+ −+. Differential Manchester (previous level low): +− −+ −+ −+ +− −+."
+   },
+   "hintBn": "",
+   "tags": [
+    "line-coding",
+    "waveform"
+   ],
+   "source": "Ch4 slide 22 (Fig 4.8)"
+  },
+  {
+   "id": "lc-w3",
+   "marks": 2,
+   "marksSplit": "2",
+   "question": "Distinguish between NRZ-L and NRZ-I. Which problem do both of them share?",
+   "type": "compare",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 2,
+    "criteria": [
+     {
+      "id": "d",
+      "type": "concepts",
+      "label": "Difference and shared problem",
+      "marks": 2,
+      "need": 3,
+      "concepts": [
+       {
+        "name": "NRZ-L: level determines bit",
+        "any": [
+         "level of the voltage",
+         "voltage level",
+         "level determines"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "NRZ-I: inversion/change determines bit",
+        "any": [
+         "inversion",
+         "invert",
+         "change",
+         "transition"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "DC component problem",
+        "any": [
+         "dc component"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "synchronization / long sequences",
+        "any": [
+         "synchroniz",
+         "baseline wander",
+         "long sequence",
+         "long run"
+        ],
+        "bn": ""
+       }
+      ]
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "In NRZ-L the level of the voltage determines the value of the bit; in NRZ-I the inversion or lack of inversion determines it (a change means 1, no change means 0). Both have an average signal rate of N/2 and both suffer from a DC component problem (and lose synchronization during long runs)."
+   },
+   "hintBn": "",
+   "tags": [
+    "line-coding"
+   ],
+   "source": "Ch4 slides 15–18"
+  }
+ ]
+}

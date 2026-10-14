@@ -1,0 +1,251 @@
+{
+ "lessonId": "ch5-bit-baud",
+ "mcqs": [
+  {
+   "id": "bb1",
+   "q": "Baud rate is the number of:",
+   "options": [
+    "Bits per second",
+    "Signal elements per second",
+    "Bytes per second",
+    "Carriers per second"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৬।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch5 slide 6"
+  },
+  {
+   "id": "bb2",
+   "q": "An analog signal carries 4 bits per signal element and 1000 elements per second. Bit rate?",
+   "options": [
+    "250 bps",
+    "1000 bps",
+    "4000 bps",
+    "16,000 bps"
+   ],
+   "answer": 2,
+   "explainBn": "N = S × r।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "numerical",
+   "source": "Ch5 slide 7"
+  },
+  {
+   "id": "bb3",
+   "q": "N = 8000 bps and S = 1000 baud. How many signal levels L?",
+   "options": [
+    "8",
+    "16",
+    "256",
+    "1000"
+   ],
+   "answer": 2,
+   "explainBn": "r = 8, L = 2⁸।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": "Ch5 slide 8"
+  },
+  {
+   "id": "bb4",
+   "q": "Why is S ≤ N in analog transmission of digital data?",
+   "options": [
+    "Because bandwidth is always less than bit rate",
+    "Because each signal element carries at least one bit (r ≥ 1)",
+    "Because carriers are periodic",
+    "Because noise reduces baud rate"
+   ],
+   "answer": 1,
+   "explainBn": "S = N/r এবং r ≥ 1, তাই S কখনো N এর বেশি হয় না।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": "Ch5 slide 6"
+  },
+  {
+   "id": "bb5",
+   "q": "For binary ASK (r = 1) at 2400 bps, the baud rate is:",
+   "options": [
+    "1200 baud",
+    "2400 baud",
+    "4800 baud",
+    "600 baud"
+   ],
+   "answer": 1,
+   "explainBn": "r = 1 হলে S = N।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "numerical",
+   "source": ""
+  },
+  {
+   "id": "bb6",
+   "q": "Which formula relates r and L?",
+   "options": [
+    "r = L/2",
+    "r = log₂L",
+    "r = 2^L",
+    "r = L − 1"
+   ],
+   "answer": 1,
+   "explainBn": "L টি এলিমেন্ট আলাদা করতে log₂L বিট লাগে।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "formula",
+   "source": ""
+  },
+  {
+   "id": "bb7",
+   "q": "A modem sends 9600 bps using 16 signal levels. Baud rate?",
+   "options": [
+    "600",
+    "2400",
+    "4800",
+    "9600"
+   ],
+   "answer": 1,
+   "explainBn": "r = 4, S = 9600/4।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": ""
+  },
+  {
+   "id": "bb8",
+   "q": "The carrier signal in digital-to-analog conversion is:",
+   "options": [
+    "The digital data itself",
+    "An analog signal of frequency fc whose characteristic is changed by the data",
+    "A noise source",
+    "A DC voltage"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৩।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch5 slide 3"
+  },
+  {
+   "id": "bb9",
+   "q": "Increasing r while keeping N fixed will:",
+   "options": [
+    "Increase the baud rate",
+    "Decrease the baud rate",
+    "Not change the baud rate",
+    "Make S greater than N"
+   ],
+   "answer": 1,
+   "explainBn": "S = N/r।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": ""
+  },
+  {
+   "id": "bb10",
+   "q": "A student claims S = N × r. For N = 4000 bps and r = 2, which result is correct?",
+   "options": [
+    "S = 8000 baud — the student is right",
+    "S = 2000 baud — the student inverted the formula",
+    "S = 4000 baud",
+    "S = 16,000 baud"
+   ],
+   "answer": 1,
+   "explainBn": "S = N/r = 2000।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "scenario",
+   "source": ""
+  }
+ ],
+ "written": [
+  {
+   "id": "bb-w1",
+   "marks": 2,
+   "marksSplit": "1+1",
+   "question": "Briefly explain the relationship between bit rate N and baud rate S in analog transmission of digital data, using the appropriate formula, and justify why S is always less than or equal to N.",
+   "type": "explain",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 2,
+    "criteria": [
+     {
+      "id": "f",
+      "type": "formula",
+      "label": "Formula S = N × (1/r) or S = N/r",
+      "marks": 0.75,
+      "patterns": [
+       "S\\s*=\\s*N\\s*[×x*·]?\\s*\\(?\\s*1\\s*/\\s*r",
+       "S\\s*=\\s*N\\s*/\\s*r",
+       "S\\s*=\\s*\\(?\\s*1\\s*/\\s*r\\s*\\)?\\s*[×x*·]?\\s*N"
+      ],
+      "bn": ""
+     },
+     {
+      "id": "def",
+      "type": "concepts",
+      "label": "Definitions and justification",
+      "marks": 1.25,
+      "need": 3,
+      "concepts": [
+       {
+        "name": "bit rate = bits per second",
+        "any": [
+         "bits per second",
+         "number of bits",
+         "bps"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "baud rate = signal elements per second",
+        "any": [
+         "signal element",
+         "signal elements per second",
+         "baud"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "r ≥ 1 / at least one bit per element",
+        "any": [
+         "at least one bit",
+         "r ≥ 1",
+         "r >= 1",
+         "r is at least 1",
+         "one or more bits",
+         "minimum of one bit",
+         "r cannot be less than 1"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "r = log₂L",
+        "any": [
+         "log2 l",
+         "log₂l",
+         "log 2 l",
+         "log2(l)"
+        ],
+        "bn": ""
+       }
+      ]
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "Bit rate N = bits per second; baud rate S = signal elements per second. S = N × (1/r) with r = log₂L. Each signal element carries at least one bit (r ≥ 1), so S ≤ N; S = N only when r = 1."
+   },
+   "hintBn": "",
+   "tags": [
+    "bit-baud"
+   ],
+   "source": "Summer 2026 midterm Q1(c)"
+  }
+ ]
+}

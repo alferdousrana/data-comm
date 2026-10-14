@@ -1,0 +1,268 @@
+{
+ "lessonId": "ch4-scrambling",
+ "mcqs": [
+  {
+   "id": "sc1",
+   "q": "B8ZS replaces eight consecutive zeros with:",
+   "options": [
+    "000V",
+    "B00V",
+    "000VB0VB",
+    "0000VBVB"
+   ],
+   "answer": 2,
+   "explainBn": "স্লাইড ৪০।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch4 slide 40"
+  },
+  {
+   "id": "sc2",
+   "q": "In scrambling, V (violation) is a nonzero pulse that:",
+   "options": [
+    "Has the opposite polarity to the previous pulse",
+    "Has the same polarity as the previous pulse",
+    "Is always positive",
+    "Is always zero"
+   ],
+   "answer": 1,
+   "explainBn": "AMI নিয়ম ভাঙে।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch4 slide 40"
+  },
+  {
+   "id": "sc3",
+   "q": "If the previous pulse is positive, B8ZS encodes 00000000 as:",
+   "options": [
+    "0 0 0 + − 0 − +",
+    "0 0 0 − + 0 + −",
+    "+ 0 0 + 0 0 0 0",
+    "0 0 0 + + 0 − −"
+   ],
+   "answer": 0,
+   "explainBn": "V=+, B=−, 0, V=−, B=+।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "waveform",
+   "source": "Ch4 slide 40"
+  },
+  {
+   "id": "sc4",
+   "q": "HDB3 uses 000V when the number of nonzero pulses since the last substitution is:",
+   "options": [
+    "Even",
+    "Odd",
+    "Zero",
+    "Greater than 8"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৪১।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "definition",
+   "source": "Ch4 slide 41"
+  },
+  {
+   "id": "sc5",
+   "q": "Why is scrambling used with AMI?",
+   "options": [
+    "To remove the DC component",
+    "To avoid loss of synchronization during long sequences of zeros",
+    "To double the data rate",
+    "To encrypt data"
+   ],
+   "answer": 1,
+   "explainBn": "দীর্ঘ শূন্যে সিনক হারায়।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "conceptual",
+   "source": "Ch4 slide 25"
+  },
+  {
+   "id": "sc6",
+   "q": "How many consecutive zeros does HDB3 replace?",
+   "options": [
+    "2",
+    "4",
+    "6",
+    "8"
+   ],
+   "answer": 1,
+   "explainBn": "HDB3 = High-density bipolar 3-zero: চারটি শূন্য হলে substitution।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch4 slide 41"
+  },
+  {
+   "id": "sc7",
+   "q": "The purpose of choosing between 000V and B00V in HDB3 is to:",
+   "options": [
+    "Keep the number of nonzero pulses after each substitution even",
+    "Make every pulse positive",
+    "Add parity bits",
+    "Increase bandwidth"
+   ],
+   "answer": 0,
+   "explainBn": "স্লাইড ৪১।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": "Ch4 slide 41"
+  },
+  {
+   "id": "sc8",
+   "q": "B8ZS of 1 0 0 0 0 1 with previous pulse positive is:",
+   "options": [
+    "− 0 0 0 0 +",
+    "+ 0 0 0 0 −",
+    "− 0 0 0 − +",
+    "− + − + − +"
+   ],
+   "answer": 0,
+   "explainBn": "মাত্র চারটি শূন্য — substitution নেই, সাধারণ AMI।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "waveform",
+   "source": ""
+  },
+  {
+   "id": "sc9",
+   "q": "For the midterm sequence 0000 1 00000000 1 000 (previous pulse positive), the pulse for the final 1 is:",
+   "options": [
+    "+",
+    "−",
+    "0",
+    "V"
+   ],
+   "answer": 0,
+   "explainBn": "প্যাটার্নের শেষ B = −, তাই পরের 1 = +।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "waveform",
+   "source": ""
+  },
+  {
+   "id": "sc10",
+   "q": "Where is B8ZS commonly used and where is HDB3 commonly used?",
+   "options": [
+    "B8ZS outside North America; HDB3 in North America",
+    "B8ZS in North America; HDB3 outside North America",
+    "Both only in Europe",
+    "Both only in wireless LANs"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৪০–৪১।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch4 slides 40–41"
+  }
+ ],
+ "written": [
+  {
+   "id": "sc-w1",
+   "marks": 3,
+   "marksSplit": "3",
+   "question": "A digital signal has the following binary sequence:\n0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0\nApply B8ZS scrambling to the above sequence, select the appropriate substitution pattern at each occurrence and show the complete encoded output in +, −, and 0 notation. Assume the last non-zero pulse before the sequence was positive.",
+   "type": "procedure",
+   "inputs": [
+    "levels",
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "out",
+      "type": "sequence",
+      "label": "Encoded output (17 symbols)",
+      "marks": 2.5,
+      "expected": "0 0 0 0 - 0 0 0 - + 0 + - + 0 0 0",
+      "halves": false,
+      "scheme": "b8zs"
+     },
+     {
+      "id": "pat",
+      "type": "concepts",
+      "label": "Names the 000VB0VB pattern / V and B",
+      "marks": 0.5,
+      "need": 1,
+      "concepts": [
+       {
+        "name": "000VB0VB pattern",
+        "any": [
+         "000vb0vb",
+         "violation",
+         "bipolar"
+        ],
+        "bn": ""
+       }
+      ]
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "0 0 0 0 − 0 0 0 − + 0 + − + 0 0 0 (the eight zeros, after a − pulse, become 000VB0VB = 000−+0+−).",
+    "minWords": 0
+   },
+   "hintBn": "",
+   "tags": [
+    "scrambling"
+   ],
+   "source": "Summer 2026 midterm Q3(a)"
+  },
+  {
+   "id": "sc-w2",
+   "marks": 3,
+   "marksSplit": "3",
+   "question": "Apply HDB3 to 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0. Assume the pulse before the sequence was negative and the count of pulses since the last substitution starts at zero.",
+   "type": "procedure",
+   "inputs": [
+    "levels",
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "out",
+      "type": "sequence",
+      "label": "Encoded output",
+      "marks": 2.5,
+      "expected": "+ - + 0 0 + - 0 0 0 - + 0 0 +",
+      "halves": false,
+      "scheme": "hdb3"
+     },
+     {
+      "id": "rule",
+      "type": "concepts",
+      "label": "States odd/even rule",
+      "marks": 0.5,
+      "need": 1,
+      "concepts": [
+       {
+        "name": "odd → 000V, even → B00V",
+        "any": [
+         "odd",
+         "even"
+        ],
+        "bn": ""
+       }
+      ]
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "HDB3 replaces four zeros with 000V when the number of nonzero pulses since the last substitution is odd, and with B00V when it is even. Output: + − + 0 0 + − 0 0 0 − + 0 0 +",
+    "minWords": 0
+   },
+   "hintBn": "",
+   "tags": [
+    "scrambling"
+   ],
+   "source": "Ch4 slide 41 (Fig 4.20)"
+  }
+ ]
+}

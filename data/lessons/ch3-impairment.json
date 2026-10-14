@@ -1,0 +1,43 @@
+{
+ "id": "ch3-impairment",
+ "chapterId": "fz-ch3",
+ "order": 5,
+ "title": "Transmission Impairment: Attenuation, Distortion, Noise",
+ "titleBn": "ট্রান্সমিশন ইমপেয়ারমেন্ট",
+ "source": {
+  "file": "Chapter-3-Data_and_Signals__2_.ppt",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 3",
+  "slides": [
+   61,
+   62,
+   63,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   76
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "important",
+  "reasons": [
+   "Slide emphasis"
+  ]
+ },
+ "topics": [
+  "Transmission Impairment: Attenuation, Distortion, Noise"
+ ],
+ "keyPoints": [
+  "What is sent is not what is received: attenuation, distortion, noise (slide 61).",
+  "dB = 10 log10(P2/P1); losses and gains in dB are additive (slides 63–66).",
+  "dBm = 10 log10 Pm with Pm in milliwatts (slide 67).",
+  "Distortion: components travel at different speeds, causing phase differences (slide 69).",
+  "Noise types: thermal, induced, crosstalk, impulse (slide 70)."
+ ]
+}

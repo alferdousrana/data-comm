@@ -1,0 +1,236 @@
+{
+ "id": "ch7-guided-media",
+ "chapterId": "fz-ch7",
+ "order": 1,
+ "title": "Guided Media: Twisted-Pair, Coaxial and Fiber-Optic Cable",
+ "titleBn": "গাইডেড মিডিয়া: টুইস্টেড-পেয়ার, কোঅ্যাক্সিয়াল ও ফাইবার-অপটিক কেবল",
+ "source": {
+  "file": "Chapter-7-Transmission_Media.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 7 — Transmission Media",
+  "slides": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25
+  ]
+ },
+ "estMinutes": 35,
+ "difficulty": "easy",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "Labelling a fiber-optic cable and comparing it with twisted pair appeared in the supplied midterm (Q1a, 2+1 marks)"
+  ]
+ },
+ "topics": [
+  "guided media",
+  "twisted pair",
+  "UTP",
+  "STP",
+  "coaxial",
+  "BNC",
+  "fiber optic",
+  "core",
+  "cladding",
+  "buffer",
+  "Kevlar",
+  "jacket",
+  "total internal reflection",
+  "multimode",
+  "single mode",
+  "RJ-45"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "Transmission media are the physical path for signals. The midterm asked you to label a fiber cable and compare it with twisted pair.",
+  "objectives": [
+   "Distinguish guided and unguided media",
+   "Describe UTP/STP and why wires are twisted",
+   "Describe coaxial cable structure",
+   "Label fiber-optic cable parts and explain total internal reflection",
+   "Compare fiber with twisted pair"
+  ],
+  "prerequisites": [
+   "Attenuation and noise (Ch3)"
+  ]
+ },
+ "explain": [
+  {
+   "h": "গাইডেড বনাম আনগাইডেড",
+   "bn": "**Guided medium**: ইলেক্ট্রোম্যাগনেটিক তরঙ্গ চলার জন্য একটি ভৌত পথ থাকে (কেবল)। **Unguided/wireless**: তরঙ্গ বাতাস, পানি বা শূন্যে চলে। গাইডেড মিডিয়া তিনটি: **twisted-pair, coaxial, fiber-optic**।"
+  },
+  {
+   "h": "টুইস্টেড-পেয়ার",
+   "bn": "দুটি ইনসুলেটেড তামার তার পেঁচানো থাকে। পেঁচানোর ফলে বাইরের নয়েজ ও **crosstalk** দুটো তারে প্রায় সমানভাবে লাগে এবং রিসিভারে বাতিল হয়ে যায়। **UTP** (shield নেই) ও **STP** (ধাতব foil shield আছে — নয়েজ কম, কিন্তু দামি ও ভারী)। UTP এর বিভিন্ন category; সংযোগে **RJ-45** কানেক্টর। দূরত্ব ও ফ্রিকোয়েন্সি বাড়লে attenuation দ্রুত বাড়ে।"
+  },
+  {
+   "h": "কোঅ্যাক্সিয়াল কেবল",
+   "bn": "কেন্দ্রে একটি **inner conductor** (তামা), তার চারপাশে **insulator**, তারপর **outer conductor** (ধাতব জাল/foil — shield হিসেবেও কাজ করে), সবশেষে **plastic cover**। টুইস্টেড-পেয়ারের চেয়ে বেশি ফ্রিকোয়েন্সি বহন করে। সংযোগে **BNC** কানেক্টর।"
+  },
+  {
+   "h": "ফাইবার-অপটিক কেবল",
+   "bn": "সিগন্যাল **আলো** হিসেবে চলে। কার্যনীতি: **total internal reflection** — আলো যখন বেশি ঘন মাধ্যম থেকে কম ঘন মাধ্যমে critical angle এর চেয়ে বড় কোণে পড়ে, তখন পুরোটা প্রতিফলিত হয়।\n• **Core**: আলো চলার অংশ (কাচ বা প্লাস্টিক)।\n• **Cladding**: core এর চারপাশে, **কম refractive index** দিয়ে interface এ প্রতিফলন নিশ্চিত করে।\n• **Plastic buffer**: সুরক্ষার আবরণ।\n• **Kevlar strength members**: কেবলকে শক্তি দেয়।\n• **Outer jacket**: বাইরের সুরক্ষা।\nPropagation modes: **multimode (step-index, graded-index)** ও **single-mode**।"
+  },
+  {
+   "h": "ফাইবার বনাম টুইস্টেড-পেয়ার (অতিরিক্ত পাঠ্য — Forouzan পাঠ্যবই)",
+   "bn": "ফাইবারের সুবিধা: অনেক **বেশি bandwidth**, **কম attenuation** তাই দীর্ঘ দূরত্বে repeater কম লাগে, **electromagnetic interference থেকে মুক্ত** (আলো, বিদ্যুৎ নয়), **হালকা**, **tapping কঠিন** তাই নিরাপদ। অসুবিধা: **দাম বেশি**, ইনস্টল ও রক্ষণাবেক্ষণে দক্ষতা লাগে, আলো **একমুখী** তাই দুই দিকের জন্য দুটি ফাইবার লাগে।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "For the guided medium, there is a physical path (such as a cable) for electromagnetic wave propagation. For the wireless medium, the electromagnetic wave is transmitted through air, water, or vacuum.",
+   "slide": 3
+  },
+  {
+   "text": "Guided media include twisted-pair cable, coaxial cable, and fiber-optic cable.",
+   "slide": 8
+  },
+  {
+   "text": "The working principle of optical fiber is total internal reflection. Optical fiber has generally two layers: core and cladding. Core: the light transmission area of the fiber. Cladding: provides a lower refractive index at the core interface.",
+   "slide": 19
+  },
+  {
+   "text": "Figure 7.14 Fiber construction: outer jacket, Kevlar for strength, plastic buffer, cladding, glass or plastic core.",
+   "slide": 23
+  }
+ ],
+ "realLife": {
+  "title": "FTTH internet at home",
+  "bn": "অনেক ISP এখন বাসায় ফাইবার (FTTH) দেয় — রাস্তার খুঁটি থেকে বাসা পর্যন্ত পাতলা ফাইবার কেবল, আর রাউটার থেকে পিসিতে UTP (Cat 6) কেবল। দূরের পথে ফাইবার (কম attenuation, বেশি bandwidth), ঘরের ভিতরে সস্তা UTP।",
+  "link": "Fiber suits long, high-bandwidth runs; twisted pair suits short, low-cost connections.",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "diagram",
+   "id": "fiber-layers",
+   "caption": "Fiber construction (after Figure 7.14): core, cladding, plastic buffer, Kevlar strength members, outer jacket.",
+   "alt": "Cut-away cable showing nested layers from the centre: core, cladding, plastic buffer, Kevlar fibres, outer jacket, each labelled."
+  },
+  {
+   "kind": "diagram",
+   "id": "fiber-tir",
+   "caption": "Light stays in the core by total internal reflection at the core–cladding boundary.",
+   "alt": "A light ray zig-zagging inside the core, reflecting at the boundary with the cladding."
+  },
+  {
+   "kind": "sim",
+   "id": "label",
+   "params": {
+    "diagram": "fiber"
+   },
+   "caption": "Practise: drag (or tap) labels onto the fiber diagram.",
+   "alt": "Labelling exercise with five empty label slots."
+  }
+ ],
+ "formulas": [],
+ "solved": [
+  {
+   "title": "Choosing a medium",
+   "given": [
+    "Two campus buildings 2 km apart",
+    "Next to a power substation (heavy EMI)",
+    "Need high bandwidth"
+   ],
+   "required": "Twisted pair or fiber?",
+   "rule": "Compare attenuation, EMI immunity and bandwidth",
+   "substitution": [],
+   "calc": [
+    "Twisted pair: high attenuation over 2 km, affected by EMI.",
+    "Fiber: low attenuation, immune to EMI, high bandwidth."
+   ],
+   "answer": "Fiber-optic cable.",
+   "bn": "দূরত্ব + EMI + bandwidth — তিনটিতেই ফাইবার এগিয়ে।"
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 3,
+   "question": "Label the basic parts of a fiber-optic cable with a proper diagram. Compare the significance of the optical fiber cable over the twisted-pair cable.",
+   "answer": "[Diagram: concentric layers labelled from the centre — core, cladding, plastic buffer, Kevlar strength members, outer jacket.]\n• Core: glass or plastic centre through which light travels.\n• Cladding: surrounds the core with a lower refractive index, so light is kept in the core by total internal reflection.\n• Buffer, Kevlar and jacket: protect and strengthen the cable.\nSignificance over twisted pair:\n1. Much higher bandwidth (data rate).\n2. Less signal attenuation, so longer distances without repeaters.\n3. Immune to electromagnetic interference because it carries light, not electric current.\n4. Lighter and harder to tap (more secure).\n(Trade-off: higher cost and more difficult installation.)"
+  }
+ ],
+ "keywords": [
+  {
+   "term": "guided / unguided",
+   "bn": "ভৌত পথ আছে / নেই"
+  },
+  {
+   "term": "twisting reduces noise & crosstalk",
+   "bn": "পেঁচানোর উদ্দেশ্য"
+  },
+  {
+   "term": "UTP / STP",
+   "bn": "shield ছাড়া / shield সহ"
+  },
+  {
+   "term": "core / cladding",
+   "bn": "আলো চলে / কম refractive index"
+  },
+  {
+   "term": "total internal reflection",
+   "bn": "ফাইবারের কার্যনীতি"
+  },
+  {
+   "term": "EMI immunity",
+   "bn": "বৈদ্যুতিক নয়েজে প্রভাবমুক্ত"
+  },
+  {
+   "term": "attenuation",
+   "bn": "দূরত্বে শক্তি কমা"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Saying cladding has a higher refractive index.",
+   "fix": "Cladding has a lower refractive index than the core."
+  },
+  {
+   "m": "Labelling only “core” and “cover”.",
+   "fix": "Show core, cladding, buffer, strength member (Kevlar) and jacket."
+  },
+  {
+   "m": "Claiming fiber is cheaper.",
+   "fix": "Fiber is usually more expensive to buy and install."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "Guided media: twisted pair, coax, fiber.",
+   "Twisting cancels noise/crosstalk; UTP vs STP.",
+   "Coax: inner conductor, insulator, outer conductor (shield), cover.",
+   "Fiber: total internal reflection; core + lower-index cladding.",
+   "Fiber vs TP: bandwidth, attenuation, EMI immunity, security."
+  ],
+  "card": "Core → Cladding → Buffer → Kevlar → Jacket",
+  "recall": {
+   "q": "What is the function of the cladding?",
+   "a": "To provide a lower refractive index at the core interface so light is totally internally reflected."
+  }
+ },
+ "flags": [
+  {
+   "type": "supplementary",
+   "text": "Slides 9–25 are mostly figures. The fiber-vs-twisted-pair advantages come from the Forouzan textbook section on fiber performance, not from slide text, and are marked supplementary."
+  }
+ ]
+}

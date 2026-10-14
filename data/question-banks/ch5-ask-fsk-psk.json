@@ -1,0 +1,350 @@
+{
+ "lessonId": "ch5-ask-fsk-psk",
+ "mcqs": [
+  {
+   "id": "mk1",
+   "q": "Binary ASK is also called:",
+   "options": [
+    "Phase reversal keying",
+    "On-off keying (OOK)",
+    "Frequency hopping",
+    "Manchester keying"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৯।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch5 slide 9"
+  },
+  {
+   "id": "mk2",
+   "q": "Which characteristic of the carrier does PSK change?",
+   "options": [
+    "Amplitude",
+    "Frequency",
+    "Phase",
+    "Wavelength only"
+   ],
+   "answer": 2,
+   "explainBn": "PSK এ শুধু phase বদলায়; amplitude ও frequency স্থির থাকে।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch5 slide 24"
+  },
+  {
+   "id": "mk3",
+   "q": "Why is PSK more robust than ASK?",
+   "options": [
+    "PSK uses higher frequencies",
+    "Noise mainly changes amplitude, and PSK does not carry data in amplitude",
+    "PSK uses two carriers",
+    "PSK has no bandwidth"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ২৪।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": "Ch5 slide 24"
+  },
+  {
+   "id": "mk4",
+   "q": "In BPSK (slide implementation), bit 0 is represented by a phase starting at:",
+   "options": [
+    "0°",
+    "90°",
+    "180°",
+    "270°"
+   ],
+   "answer": 2,
+   "explainBn": "স্লাইড ২৬।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch5 slide 26"
+  },
+  {
+   "id": "mk5",
+   "q": "The bandwidth of BFSK is:",
+   "options": [
+    "(1 + d)S",
+    "(1 + d)S + 2Δf",
+    "L × S only",
+    "2Δf only"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ১৮।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "formula",
+   "source": "Ch5 slide 18"
+  },
+  {
+   "id": "mk6",
+   "q": "Available band 200–300 kHz, ASK with d = 1. Bit rate?",
+   "options": [
+    "100 kbps",
+    "50 kbps",
+    "250 kbps",
+    "200 kbps"
+   ],
+   "answer": 1,
+   "explainBn": "N = B/2।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": "Ch5 slide 13"
+  },
+  {
+   "id": "mk7",
+   "q": "With fc = 1 Hz and 1 s per bit, ASK for bit 0 (OOK) shows:",
+   "options": [
+    "One full carrier cycle",
+    "A flat line (zero amplitude)",
+    "Two cycles",
+    "An inverted cycle"
+   ],
+   "answer": 1,
+   "explainBn": "OOK: 0 → amplitude 0।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "waveform",
+   "source": ""
+  },
+  {
+   "id": "mk8",
+   "q": "QAM is a combination of:",
+   "options": [
+    "ASK and FSK",
+    "ASK and PSK",
+    "FSK and PSK",
+    "AM and FM"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ২৮।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch5 slide 28"
+  },
+  {
+   "id": "mk9",
+   "q": "Sending 3 bits at a time at 3 Mbps with MFSK requires a bandwidth of:",
+   "options": [
+    "3 MHz",
+    "8 MHz",
+    "1 MHz",
+    "24 MHz"
+   ],
+   "answer": 1,
+   "explainBn": "L = 8, S = 1 Mbaud, B = 8 MHz।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "numerical",
+   "source": "Ch5 slide 22"
+  },
+  {
+   "id": "mk10",
+   "q": "A received PSK waveform has random amplitude spikes from noise, but its phase transitions are clear. The data will most likely be:",
+   "options": [
+    "Completely lost",
+    "Recovered correctly, because PSK decisions use phase",
+    "Recovered only if converted to ASK",
+    "Doubled"
+   ],
+   "answer": 1,
+   "explainBn": "Phase অক্ষত থাকলে ডেটা ঠিক থাকে।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "scenario",
+   "source": ""
+  }
+ ],
+ "written": [
+  {
+   "id": "mk-w1",
+   "marks": 3,
+   "marksSplit": "3",
+   "question": "Compare ASK and PSK in terms of their sensitivity to noise and power efficiency. Additionally, highlight which technique offers greater robustness in a noisy channel.",
+   "type": "compare",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "noise",
+      "type": "concepts",
+      "label": "Noise sensitivity compared",
+      "marks": 1.25,
+      "need": 2,
+      "concepts": [
+       {
+        "name": "ASK carries data in amplitude / noise affects amplitude",
+        "any": [
+         "amplitude"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "PSK uses phase / less affected",
+        "any": [
+         "phase"
+        ],
+        "bn": ""
+       }
+      ]
+     },
+     {
+      "id": "power",
+      "type": "concepts",
+      "label": "Power efficiency compared",
+      "marks": 1,
+      "need": 1,
+      "concepts": [
+       {
+        "name": "PSK more power efficient / constant amplitude / less power for same error",
+        "any": [
+         "power efficient",
+         "power efficiency",
+         "constant amplitude",
+         "less power",
+         "more power",
+         "same energy",
+         "energy per bit"
+        ],
+        "bn": ""
+       }
+      ]
+     },
+     {
+      "id": "robust",
+      "type": "choice",
+      "label": "Concludes PSK is more robust",
+      "marks": 0.75,
+      "correct": [
+       "psk is more robust",
+       "psk offers greater robustness",
+       "psk is better",
+       "psk is more resistant",
+       "psk is less vulnerable",
+       "psk performs better"
+      ],
+      "wrong": [
+       "ask is more robust",
+       "ask offers greater robustness",
+       "ask is better"
+      ],
+      "bn": ""
+     }
+    ],
+    "penalties": [
+     {
+      "any": [
+       "ask is more robust",
+       "ask is less sensitive to noise"
+      ],
+      "deduct": 0.5,
+      "message": "States ASK is more robust to noise.",
+      "bn": "ASK নয়েজে বেশি সংবেদনশীল।"
+     }
+    ],
+    "modelAnswer": "ASK carries data in the amplitude, which noise directly changes, so ASK is highly sensitive to noise; PSK carries data in the phase, so amplitude noise affects it much less. PSK keeps a constant amplitude (same energy per bit) and needs less power for the same error performance, so it is more power-efficient. Therefore PSK offers greater robustness in a noisy channel."
+   },
+   "hintBn": "",
+   "tags": [
+    "modulation"
+   ],
+   "source": "Summer 2026 midterm Q1(a) OR"
+  },
+  {
+   "id": "mk-w2",
+   "marks": 3,
+   "marksSplit": "2+1",
+   "question": "Illustrate the carrier waveforms for the bit sequence 1 0 1 1 using ASK, PSK and FSK modulation techniques. Assume a carrier frequency of fc = 1 Hz and a bit duration of 1 second per bit. Clearly show how binary 1 and binary 0 are represented in each waveform.",
+   "type": "waveform",
+   "inputs": [
+    "canvas",
+    "selfcheck",
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "ask",
+      "type": "selfcheck",
+      "label": "ASK drawn correctly",
+      "marks": 1,
+      "items": [
+       {
+        "id": "a1",
+        "label": "Bits 1: one full carrier cycle of amplitude A per 1-s bit",
+        "marks": 0.5,
+        "bn": ""
+       },
+       {
+        "id": "a0",
+        "label": "Bit 0: zero amplitude (OOK) or a clearly stated lower amplitude",
+        "marks": 0.5,
+        "bn": ""
+       }
+      ]
+     },
+     {
+      "id": "psk",
+      "type": "selfcheck",
+      "label": "PSK drawn correctly",
+      "marks": 1,
+      "items": [
+       {
+        "id": "p1",
+        "label": "Same amplitude and frequency in every bit",
+        "marks": 0.25,
+        "bn": ""
+       },
+       {
+        "id": "p0",
+        "label": "Bit 0 drawn with 180° phase (inverted start) relative to bit 1",
+        "marks": 0.75,
+        "bn": ""
+       }
+      ]
+     },
+     {
+      "id": "fsk",
+      "type": "selfcheck",
+      "label": "FSK drawn and labelled",
+      "marks": 1,
+      "items": [
+       {
+        "id": "f1",
+        "label": "Two distinct frequencies, amplitude constant",
+        "marks": 0.5,
+        "bn": ""
+       },
+       {
+        "id": "flab",
+        "label": "States which frequency means 1 and which means 0",
+        "marks": 0.5,
+        "bn": ""
+       }
+      ]
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "ASK: 1 → one 1-Hz cycle, 0 → flat. PSK: 1 → 0° cycle, 0 → 180° cycle. FSK: 1 → 2 Hz (two cycles), 0 → 1 Hz (one cycle), constant amplitude.",
+    "minWords": 0
+   },
+   "hintBn": "",
+   "tags": [
+    "modulation",
+    "waveform"
+   ],
+   "source": "Summer 2026 midterm Q3(b)"
+  }
+ ]
+}

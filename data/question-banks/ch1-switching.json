@@ -1,0 +1,364 @@
+{
+ "lessonId": "ch1-switching",
+ "mcqs": [
+  {
+   "id": "sw1",
+   "q": "In a circuit-switched network, what can the switch do with the dedicated circuit?",
+   "options": [
+    "Only make it active or inactive",
+    "Split it into packets",
+    "Queue it for later delivery",
+    "Change its destination address"
+   ],
+   "answer": 0,
+   "explainBn": "স্লাইড অনুযায়ী সার্কিট সবসময় থাকে; সুইচ শুধু সেটাকে active/inactive করে।",
+   "explainEn": "Slide 21 wording.",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch1 slide 21"
+  },
+  {
+   "id": "sw2",
+   "q": "In a packet-switched network, the router stores packets in a:",
+   "options": [
+    "Circuit",
+    "Queue",
+    "Cladding",
+    "Frame check sequence"
+   ],
+   "answer": 1,
+   "explainBn": "রাউটারের queue প্যাকেট জমা রেখে ফরোয়ার্ড করে।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch1 slide 22"
+  },
+  {
+   "id": "sw3",
+   "q": "Which application most needs guaranteed bandwidth and constant delay?",
+   "options": [
+    "E-mail delivery",
+    "Downloading a software update",
+    "A real-time voice call",
+    "Loading a static web page"
+   ],
+   "answer": 2,
+   "explainBn": "রিয়েল-টাইম ভয়েসে বিলম্ব পরিবর্তন হলে কথা ভেঙে যায়, তাই সংরক্ষিত পথ দরকার।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "scenario",
+   "source": ""
+  },
+  {
+   "id": "sw4",
+   "q": "Why can circuit switching waste capacity?",
+   "options": [
+    "Packets are dropped in queues",
+    "The reserved circuit stays allocated even when no data is being sent",
+    "Routers must recompute routes for every packet",
+    "It requires fiber-optic links"
+   ],
+   "answer": 1,
+   "explainBn": "চুপ থাকলেও সার্কিট দখলে থাকে, অন্য কেউ ব্যবহার করতে পারে না।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": ""
+  },
+  {
+   "id": "sw5",
+   "q": "Data in a packet-switched network is sent as:",
+   "options": [
+    "A continuous analog wave only",
+    "Blocks of data called packets",
+    "A single dedicated circuit",
+    "Optical wavelengths only"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড: communication is done in blocks of data called packets।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch1 slide 22"
+  },
+  {
+   "id": "sw6",
+   "q": "A university wants many students to share one Internet link for browsing and downloads. The best choice is:",
+   "options": [
+    "Circuit switching, because each student needs a reserved circuit",
+    "Packet switching, because bursty traffic can share the link on demand",
+    "No switching is needed",
+    "Circuit switching, because it removes all delay"
+   ],
+   "answer": 1,
+   "explainBn": "ব্রাউজিং বার্স্টি — শেয়ার করলে লিংক দক্ষভাবে ব্যবহার হয়।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "scenario",
+   "source": ""
+  },
+  {
+   "id": "sw7",
+   "q": "Which statement about delay is correct?",
+   "options": [
+    "Circuit switching has variable queuing delay at every switch",
+    "Packet switching can have variable delay because packets wait in router queues",
+    "Both techniques always have identical delay",
+    "Packet switching never has delay"
+   ],
+   "answer": 1,
+   "explainBn": "Queue-তে অপেক্ষার সময় ট্রাফিকের উপর নির্ভর করে, তাই ডেলে পরিবর্তনশীল।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": ""
+  },
+  {
+   "id": "sw8",
+   "q": "According to the slides, an internet is best described as:",
+   "options": [
+    "A single cable joining two computers",
+    "A switched network in which a switch connects at least two links",
+    "A network without any devices",
+    "A ring of hubs only"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ২০ এর সংজ্ঞা।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch1 slide 20"
+  },
+  {
+   "id": "sw9",
+   "q": "“Store and forward” refers to:",
+   "options": [
+    "A switch reserving a circuit",
+    "A router holding a packet in its queue and then sending it on",
+    "Encrypting data before sending",
+    "Sending all bits in parallel"
+   ],
+   "answer": 1,
+   "explainBn": "রাউটার প্যাকেট জমা রেখে পরে পাঠায়।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch1 slide 22"
+  },
+  {
+   "id": "sw10",
+   "q": "A video call app on a shared Wi-Fi link sometimes freezes during heavy downloads. Which property of packet switching best explains this?",
+   "options": [
+    "Dedicated circuits are released",
+    "Packets of many users share queues, so queuing delay varies",
+    "Circuits become inactive",
+    "The bandwidth is reserved for the download"
+   ],
+   "answer": 1,
+   "explainBn": "ডাউনলোডের প্যাকেট queue ভরে ফেলে, ফলে ভিডিও প্যাকেটের অপেক্ষা বাড়ে।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "scenario",
+   "source": ""
+  }
+ ],
+ "written": [
+  {
+   "id": "sw-w1",
+   "marks": 2,
+   "marksSplit": "2",
+   "question": "A telecom company wants to design a network for real-time voice calls with guaranteed bandwidth. Identify the switching technique (Circuit or Packet) that should be used and apply its working principle to justify your choice.",
+   "type": "scenario",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 2,
+    "criteria": [
+     {
+      "id": "choice",
+      "type": "choice",
+      "label": "Identifies circuit switching",
+      "marks": 0.5,
+      "correct": [
+       "circuit switching",
+       "circuit switched",
+       "circuit-switched",
+       "circuit switch"
+      ],
+      "wrong": [
+       "use packet switching",
+       "packet switching should",
+       "choose packet switching",
+       "packet switching is better",
+       "packet switching is suitable"
+      ],
+      "bn": ""
+     },
+     {
+      "id": "principle",
+      "type": "concepts",
+      "label": "Working principle and justification",
+      "marks": 1.5,
+      "need": 3,
+      "concepts": [
+       {
+        "name": "dedicated / reserved circuit",
+        "any": [
+         "dedicated",
+         "reserved",
+         "reserve",
+         "সংরক্ষিত",
+         "নির্দিষ্ট পথ"
+        ],
+        "bn": "নির্দিষ্ট সার্কিটের কথা লেখো"
+       },
+       {
+        "name": "circuit set up before transfer / switch makes it active",
+        "any": [
+         "set up",
+         "setup",
+         "established",
+         "establish",
+         "active",
+         "before the call"
+        ],
+        "bn": "কল শুরুর আগে সংযোগ তৈরি হয়"
+       },
+       {
+        "name": "guaranteed bandwidth",
+        "any": [
+         "guaranteed bandwidth",
+         "guarantee",
+         "fixed bandwidth",
+         "whole bandwidth",
+         "bandwidth is reserved"
+        ],
+        "bn": "bandwidth নিশ্চিত থাকে"
+       },
+       {
+        "name": "constant delay / no queuing",
+        "any": [
+         "constant delay",
+         "no queuing",
+         "no queue",
+         "no delay",
+         "low delay",
+         "fixed delay",
+         "minimum delay"
+        ],
+        "bn": "ডেলে স্থির — real-time এর জন্য দরকার"
+       }
+      ]
+     }
+    ],
+    "penalties": [
+     {
+      "any": [
+       "circuit switching uses packets",
+       "circuit switching stores and forwards"
+      ],
+      "deduct": 0.5,
+      "message": "Mixes up circuit switching with store-and-forward packet switching.",
+      "bn": "সার্কিট সুইচিংয়ে store-and-forward হয় না।"
+     }
+    ],
+    "modelAnswer": "Circuit switching should be used. In circuit switching a dedicated circuit is set up between the two end systems before the call, and the switches keep it active for the whole call. The bandwidth of that circuit is reserved, so it is guaranteed, and there is no queuing at the switches, so the delay is small and constant — exactly what real-time voice needs."
+   },
+   "hintBn": "",
+   "tags": [
+    "switching"
+   ],
+   "source": "Summer 2026 midterm Q1(d)"
+  },
+  {
+   "id": "sw-w2",
+   "marks": 3,
+   "marksSplit": "3",
+   "question": "Differentiate between circuit-switched and packet-switched networks. (Any three points)",
+   "type": "compare",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "cmp",
+      "type": "concepts",
+      "label": "Three valid differences",
+      "marks": 3,
+      "need": 3,
+      "concepts": [
+       {
+        "name": "connection: dedicated circuit vs no dedicated path",
+        "any": [
+         "dedicated",
+         "reserved circuit",
+         "dedicated path"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "data unit: packets / blocks",
+        "any": [
+         "packet",
+         "block"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "router queue / store and forward",
+        "any": [
+         "queue",
+         "store and forward",
+         "stores and forwards"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "resource sharing on demand vs reserved",
+        "any": [
+         "share",
+         "shared",
+         "on demand",
+         "efficient"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "delay: constant vs variable",
+        "any": [
+         "constant delay",
+         "variable delay",
+         "queuing delay",
+         "delay"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "application: voice vs data",
+        "any": [
+         "voice",
+         "real time",
+         "real-time",
+         "e-mail",
+         "web",
+         "file"
+        ],
+        "bn": ""
+       }
+      ]
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "Circuit switching uses a dedicated circuit between the two end systems which the switch only makes active or inactive; packet switching has no dedicated path and sends data in blocks called packets. In circuit switching the bandwidth is reserved for the session, while in packet switching links are shared on demand. Routers in packet switching have queues that store and forward packets, so the delay is variable, whereas a circuit has constant delay. Circuit switching suits real-time voice; packet switching suits bursty data such as web and e-mail."
+   },
+   "hintBn": "",
+   "tags": [
+    "switching"
+   ],
+   "source": "Ch1 slides 20–22"
+  }
+ ]
+}

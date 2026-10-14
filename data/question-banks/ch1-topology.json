@@ -1,0 +1,290 @@
+{
+ "lessonId": "ch1-topology",
+ "mcqs": [
+  {
+   "id": "tp1",
+   "q": "How many duplex-mode links are needed for a fully connected mesh of 6 devices?",
+   "options": [
+    "30",
+    "15",
+    "12",
+    "36"
+   ],
+   "answer": 1,
+   "explainBn": "৬×৫/২ = ১৫।",
+   "explainEn": "n(n−1)/2.",
+   "difficulty": "easy",
+   "type": "formula",
+   "source": "Ch1 slide 10"
+  },
+  {
+   "id": "tp2",
+   "q": "A connection in which a single transmission has multiple recipients is called:",
+   "options": [
+    "Point-to-point",
+    "Multipoint",
+    "Full-duplex",
+    "Simplex"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৭: multipoint — multiple recipients of single transmission।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch1 slide 7"
+  },
+  {
+   "id": "tp3",
+   "q": "In a star topology, if the central hub fails:",
+   "options": [
+    "Only one device stops",
+    "The whole network stops communicating",
+    "Devices switch to the ring automatically",
+    "Nothing happens because devices are directly linked"
+   ],
+   "answer": 1,
+   "explainBn": "সব যোগাযোগ হাব হয়ে যায়।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "conceptual",
+   "source": ""
+  },
+  {
+   "id": "tp4",
+   "q": "Which topology uses one long cable as a backbone with drop lines to devices?",
+   "options": [
+    "Ring",
+    "Mesh",
+    "Bus",
+    "Star"
+   ],
+   "answer": 2,
+   "explainBn": "বাসে একটি backbone কেবল থাকে।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch1 slide 12"
+  },
+  {
+   "id": "tp5",
+   "q": "The hybrid topology shown in the slides (Figure 1.9) is:",
+   "options": [
+    "A ring backbone with two stars",
+    "A star backbone with three bus networks",
+    "A mesh of four rings",
+    "A bus with one star"
+   ],
+   "answer": 1,
+   "explainBn": "Figure 1.9: star backbone with three bus networks।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "diagram",
+   "source": "Ch1 slide 14"
+  },
+  {
+   "id": "tp6",
+   "q": "How many I/O ports does each device need in a fully connected mesh of 10 devices?",
+   "options": [
+    "10",
+    "9",
+    "45",
+    "90"
+   ],
+   "answer": 1,
+   "explainBn": "প্রতিটি ডিভাইস বাকি n−1 = ৯ জনের সাথে যুক্ত।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "formula",
+   "source": ""
+  },
+  {
+   "id": "tp7",
+   "q": "In a ring topology each device is connected to:",
+   "options": [
+    "Every other device",
+    "Only a central hub",
+    "Its two neighbours",
+    "Only the backbone"
+   ],
+   "answer": 2,
+   "explainBn": "রিংয়ে দুই পাশের প্রতিবেশী।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch1 slide 13"
+  },
+  {
+   "id": "tp8",
+   "q": "Which is the main advantage of a mesh topology?",
+   "options": [
+    "Lowest cabling cost",
+    "Robustness — one failed link does not disable the whole network",
+    "Needs only one port per device",
+    "No need for any links"
+   ],
+   "answer": 1,
+   "explainBn": "ডেডিকেটেড লিংক থাকায় একটি নষ্ট হলেও বাকিরা চলে।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": ""
+  },
+  {
+   "id": "tp9",
+   "q": "A lab has 20 PCs each cabled to one switch, and that switch connects to a campus backbone cable shared by other labs. The campus network is best described as:",
+   "options": [
+    "Pure mesh",
+    "Pure ring",
+    "Hybrid (stars attached to a bus backbone)",
+    "Point-to-point WAN"
+   ],
+   "answer": 2,
+   "explainBn": "প্রতিটি ল্যাব স্টার, সব মিলিয়ে backbone-এ যুক্ত — হাইব্রিড।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "scenario",
+   "source": ""
+  },
+  {
+   "id": "tp10",
+   "q": "Adding one more device to a fully connected mesh of 4 devices increases the number of links from 6 to:",
+   "options": [
+    "7",
+    "8",
+    "10",
+    "20"
+   ],
+   "answer": 2,
+   "explainBn": "৫×৪/২ = ১০।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "numerical",
+   "source": ""
+  }
+ ],
+ "written": [
+  {
+   "id": "tp-w1",
+   "marks": 3,
+   "marksSplit": "3",
+   "question": "A training institute is setting up a network where the main backbone uses a bus topology, connecting one star topology and two ring topologies. Construct the hybrid network diagram.",
+   "type": "diagram",
+   "inputs": [
+    "text",
+    "canvas",
+    "selfcheck"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "draw",
+      "type": "selfcheck",
+      "label": "Diagram drawn and labelled",
+      "marks": 2.5,
+      "items": [
+       {
+        "id": "bus",
+        "label": "Bus backbone drawn as one line (with terminators/taps)",
+        "marks": 0.75,
+        "bn": "বাস ব্যাকবোন একটি লাইন"
+       },
+       {
+        "id": "star",
+        "label": "Star: hub with stations each linked only to the hub",
+        "marks": 0.75,
+        "bn": "হাব ও আলাদা লিংক"
+       },
+       {
+        "id": "rings",
+        "label": "Two rings, each a closed loop of stations attached to the bus",
+        "marks": 0.75,
+        "bn": "দুটি বন্ধ রিং"
+       },
+       {
+        "id": "labels",
+        "label": "All parts labelled (backbone, hub, ring 1, ring 2)",
+        "marks": 0.25,
+        "bn": "লেবেল"
+       }
+      ]
+     },
+     {
+      "id": "note",
+      "type": "concepts",
+      "label": "Short explanation",
+      "marks": 0.5,
+      "need": 1,
+      "concepts": [
+       {
+        "name": "hybrid combines topologies",
+        "any": [
+         "combination",
+         "combine",
+         "two or more",
+         "more than one",
+         "hybrid"
+        ],
+        "bn": ""
+       }
+      ]
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "Draw a bus backbone with three drop lines: one to a hub with four stations (star), and one each to two rings of four stations. A hybrid topology combines two or more topologies; here the bus is the backbone.",
+    "minWords": 6
+   },
+   "hintBn": "",
+   "tags": [
+    "topology",
+    "diagram"
+   ],
+   "source": "Summer 2026 midterm Q3(a) OR"
+  },
+  {
+   "id": "tp-w2",
+   "marks": 2,
+   "marksSplit": "2",
+   "question": "How many duplex-mode links are needed to connect 8 devices in a fully connected mesh topology? Show the formula.",
+   "type": "numerical",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 2,
+    "criteria": [
+     {
+      "id": "f",
+      "type": "formula",
+      "label": "Formula n(n − 1)/2",
+      "marks": 0.75,
+      "patterns": [
+       "n\\s*\\(\\s*n\\s*[-−–]\\s*1\\s*\\)\\s*/\\s*2",
+       "n\\s*\\(\\s*n\\s*[-−–]\\s*1\\s*\\)\\s*÷\\s*2"
+      ],
+      "bn": ""
+     },
+     {
+      "id": "n",
+      "type": "numeric",
+      "label": "Number of links = 28",
+      "marks": 1.25,
+      "expected": 28,
+      "dim": null,
+      "display": "28",
+      "relTol": 0.01,
+      "bn": ""
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "Links = n(n − 1)/2 = 8 × 7/2 = 28 duplex-mode links."
+   },
+   "hintBn": "",
+   "tags": [
+    "topology",
+    "numerical"
+   ],
+   "source": "Ch1 slide 10"
+  }
+ ]
+}

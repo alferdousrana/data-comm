@@ -1,0 +1,1319 @@
+{
+ "version": "2026.10-batch1",
+ "course": "CSE 311 — Data Communications",
+ "university": "Green University of Bangladesh",
+ "sources": [
+  {
+   "file": "Chapter-1-Introduction.pptx",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "content": "Chapter 1 — Introduction",
+   "slides": 27,
+   "status": "ok"
+  },
+  {
+   "file": "Chapter-2-Network_Models__5th_edition_.ppt",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "content": "Chapter 2 — Network Models",
+   "slides": 37,
+   "status": "ok"
+  },
+  {
+   "file": "Chapter-3-Data_and_Signals__2_.ppt",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "content": "Chapter 3 — Introduction to Physical Layer (Data and Signals)",
+   "slides": 104,
+   "status": "ok"
+  },
+  {
+   "file": "Data_Com_Chapter-4__5th_Edition.pptx",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "content": "Chapter 4 — Digital Transmission",
+   "slides": 74,
+   "status": "ok"
+  },
+  {
+   "file": "Chapter_5_5th_ed.pptx",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "content": "Chapter 5 — Analog Transmission",
+   "slides": 39,
+   "status": "ok"
+  },
+  {
+   "file": "Chapter-6-multiplexing.pptx",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "content": "Chapter 6 — Bandwidth Utilization: Multiplexing and Spreading",
+   "slides": 67,
+   "status": "ok"
+  },
+  {
+   "file": "Chapter-7-Transmission_Media.pptx",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "content": "Chapter 7 — Transmission Media",
+   "slides": 36,
+   "status": "ok"
+  },
+  {
+   "file": "Chapter_7_Kurose_Ross_v8_2.pptx",
+   "book": "Kurose & Ross, Computer Networking: A Top-Down Approach 8e",
+   "content": "Chapter 7 — Wireless and Mobile Networks",
+   "slides": 92,
+   "status": "ok"
+  },
+  {
+   "file": "Chapter_6_Kurose_Ross_v8_2.pptx",
+   "book": "Kurose & Ross, Computer Networking: A Top-Down Approach 8e",
+   "content": "Chapter 7 — Wireless and Mobile Networks (duplicate of the file above)",
+   "slides": 92,
+   "status": "mismatch",
+   "note": "File name says Chapter 6 (Link Layer and LANs) but its slides are identical to the Chapter 7 Wireless deck. The Link Layer deck was not supplied."
+  }
+ ],
+ "chapters": [
+  {
+   "id": "fz-ch1",
+   "title": "Introduction",
+   "titleBn": "ভূমিকা",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "bookChapter": "Forouzan Ch 1",
+   "file": "Chapter-1-Introduction.pptx"
+  },
+  {
+   "id": "fz-ch2",
+   "title": "Network Models",
+   "titleBn": "নেটওয়ার্ক মডেল",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "bookChapter": "Forouzan Ch 2",
+   "file": "Chapter-2-Network_Models__5th_edition_.ppt"
+  },
+  {
+   "id": "fz-ch3",
+   "title": "Introduction to Physical Layer: Data and Signals",
+   "titleBn": "ফিজিক্যাল লেয়ার: ডেটা ও সিগন্যাল",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "bookChapter": "Forouzan Ch 3",
+   "file": "Chapter-3-Data_and_Signals__2_.ppt"
+  },
+  {
+   "id": "fz-ch4",
+   "title": "Digital Transmission",
+   "titleBn": "ডিজিটাল ট্রান্সমিশন",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "bookChapter": "Forouzan Ch 4",
+   "file": "Data_Com_Chapter-4__5th_Edition.pptx"
+  },
+  {
+   "id": "fz-ch5",
+   "title": "Analog Transmission",
+   "titleBn": "অ্যানালগ ট্রান্সমিশন",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "bookChapter": "Forouzan Ch 5",
+   "file": "Chapter_5_5th_ed.pptx"
+  },
+  {
+   "id": "fz-ch6",
+   "title": "Bandwidth Utilization: Multiplexing and Spreading",
+   "titleBn": "ব্যান্ডউইডথ ব্যবহার: মাল্টিপ্লেক্সিং ও স্প্রেডিং",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "bookChapter": "Forouzan Ch 6",
+   "file": "Chapter-6-multiplexing.pptx"
+  },
+  {
+   "id": "fz-ch7",
+   "title": "Transmission Media",
+   "titleBn": "ট্রান্সমিশন মিডিয়া",
+   "book": "Forouzan, Data Communications and Networking 5e",
+   "bookChapter": "Forouzan Ch 7",
+   "file": "Chapter-7-Transmission_Media.pptx"
+  },
+  {
+   "id": "kr-ch6",
+   "title": "Link Layer and LANs",
+   "titleBn": "লিংক লেয়ার ও LAN",
+   "book": "Kurose & Ross, Computer Networking: A Top-Down Approach 8e",
+   "bookChapter": "Kurose & Ross Ch 6",
+   "file": null,
+   "missingSource": true
+  },
+  {
+   "id": "kr-ch7",
+   "title": "Wireless and Mobile Networks",
+   "titleBn": "ওয়্যারলেস ও মোবাইল নেটওয়ার্ক",
+   "book": "Kurose & Ross, Computer Networking: A Top-Down Approach 8e",
+   "bookChapter": "Kurose & Ross Ch 7",
+   "file": "Chapter_7_Kurose_Ross_v8_2.pptx"
+  }
+ ],
+ "lessons": [
+  {
+   "id": "ch1-data-comm-basics",
+   "chapterId": "fz-ch1",
+   "order": 1,
+   "title": "Data Communications, Networks and Protocols",
+   "titleBn": "ডেটা কমিউনিকেশন, নেটওয়ার্ক ও প্রোটোকল",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "Data Communications, Networks and Protocols"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter-1-Introduction.pptx",
+   "slides": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    15,
+    26,
+    27
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Data Communications, Networks and Protocols ডেটা কমিউনিকেশন, নেটওয়ার্ক ও প্রোটোকল Data communications = exchange of data between two devices via a transmission medium. Four fundamental characteristics: delivery, accuracy, timeliness, jitter (slide 2). Components of a data communication system (Figure 1.1) and data flow: simplex, half-duplex, full-duplex (Figure 1.2). Network criteria: performance (delay, throughput), reliability, security (slide 6). Categories: LAN, WAN, MAN (slide 15). Protocol elements: syntax, semantics, timing (slide 27)."
+  },
+  {
+   "id": "ch1-topology",
+   "chapterId": "fz-ch1",
+   "order": 2,
+   "title": "Physical Topologies: Mesh, Star, Bus, Ring and Hybrid",
+   "titleBn": "ফিজিক্যাল টপোলজি: মেশ, স্টার, বাস, রিং ও হাইব্রিড",
+   "estMinutes": 25,
+   "difficulty": "easy",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "Hybrid topology construction appeared in the supplied midterm (Q3a OR, 3 marks)",
+     "Mesh link formula is a quick numerical question"
+    ]
+   },
+   "topics": [
+    "mesh",
+    "star",
+    "bus",
+    "ring",
+    "hybrid",
+    "point-to-point",
+    "multipoint",
+    "n(n-1)/2",
+    "backbone",
+    "hub"
+   ],
+   "status": "complete",
+   "sourceFile": "Chapter-1-Introduction.pptx",
+   "slides": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "mcqCount": 10,
+   "writtenCount": 2,
+   "searchText": "Physical Topologies: Mesh, Star, Bus, Ring and Hybrid ফিজিক্যাল টপোলজি: মেশ, স্টার, বাস, রিং ও হাইব্রিড mesh star bus ring hybrid point-to-point multipoint n(n-1)/2 backbone hub Mesh links Links = n(n − 1) / 2 Ports per device (mesh) Ports = n − 1 point-to-point multipoint backbone hub duplex-mode links hybrid topology How many duplex-mode links are needed for a fully connected mesh of 6 devices? A connection in which a single transmission has multiple recipients is called: In a star topology, if the central hub fails: Which topology uses one long cable as a backbone with drop lines to devices? The hybrid topology shown in the slides (Figure 1.9) is: How many I/O ports does each device need in a fully connected mesh of 10 devices? In a ring topology each device is connected to: Which is the main advantage of a mesh topology? A lab has 20 PCs each cabled to one switch, and that switch connects to a campus backbone cable shared by other labs. The campus network is best described as: Adding one more device to a fully connected mesh of 4 devices increases the number of links from 6 to: A training institute is setting up a network where the main backbone uses a bus topology, connecting one star topology and two ring topologies. Construct the hybrid network diagram. How many duplex-mode links are needed to connect 8 devices in a fully connected mesh topology? Show the formula."
+  },
+  {
+   "id": "ch1-switching",
+   "chapterId": "fz-ch1",
+   "order": 3,
+   "title": "Switching: Circuit-Switched vs Packet-Switched Networks",
+   "titleBn": "সুইচিং: সার্কিট সুইচিং বনাম প্যাকেট সুইচিং",
+   "estMinutes": 20,
+   "difficulty": "easy",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "Appeared in the supplied Summer 2026 midterm (Q1d, 2 marks)",
+     "Scenario-based “identify and justify” style is common"
+    ]
+   },
+   "topics": [
+    "circuit switching",
+    "packet switching",
+    "dedicated circuit",
+    "store and forward",
+    "queue",
+    "router",
+    "switch"
+   ],
+   "status": "complete",
+   "sourceFile": "Chapter-1-Introduction.pptx",
+   "slides": [
+    20,
+    21,
+    22
+   ],
+   "mcqCount": 10,
+   "writtenCount": 2,
+   "searchText": "Switching: Circuit-Switched vs Packet-Switched Networks সুইচিং: সার্কিট সুইচিং বনাম প্যাকেট সুইচিং circuit switching packet switching dedicated circuit store and forward queue router switch switched network dedicated circuit active / inactive packets queue store and forward guaranteed bandwidth In a circuit-switched network, what can the switch do with the dedicated circuit? In a packet-switched network, the router stores packets in a: Which application most needs guaranteed bandwidth and constant delay? Why can circuit switching waste capacity? Data in a packet-switched network is sent as: A university wants many students to share one Internet link for browsing and downloads. The best choice is: Which statement about delay is correct? According to the slides, an internet is best described as: “Store and forward” refers to: A video call app on a shared Wi-Fi link sometimes freezes during heavy downloads. Which property of packet switching best explains this? A telecom company wants to design a network for real-time voice calls with guaranteed bandwidth. Identify the switching technique (Circuit or Packet) that should be used and apply its working principl Differentiate between circuit-switched and packet-switched networks. (Any three points)"
+  },
+  {
+   "id": "ch2-osi-tcpip",
+   "chapterId": "fz-ch2",
+   "order": 1,
+   "title": "Protocol Layering, the OSI Model and TCP/IP",
+   "titleBn": "প্রোটোকল লেয়ারিং, OSI মডেল ও TCP/IP",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "Protocol Layering, the OSI Model and TCP/IP"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter-2-Network_Models__5th_edition_.ppt",
+   "slides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Protocol Layering, the OSI Model and TCP/IP প্রোটোকল লেয়ারিং, OSI মডেল ও TCP/IP Two principles of protocol layering: each layer performs two opposite tasks; objects under each layer at both sites are identical (slide 4). ISO is the organization; OSI is the model (slide 6). Physical: bits hop to hop; data link: frames hop to hop; network: packets source host to destination host; transport: message process to process (slides 9–18). Session: dialog control and synchronization; presentation: translation, compression, encryption; application: services to the user (slides 19–22). Why OSI did not replace TCP/IP: late arrival, incompletely defined layers, insufficient performance (slide 30)."
+  },
+  {
+   "id": "ch2-addressing",
+   "chapterId": "fz-ch2",
+   "order": 2,
+   "title": "Addressing and the Hop-by-Hop Journey of a Message",
+   "titleBn": "অ্যাড্রেসিং ও হপ-বাই-হপ মেসেজের যাত্রা",
+   "estMinutes": 30,
+   "difficulty": "medium",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "Appeared in the supplied midterm (Q3c, 4 marks) using exactly the slide figure (A/10 … P/95)",
+     "Tests understanding of physical vs logical addresses"
+    ]
+   },
+   "topics": [
+    "physical address",
+    "logical address",
+    "IP address",
+    "port address",
+    "specific address",
+    "hop",
+    "router",
+    "frame",
+    "encapsulation",
+    "MAC"
+   ],
+   "status": "complete",
+   "sourceFile": "Chapter-2-Network_Models__5th_edition_.ppt",
+   "slides": [
+    11,
+    12,
+    13,
+    14,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+   ],
+   "mcqCount": 10,
+   "writtenCount": 1,
+   "searchText": "Addressing and the Hop-by-Hop Journey of a Message অ্যাড্রেসিং ও হপ-বাই-হপ মেসেজের যাত্রা physical address logical address IP address port address specific address hop router frame encapsulation MAC physical (link) address logical (IP) address port address hop-to-hop delivery decapsulation / encapsulation trailer (T2) Which address changes from hop to hop? How many levels of addresses are used in TCP/IP according to the slides? In the figure A/10 → P/95, what frame travels on LAN 2? The port address identifies: A physical address such as 07:01:02:01:2C:4B has how many bytes? What does a router do with an arriving frame before forwarding it? Which layer is responsible for source-to-destination delivery of packets? www.kbs.co.kr is an example of which address? On LAN 3 of the figure, the frame’s source physical address is: A student writes that the frame on LAN 2 is “T F | Data”. What is wrong? Consider the network topology in Figure 1 (Host A = A/10; Router 1: F/20 on LAN 1, T/99 on LAN 2; Router 2: N/33 on LAN 2, Z/66 on LAN 3; Host D = P/95). A message is sent from host A to host D throug"
+  },
+  {
+   "id": "ch3-signals-basics",
+   "chapterId": "fz-ch3",
+   "order": 1,
+   "title": "Analog and Digital Data and Signals; Periodic Signals",
+   "titleBn": "অ্যানালগ ও ডিজিটাল ডেটা ও সিগন্যাল",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "supporting",
+    "reasons": [
+     "Supporting concept for other topics"
+    ]
+   },
+   "topics": [
+    "Analog and Digital Data and Signals; Periodic Signals"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter-3-Data_and_Signals__2_.ppt",
+   "slides": [
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12,
+    21,
+    22,
+    23,
+    25
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Analog and Digital Data and Signals; Periodic Signals অ্যানালগ ও ডিজিটাল ডেটা ও সিগন্যাল Data can be analog (continuous) or digital (discrete); so can signals. We commonly use periodic analog signals and nonperiodic digital signals (slide 9). Sine wave properties: peak amplitude, frequency, phase. Phase describes the position of the waveform relative to time 0. Wavelength = propagation speed × period = propagation speed / frequency."
+  },
+  {
+   "id": "ch3-composite-bandwidth",
+   "chapterId": "fz-ch3",
+   "order": 2,
+   "title": "Composite Signals, Frequency Domain and Bandwidth",
+   "titleBn": "কম্পোজিট সিগন্যাল, ফ্রিকোয়েন্সি ডোমেইন ও ব্যান্ডউইডথ",
+   "estMinutes": 30,
+   "difficulty": "medium",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "Appeared in the supplied midterm (Q2a, 4 marks: bandwidth + two frequency-domain sketches)",
+     "Bandwidth = fh − fl is needed for Nyquist/Shannon problems"
+    ]
+   },
+   "topics": [
+    "composite signal",
+    "frequency domain",
+    "time domain",
+    "bandwidth",
+    "periodic",
+    "nonperiodic",
+    "spectrum",
+    "Fourier",
+    "fh fl",
+    "frequency",
+    "period",
+    "phase"
+   ],
+   "status": "complete",
+   "sourceFile": "Chapter-3-Data_and_Signals__2_.ppt",
+   "slides": [
+    11,
+    13,
+    19,
+    20,
+    26,
+    27,
+    28,
+    29,
+    30,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+   ],
+   "mcqCount": 10,
+   "writtenCount": 2,
+   "searchText": "Composite Signals, Frequency Domain and Bandwidth কম্পোজিট সিগন্যাল, ফ্রিকোয়েন্সি ডোমেইন ও ব্যান্ডউইডথ composite signal frequency domain time domain bandwidth periodic nonperiodic spectrum Fourier fh fl frequency period phase Frequency–period f = 1 / T,  T = 1 / f Bandwidth B = f_h − f_l Wavelength λ = propagation speed × period = c / f composite signal frequency domain discrete frequencies continuous frequencies bandwidth = fh − fl Fourier analysis A periodic composite signal contains components at 100, 300, 500, 700 and 900 Hz. Its bandwidth is: The frequency-domain plot of a nonperiodic composite signal is: The period of a signal is 100 ms. Its frequency is: A signal has a bandwidth of 20 Hz and its highest frequency is 60 Hz. The lowest frequency is: In a frequency-domain plot, the vertical axis shows: If a signal does not change at all, its frequency is: A sine wave is offset 1/6 cycle with respect to time 0. Its phase is: Why is a single-frequency sine wave not useful for data communication? A nonperiodic signal has B = 200 kHz centred at 140 kHz. Its frequency range is: Components at 0, 4, 8, 12, 16 Hz have amplitudes 3, 6, 20, 6, 5 V. The bandwidth is: A non-periodic composite signal is formed by combining five sinusoidal components with frequencies of 0 Hz, 4 Hz, 8 Hz, 12 Hz and 16 Hz. The two terminal frequency components have peak amplitudes of 3 Distinguish between the frequency-domain representations of periodic and nonperiodic composite signals."
+  },
+  {
+   "id": "ch3-digital-signals",
+   "chapterId": "fz-ch3",
+   "order": 3,
+   "title": "Digital Signals: Levels, Bit Rate and Transmission Time",
+   "titleBn": "ডিজিটাল সিগন্যাল: লেভেল, বিট রেট ও ট্রান্সমিশন সময়",
+   "estMinutes": 25,
+   "difficulty": "easy",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "Transmission-time calculation appeared in the supplied midterm (Q2b, 3 marks)",
+     "log₂L and bit rate are used in Nyquist and baud-rate problems"
+    ]
+   },
+   "topics": [
+    "bit rate",
+    "bit interval",
+    "bit length",
+    "signal levels",
+    "log2 L",
+    "transmission time",
+    "baseband",
+    "bandwidth",
+    "characters",
+    "bits per character"
+   ],
+   "status": "complete",
+   "sourceFile": "Chapter-3-Data_and_Signals__2_.ppt",
+   "slides": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    54,
+    55,
+    56,
+    57
+   ],
+   "mcqCount": 10,
+   "writtenCount": 2,
+   "searchText": "Digital Signals: Levels, Bit Rate and Transmission Time ডিজিটাল সিগন্যাল: লেভেল, বিট রেট ও ট্রান্সমিশন সময় bit rate bit interval bit length signal levels log2 L transmission time baseband bandwidth characters bits per character Bits per level n = log₂ L Bit interval bit interval = 1 / bit rate Transmission time time = total bits / bit rate Baseband minimum bandwidth B_min = N / 2 (first harmonic); 3N/2, 5N/2 for better shape bit rate (bps) bit interval log₂ L baseband low-pass channel bandpass channel A digital signal has 8 levels. How many bits does each level carry? At 1000 bps, how long does it take to send 150 bits? A file has 200,000 characters of 8 bits each. At 1000 bps the transmission time is: The bit interval for a 2 kbps signal is: Baseband transmission means: The minimum bandwidth of a low-pass channel to send 1 Mbps (first harmonic) is: A low-pass channel has bandwidth 100 kHz. Using the first harmonic, its maximum bit rate is: Digitized voice at 4 kHz, sampled at twice the highest frequency with 8 bits per sample, needs: Why is a 9-level digital signal unrealistic? If only a bandpass channel is available, a digital signal must be: A transmission device operates at a data rate of R = 1000 bps. Assuming each character is represented using 8 bits, solve the following:\n(i) Calculate the time required to transmit 150 bits of data.\n( We need to download text documents at 100 pages per minute. A page has 24 lines of 80 characters and each character needs 8 bits. What bit rate is required?"
+  },
+  {
+   "id": "ch3-data-rate-limits",
+   "chapterId": "fz-ch3",
+   "order": 4,
+   "title": "Data Rate Limits: Nyquist, Shannon and SNR",
+   "titleBn": "ডেটা রেটের সীমা: নাইকুইস্ট, শ্যানন ও SNR",
+   "estMinutes": 40,
+   "difficulty": "medium",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "Nyquist appeared in the supplied midterm (Q1b, 3 marks)",
+     "Shannon min-SNR and SNR_dB appeared in the supplied midterm (Q2c, 3 marks)",
+     "Both formulas are reused across chapters"
+    ]
+   },
+   "topics": [
+    "Nyquist",
+    "Shannon",
+    "channel capacity",
+    "SNR",
+    "decibel",
+    "dB",
+    "noiseless",
+    "noisy",
+    "signal levels",
+    "log2"
+   ],
+   "status": "complete",
+   "sourceFile": "Chapter-3-Data_and_Signals__2_.ppt",
+   "slides": [
+    63,
+    71,
+    72,
+    73,
+    74,
+    75,
+    77,
+    78,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92
+   ],
+   "mcqCount": 10,
+   "writtenCount": 3,
+   "searchText": "Data Rate Limits: Nyquist, Shannon and SNR ডেটা রেটের সীমা: নাইকুইস্ট, শ্যানন ও SNR Nyquist Shannon channel capacity SNR decibel dB noiseless noisy signal levels log2 Nyquist bit rate N_max = 2 × B × log₂ L Nyquist levels L = 2^(N / 2B) Shannon capacity C = B × log₂(1 + SNR) Minimum SNR SNR = 2^(C/B) − 1 SNR in decibels SNR_dB = 10 log₁₀ SNR ;  SNR = 10^(SNR_dB/10) Decibel change dB = 10 log₁₀(P₂ / P₁) noiseless channel — Nyquist noisy channel — Shannon signal levels (L) channel capacity (C) SNR SNR_dB = 10 log₁₀ SNR reliability A noiseless 3000-Hz channel sends 2 bits per level. Maximum bit rate? Shannon capacity of a channel with SNR ≈ 0 is: B = 4 kHz and the required rate is 100 kbps. The minimum SNR is: SNR = 10,000. SNR_dB is: Which statement best describes how the Shannon and Nyquist formulas are used together? Increasing the number of signal levels may: A telephone line has B = 3000 Hz and SNR = 3162. Its capacity is about: To send 265 kbps over a noiseless 20-kHz channel, how many levels are needed (rounded to a power of 2 so the rate is still met)? A signal loses half its power through a medium. The attenuation is about: A student writes C = 2 MHz × log₂(1 + 36) for SNR_dB = 36. The mistake is: Suppose a noiseless channel with a bandwidth of 3000 Hz is transmitting a signal. The signal sends 2 bits for each level. Calculate the maximum bit rate supported by the channel. A network engineer is designing a communication system that uses a channel with a bandwidth of 4 kHz. The system must support a data transmission rate of 100 kbps. Determine the minimum SNR required t We have a channel with a 1-MHz bandwidth and SNR = 63. What are the appropriate bit rate and number of signal levels?"
+  },
+  {
+   "id": "ch3-impairment",
+   "chapterId": "fz-ch3",
+   "order": 5,
+   "title": "Transmission Impairment: Attenuation, Distortion, Noise",
+   "titleBn": "ট্রান্সমিশন ইমপেয়ারমেন্ট",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "Transmission Impairment: Attenuation, Distortion, Noise"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter-3-Data_and_Signals__2_.ppt",
+   "slides": [
+    61,
+    62,
+    63,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    76
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Transmission Impairment: Attenuation, Distortion, Noise ট্রান্সমিশন ইমপেয়ারমেন্ট What is sent is not what is received: attenuation, distortion, noise (slide 61). dB = 10 log10(P2/P1); losses and gains in dB are additive (slides 63–66). dBm = 10 log10 Pm with Pm in milliwatts (slide 67). Distortion: components travel at different speeds, causing phase differences (slide 69). Noise types: thermal, induced, crosstalk, impulse (slide 70)."
+  },
+  {
+   "id": "ch3-performance",
+   "chapterId": "fz-ch3",
+   "order": 6,
+   "title": "Performance: Throughput, Latency, Bandwidth-Delay Product",
+   "titleBn": "পারফরম্যান্স: থ্রুপুট, লেটেন্সি",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "supporting",
+    "reasons": [
+     "Supporting concept for other topics"
+    ]
+   },
+   "topics": [
+    "Performance: Throughput, Latency, Bandwidth-Delay Product"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter-3-Data_and_Signals__2_.ppt",
+   "slides": [
+    92,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Performance: Throughput, Latency, Bandwidth-Delay Product পারফরম্যান্স: থ্রুপুট, লেটেন্সি Bandwidth has two meanings: in hertz (range of frequencies) and in bits per second (speed). Latency = propagation time + transmission time + queuing time + processing delay. The bandwidth-delay product defines the number of bits that can fill the link."
+  },
+  {
+   "id": "ch4-line-coding",
+   "chapterId": "fz-ch4",
+   "order": 1,
+   "title": "Line Coding: NRZ-L, NRZ-I, RZ, Manchester, AMI",
+   "titleBn": "লাইন কোডিং: NRZ-L, NRZ-I, RZ, ম্যানচেস্টার, AMI",
+   "estMinutes": 40,
+   "difficulty": "medium",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "Drawing NRZ-L, NRZ-I and RZ appeared in the supplied midterm (Q1b OR, 3 marks)",
+     "Foundation for B8ZS/HDB3 scrambling"
+    ]
+   },
+   "topics": [
+    "line coding",
+    "NRZ-L",
+    "NRZ-I",
+    "RZ",
+    "Manchester",
+    "differential Manchester",
+    "AMI",
+    "pseudoternary",
+    "unipolar",
+    "polar",
+    "bipolar",
+    "signal element",
+    "data element",
+    "self-synchronization",
+    "DC component",
+    "baud"
+   ],
+   "status": "complete",
+   "sourceFile": "Data_Com_Chapter-4__5th_Edition.pptx",
+   "slides": [
+    2,
+    4,
+    5,
+    6,
+    8,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    31
+   ],
+   "mcqCount": 10,
+   "writtenCount": 3,
+   "searchText": "Line Coding: NRZ-L, NRZ-I, RZ, Manchester, AMI লাইন কোডিং: NRZ-L, NRZ-I, RZ, ম্যানচেস্টার, AMI line coding NRZ-L NRZ-I RZ Manchester differential Manchester AMI pseudoternary unipolar polar bipolar signal element data element self-synchronization DC component baud Average signal (baud) rate S_ave = c × N × (1/r) Minimum bandwidth B_min = c × N × (1/r) signal element / data element NRZ-L: level NRZ-I: inversion mid-bit transition DC component self-synchronization bipolar (AMI) In NRZ-I, what represents a binary 1? Using the slide convention, NRZ-L for 0110 is: Which schemes use a mid-bit transition for synchronization? The average signal rate of NRZ-L for bit rate N is: In AMI, binary 0 is represented by: RZ for the bit 0 (slide figure) is: Which problem do both NRZ-L and NRZ-I have? NRZ-I starting from +V for bits 1 1 0 1 gives: A data element is: Main trade-off of Manchester compared with NRZ is: Consider the bit sequence 1 0 1 1 0 0 0 1. Draw the waveform using NRZ-L, NRZ-I and RZ encoding. Assume the signal starts at a positive level and there is no transition for an initial reference bit wh Draw the Manchester and differential Manchester waveforms for 0 1 0 0 1 1 (differential Manchester: assume the line was low before the first bit). Distinguish between NRZ-L and NRZ-I. Which problem do both of them share?"
+  },
+  {
+   "id": "ch4-scrambling",
+   "chapterId": "fz-ch4",
+   "order": 2,
+   "title": "Scrambling: B8ZS and HDB3",
+   "titleBn": "স্ক্র্যাম্বলিং: B8ZS ও HDB3",
+   "estMinutes": 30,
+   "difficulty": "hard",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "B8ZS on a 17-bit sequence appeared in the supplied midterm (Q3a, 3 marks)",
+     "Requires exact polarity tracking"
+    ]
+   },
+   "topics": [
+    "scrambling",
+    "B8ZS",
+    "HDB3",
+    "AMI",
+    "violation",
+    "bipolar",
+    "000VB0VB",
+    "000V",
+    "B00V",
+    "long sequence of zeros",
+    "synchronization"
+   ],
+   "status": "complete",
+   "sourceFile": "Data_Com_Chapter-4__5th_Edition.pptx",
+   "slides": [
+    25,
+    39,
+    40,
+    41
+   ],
+   "mcqCount": 10,
+   "writtenCount": 2,
+   "searchText": "Scrambling: B8ZS and HDB3 স্ক্র্যাম্বলিং: B8ZS ও HDB3 scrambling B8ZS HDB3 AMI violation bipolar 000VB0VB 000V B00V long sequence of zeros synchronization B8ZS pattern 00000000 → 000VB0VB HDB3 patterns 0000 → 000V (odd pulses since last substitution) | B00V (even) scrambling violation (V) bipolar (B) 000VB0VB 000V / B00V synchronization B8ZS replaces eight consecutive zeros with: In scrambling, V (violation) is a nonzero pulse that: If the previous pulse is positive, B8ZS encodes 00000000 as: HDB3 uses 000V when the number of nonzero pulses since the last substitution is: Why is scrambling used with AMI? How many consecutive zeros does HDB3 replace? The purpose of choosing between 000V and B00V in HDB3 is to: B8ZS of 1 0 0 0 0 1 with previous pulse positive is: For the midterm sequence 0000 1 00000000 1 000 (previous pulse positive), the pulse for the final 1 is: Where is B8ZS commonly used and where is HDB3 commonly used? A digital signal has the following binary sequence:\n0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0\nApply B8ZS scrambling to the above sequence, select the appropriate substitution pattern at each occurrence and sh Apply HDB3 to 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0. Assume the pulse before the sequence was negative and the count of pulses since the last substitution starts at zero."
+  },
+  {
+   "id": "ch4-block-pcm",
+   "chapterId": "fz-ch4",
+   "order": 3,
+   "title": "Multilevel Schemes, Block Coding, PCM and Delta Modulation",
+   "titleBn": "ব্লক কোডিং, PCM ও ডেল্টা মডুলেশন",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "Multilevel Schemes, Block Coding, PCM and Delta Modulation"
+   ],
+   "status": "outline",
+   "sourceFile": "Data_Com_Chapter-4__5th_Edition.pptx",
+   "slides": [
+    27,
+    28,
+    29,
+    30,
+    32,
+    42,
+    43,
+    45,
+    47,
+    49,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    62,
+    63
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Multilevel Schemes, Block Coding, PCM and Delta Modulation ব্লক কোডিং, PCM ও ডেল্টা মডুলেশন mBnL: m data elements encoded as n signal elements with 2^m ≤ L^n (slide 27). Block coding (mB/nB) replaces each m-bit group with an n-bit group (slide 32). PCM: sampling, quantization, encoding (slide 43). Nyquist theorem: sampling rate ≥ 2 × highest frequency (slide 47). Quantization SNR_dB = 6.02 nb + 1.76 (slide 58)."
+  },
+  {
+   "id": "ch4-transmission-modes",
+   "chapterId": "fz-ch4",
+   "order": 4,
+   "title": "Transmission Modes: Parallel and Serial",
+   "titleBn": "ট্রান্সমিশন মোড: প্যারালেল ও সিরিয়াল",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "supporting",
+    "reasons": [
+     "Supporting concept for other topics"
+    ]
+   },
+   "topics": [
+    "Transmission Modes: Parallel and Serial"
+   ],
+   "status": "outline",
+   "sourceFile": "Data_Com_Chapter-4__5th_Edition.pptx",
+   "slides": [
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Transmission Modes: Parallel and Serial ট্রান্সমিশন মোড: প্যারালেল ও সিরিয়াল Parallel: multiple bits per clock tick; serial: one bit per clock tick (slide 66). Asynchronous: 1 start bit (0), one or more stop bits (1s), possible gaps between bytes (slide 70). Asynchronous at the byte level, but bits are still synchronized (slide 71). Synchronous: bits sent one after another with no start/stop bits or gaps; receiver groups the bits (slide 73)."
+  },
+  {
+   "id": "ch5-bit-baud",
+   "chapterId": "fz-ch5",
+   "order": 1,
+   "title": "Bit Rate vs Baud Rate in Analog Transmission",
+   "titleBn": "অ্যানালগ ট্রান্সমিশনে বিট রেট বনাম বড রেট",
+   "estMinutes": 20,
+   "difficulty": "easy",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "Appeared in the supplied midterm (Q1c, 2 marks: formula + justify S ≤ N)",
+     "Needed for ASK/FSK/PSK bandwidth problems"
+    ]
+   },
+   "topics": [
+    "bit rate",
+    "baud rate",
+    "signal element",
+    "data element",
+    "r",
+    "L",
+    "log2 L",
+    "S = N/r",
+    "carrier",
+    "digital-to-analog"
+   ],
+   "status": "complete",
+   "sourceFile": "Chapter_5_5th_ed.pptx",
+   "slides": [
+    2,
+    3,
+    6,
+    7,
+    8
+   ],
+   "mcqCount": 10,
+   "writtenCount": 1,
+   "searchText": "Bit Rate vs Baud Rate in Analog Transmission অ্যানালগ ট্রান্সমিশনে বিট রেট বনাম বড রেট bit rate baud rate signal element data element r L log2 L S = N/r carrier digital-to-analog Baud rate S = N × (1 / r) Bits per element r = log₂ L bit rate (bps) baud rate (baud) S = N/r r = log₂L r ≥ 1 Baud rate is the number of: An analog signal carries 4 bits per signal element and 1000 elements per second. Bit rate? N = 8000 bps and S = 1000 baud. How many signal levels L? Why is S ≤ N in analog transmission of digital data? For binary ASK (r = 1) at 2400 bps, the baud rate is: Which formula relates r and L? A modem sends 9600 bps using 16 signal levels. Baud rate? The carrier signal in digital-to-analog conversion is: Increasing r while keeping N fixed will: A student claims S = N × r. For N = 4000 bps and r = 2, which result is correct? Briefly explain the relationship between bit rate N and baud rate S in analog transmission of digital data, using the appropriate formula, and justify why S is always less than or equal to N."
+  },
+  {
+   "id": "ch5-ask-fsk-psk",
+   "chapterId": "fz-ch5",
+   "order": 2,
+   "title": "Digital-to-Analog: ASK, FSK and PSK",
+   "titleBn": "ডিজিটাল থেকে অ্যানালগ: ASK, FSK ও PSK",
+   "estMinutes": 40,
+   "difficulty": "medium",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "ASK vs PSK comparison appeared in the supplied midterm (Q1a OR, 3 marks)",
+     "Drawing ASK, PSK and FSK for 1011 appeared in the supplied midterm (Q3b, 3 marks)"
+    ]
+   },
+   "topics": [
+    "ASK",
+    "FSK",
+    "PSK",
+    "BASK",
+    "OOK",
+    "BFSK",
+    "BPSK",
+    "QAM",
+    "carrier",
+    "bandwidth",
+    "noise",
+    "d factor",
+    "modulation"
+   ],
+   "status": "complete",
+   "sourceFile": "Chapter_5_5th_ed.pptx",
+   "slides": [
+    5,
+    9,
+    10,
+    11,
+    12,
+    13,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22,
+    24,
+    25,
+    26,
+    28
+   ],
+   "mcqCount": 10,
+   "writtenCount": 2,
+   "searchText": "Digital-to-Analog: ASK, FSK and PSK ডিজিটাল থেকে অ্যানালগ: ASK, FSK ও PSK ASK FSK PSK BASK OOK BFSK BPSK QAM carrier bandwidth noise d factor modulation ASK / PSK bandwidth B = (1 + d) × S BFSK bandwidth B = (1 + d) × S + 2Δf MFSK bandwidth B = L × S carrier (fc) on-off keying (OOK) fc ± Δf 0° / 180° robust to noise B = (1 + d)S QAM = ASK + PSK Binary ASK is also called: Which characteristic of the carrier does PSK change? Why is PSK more robust than ASK? In BPSK (slide implementation), bit 0 is represented by a phase starting at: The bandwidth of BFSK is: Available band 200–300 kHz, ASK with d = 1. Bit rate? With fc = 1 Hz and 1 s per bit, ASK for bit 0 (OOK) shows: QAM is a combination of: Sending 3 bits at a time at 3 Mbps with MFSK requires a bandwidth of: A received PSK waveform has random amplitude spikes from noise, but its phase transitions are clear. The data will most likely be: Compare ASK and PSK in terms of their sensitivity to noise and power efficiency. Additionally, highlight which technique offers greater robustness in a noisy channel. Illustrate the carrier waveforms for the bit sequence 1 0 1 1 using ASK, PSK and FSK modulation techniques. Assume a carrier frequency of fc = 1 Hz and a bit duration of 1 second per bit. Clearly show"
+  },
+  {
+   "id": "ch5-analog-to-analog",
+   "chapterId": "fz-ch5",
+   "order": 3,
+   "title": "Analog-to-Analog Conversion: AM, FM, PM",
+   "titleBn": "অ্যানালগ থেকে অ্যানালগ: AM, FM, PM",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "Analog-to-Analog Conversion: AM, FM, PM"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter_5_5th_ed.pptx",
+   "slides": [
+    29,
+    30,
+    31,
+    33,
+    35,
+    36,
+    37,
+    38
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Analog-to-Analog Conversion: AM, FM, PM অ্যানালগ থেকে অ্যানালগ: AM, FM, PM AM: only the amplitude of the carrier changes; bandwidth is twice the modulating signal’s bandwidth (slide 31). FM: carrier frequency follows the modulating voltage; amplitude and phase constant (slide 33). B_PM = 2(1 + β)B (slide 36). FM: Δf = kf·Am, independent of fm; PM: Δφ = kp·Am, equivalent Δf = kp·Am·fm (slides 37–38)."
+  },
+  {
+   "id": "ch6-fdm-wdm",
+   "chapterId": "fz-ch6",
+   "order": 1,
+   "title": "Multiplexing: FDM and WDM",
+   "titleBn": "মাল্টিপ্লেক্সিং: FDM ও WDM",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "Multiplexing: FDM and WDM"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter-6-multiplexing.pptx",
+   "slides": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    13,
+    15,
+    17,
+    20,
+    21,
+    22,
+    23
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Multiplexing: FDM and WDM মাল্টিপ্লেক্সিং: FDM ও WDM Multiplexing: simultaneous transmission of multiple signals across a single data link (slide 3). FDM is an analog technique, used when link bandwidth (Hz) exceeds the combined bandwidths of the signals (slide 7). Guard bands prevent overlapping; n channels need n − 1 guard bands (slides 9, 15). WDM is an analog multiplexing technique for optical signals, using prisms (slides 22–23)."
+  },
+  {
+   "id": "ch6-tdm",
+   "chapterId": "fz-ch6",
+   "order": 2,
+   "title": "Time-Division Multiplexing",
+   "titleBn": "টাইম-ডিভিশন মাল্টিপ্লেক্সিং",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "Time-Division Multiplexing"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter-6-multiplexing.pptx",
+   "slides": [
+    24,
+    25,
+    27,
+    28,
+    29,
+    30,
+    33,
+    35,
+    39,
+    41,
+    42,
+    46,
+    48,
+    50,
+    56
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Time-Division Multiplexing টাইম-ডিভিশন মাল্টিপ্লেক্সিং TDM is a digital technique combining several low-rate channels into one high-rate one (slide 25). In synchronous TDM the link rate is n times faster and the unit duration n times shorter (slide 27). Frame duration equals the duration of an input unit (slide 29). Data rate management: multilevel, multislot, pulse stuffing (slide 42). Framing (synchronization) bits are overhead (slide 46)."
+  },
+  {
+   "id": "ch6-spread-spectrum",
+   "chapterId": "fz-ch6",
+   "order": 3,
+   "title": "Spread Spectrum: FHSS and DSSS",
+   "titleBn": "স্প্রেড স্পেকট্রাম",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "supporting",
+    "reasons": [
+     "Supporting concept for other topics"
+    ]
+   },
+   "topics": [
+    "Spread Spectrum: FHSS and DSSS"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter-6-multiplexing.pptx",
+   "slides": [
+    59,
+    60,
+    61,
+    62,
+    66
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Spread Spectrum: FHSS and DSSS স্প্রেড স্পেকট্রাম Goals: prevent eavesdropping and jamming by adding redundancy (slide 59). A signal of bandwidth B is spread to Bss; signals use different codes (slide 60). FHSS hops between frequencies; DSSS replaces each bit with a chip code (slides 62–67)."
+  },
+  {
+   "id": "ch7-guided-media",
+   "chapterId": "fz-ch7",
+   "order": 1,
+   "title": "Guided Media: Twisted-Pair, Coaxial and Fiber-Optic Cable",
+   "titleBn": "গাইডেড মিডিয়া: টুইস্টেড-পেয়ার, কোঅ্যাক্সিয়াল ও ফাইবার-অপটিক কেবল",
+   "estMinutes": 35,
+   "difficulty": "easy",
+   "importance": {
+    "level": "very-important",
+    "reasons": [
+     "Labelling a fiber-optic cable and comparing it with twisted pair appeared in the supplied midterm (Q1a, 2+1 marks)"
+    ]
+   },
+   "topics": [
+    "guided media",
+    "twisted pair",
+    "UTP",
+    "STP",
+    "coaxial",
+    "BNC",
+    "fiber optic",
+    "core",
+    "cladding",
+    "buffer",
+    "Kevlar",
+    "jacket",
+    "total internal reflection",
+    "multimode",
+    "single mode",
+    "RJ-45"
+   ],
+   "status": "complete",
+   "sourceFile": "Chapter-7-Transmission_Media.pptx",
+   "slides": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+   ],
+   "mcqCount": 10,
+   "writtenCount": 1,
+   "searchText": "Guided Media: Twisted-Pair, Coaxial and Fiber-Optic Cable গাইডেড মিডিয়া: টুইস্টেড-পেয়ার, কোঅ্যাক্সিয়াল ও ফাইবার-অপটিক কেবল guided media twisted pair UTP STP coaxial BNC fiber optic core cladding buffer Kevlar jacket total internal reflection multimode single mode RJ-45 guided / unguided twisting reduces noise & crosstalk UTP / STP core / cladding total internal reflection EMI immunity attenuation The working principle of optical fiber is: The cladding of an optical fiber has: Which is NOT a guided medium? Wires in twisted-pair cable are twisted mainly to: In Figure 7.14, the layer that provides strength is: Main difference between UTP and STP: A link must pass next to heavy machinery producing strong electromagnetic interference. The best medium is: The BNC connector is used with: Which is a disadvantage of fiber-optic cable? In a coaxial cable, the outer metallic conductor also acts as: Label the basic parts of a fiber optic cable with a proper diagram. Compare the significance of the optical fiber cable over the twisted-pair cable."
+  },
+  {
+   "id": "ch7-unguided-media",
+   "chapterId": "fz-ch7",
+   "order": 2,
+   "title": "Unguided Media: Radio Waves, Microwaves, Infrared",
+   "titleBn": "আনগাইডেড মিডিয়া",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "Unguided Media: Radio Waves, Microwaves, Infrared"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter-7-Transmission_Media.pptx",
+   "slides": [
+    26,
+    27,
+    28,
+    31,
+    33,
+    35,
+    36
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Unguided Media: Radio Waves, Microwaves, Infrared আনগাইডেড মিডিয়া Unguided media transport electromagnetic waves without a physical conductor (slide 26). Radio waves: multicast (radio, TV, paging), penetrate walls, omnidirectional antennas (slide 31). Microwaves: unicast (cellular, satellite, WLAN), line-of-sight, directional antennas (slide 33). Infrared: short range in a closed area, line of sight (slide 35)."
+  },
+  {
+   "id": "kr7-wireless-links",
+   "chapterId": "kr-ch7",
+   "order": 1,
+   "title": "Wireless Networks: Elements and Link Characteristics",
+   "titleBn": "ওয়্যারলেস লিংকের বৈশিষ্ট্য",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "Wireless Networks: Elements and Link Characteristics"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter_7_Kurose_Ross_v8_2.pptx",
+   "slides": [
+    3,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Wireless Networks: Elements and Link Characteristics ওয়্যারলেস লিংকের বৈশিষ্ট্য Elements: wireless hosts, base stations, wireless links; infrastructure vs ad hoc mode. Fading: free-space path loss ~ (fd)². Multipath propagation, interference/noise and the hidden-terminal problem."
+  },
+  {
+   "id": "kr7-cdma",
+   "chapterId": "kr-ch7",
+   "order": 2,
+   "title": "Code Division Multiple Access (CDMA)",
+   "titleBn": "CDMA",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "Code Division Multiple Access (CDMA)"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter_7_Kurose_Ross_v8_2.pptx",
+   "slides": [
+    18,
+    19,
+    20
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Code Division Multiple Access (CDMA) CDMA Each user has a unique chipping sequence (code); all share the same frequency. Encoder output Z(i,m) = d(i)·c(m); decoder correlates received chips with the code. Multiple senders’ signals add in the channel; the right code recovers each one."
+  },
+  {
+   "id": "kr7-80211",
+   "chapterId": "kr-ch7",
+   "order": 3,
+   "title": "IEEE 802.11 Wireless LAN",
+   "titleBn": "IEEE 802.11 ওয়্যারলেস LAN",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "important",
+    "reasons": [
+     "Slide emphasis"
+    ]
+   },
+   "topics": [
+    "IEEE 802.11 Wireless LAN"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter_7_Kurose_Ross_v8_2.pptx",
+   "slides": [
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "IEEE 802.11 Wireless LAN IEEE 802.11 ওয়্যারলেস LAN Architecture: BSS, AP, ad hoc; channels in 2.4 GHz may overlap. Association with passive (beacon) or active (probe) scanning. MAC: CSMA/CA — no collision detection; DIFS, backoff, ACK after SIFS. RTS/CTS reservation; four address fields in the 802.11 frame."
+  },
+  {
+   "id": "kr7-cellular-mobility",
+   "chapterId": "kr-ch7",
+   "order": 4,
+   "title": "Cellular (4G/5G) Networks and Mobility",
+   "titleBn": "সেলুলার নেটওয়ার্ক ও মোবিলিটি",
+   "estMinutes": 15,
+   "difficulty": "medium",
+   "importance": {
+    "level": "supporting",
+    "reasons": [
+     "Supporting concept for other topics"
+    ]
+   },
+   "topics": [
+    "Cellular (4G/5G) Networks and Mobility"
+   ],
+   "status": "outline",
+   "sourceFile": "Chapter_7_Kurose_Ross_v8_2.pptx",
+   "slides": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91
+   ],
+   "mcqCount": 0,
+   "writtenCount": 0,
+   "searchText": "Cellular (4G/5G) Networks and Mobility সেলুলার নেটওয়ার্ক ও মোবিলিটি 4G LTE architecture: base stations, packet core; data/control plane separation. Mobility approaches: home vs visited network, indirect and direct routing. Handover between base stations; Mobile IP."
+  }
+ ],
+ "contentStatus": {
+  "complete": 11,
+  "outline": 16
+ }
+}

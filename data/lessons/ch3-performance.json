@@ -1,0 +1,40 @@
+{
+ "id": "ch3-performance",
+ "chapterId": "fz-ch3",
+ "order": 6,
+ "title": "Performance: Throughput, Latency, Bandwidth-Delay Product",
+ "titleBn": "পারফরম্যান্স: থ্রুপুট, লেটেন্সি",
+ "source": {
+  "file": "Chapter-3-Data_and_Signals__2_.ppt",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 3",
+  "slides": [
+   92,
+   95,
+   96,
+   97,
+   98,
+   99,
+   100,
+   101,
+   102
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "supporting",
+  "reasons": [
+   "Supporting concept for other topics"
+  ]
+ },
+ "topics": [
+  "Performance: Throughput, Latency, Bandwidth-Delay Product"
+ ],
+ "keyPoints": [
+  "Bandwidth has two meanings: in hertz (range of frequencies) and in bits per second (speed).",
+  "Latency = propagation time + transmission time + queuing time + processing delay.",
+  "The bandwidth-delay product defines the number of bits that can fill the link."
+ ]
+}

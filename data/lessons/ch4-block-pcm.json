@@ -1,0 +1,52 @@
+{
+ "id": "ch4-block-pcm",
+ "chapterId": "fz-ch4",
+ "order": 3,
+ "title": "Multilevel Schemes, Block Coding, PCM and Delta Modulation",
+ "titleBn": "ব্লক কোডিং, PCM ও ডেল্টা মডুলেশন",
+ "source": {
+  "file": "Data_Com_Chapter-4__5th_Edition.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 4",
+  "slides": [
+   27,
+   28,
+   29,
+   30,
+   32,
+   42,
+   43,
+   45,
+   47,
+   49,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   62,
+   63
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "important",
+  "reasons": [
+   "Slide emphasis"
+  ]
+ },
+ "topics": [
+  "Multilevel Schemes, Block Coding, PCM and Delta Modulation"
+ ],
+ "keyPoints": [
+  "mBnL: m data elements encoded as n signal elements with 2^m ≤ L^n (slide 27).",
+  "Block coding (mB/nB) replaces each m-bit group with an n-bit group (slide 32).",
+  "PCM: sampling, quantization, encoding (slide 43).",
+  "Nyquist theorem: sampling rate ≥ 2 × highest frequency (slide 47).",
+  "Quantization SNR_dB = 6.02 nb + 1.76 (slide 58)."
+ ]
+}

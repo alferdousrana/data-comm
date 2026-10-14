@@ -1,0 +1,277 @@
+{
+ "lessonId": "ch3-digital-signals",
+ "mcqs": [
+  {
+   "id": "ds1",
+   "q": "A digital signal has 8 levels. How many bits does each level carry?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "8"
+   ],
+   "answer": 1,
+   "explainBn": "log₂8 = 3।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "formula",
+   "source": "Ch3 slide 43"
+  },
+  {
+   "id": "ds2",
+   "q": "At 1000 bps, how long does it take to send 150 bits?",
+   "options": [
+    "1.5 s",
+    "0.15 s",
+    "150 s",
+    "0.015 s"
+   ],
+   "answer": 1,
+   "explainBn": "150/1000 = 0.15 s।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "numerical",
+   "source": ""
+  },
+  {
+   "id": "ds3",
+   "q": "A file has 200,000 characters of 8 bits each. At 1000 bps the transmission time is:",
+   "options": [
+    "200 s",
+    "1600 s",
+    "25 s",
+    "160 s"
+   ],
+   "answer": 1,
+   "explainBn": "200,000 × 8 / 1000 = 1600 s।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": ""
+  },
+  {
+   "id": "ds4",
+   "q": "The bit interval for a 2 kbps signal is:",
+   "options": [
+    "2 ms",
+    "0.5 ms",
+    "500 ms",
+    "0.2 ms"
+   ],
+   "answer": 1,
+   "explainBn": "1/2000 s = 0.5 ms।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": "Ch3 slide 42"
+  },
+  {
+   "id": "ds5",
+   "q": "Baseband transmission means:",
+   "options": [
+    "Converting the digital signal to analog before sending",
+    "Sending a digital signal over a channel without changing it to analog",
+    "Sending only voice",
+    "Using only wireless media"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৪৯।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch3 slide 49"
+  },
+  {
+   "id": "ds6",
+   "q": "The minimum bandwidth of a low-pass channel to send 1 Mbps (first harmonic) is:",
+   "options": [
+    "1 MHz",
+    "500 kHz",
+    "2 MHz",
+    "250 kHz"
+   ],
+   "answer": 1,
+   "explainBn": "B = N/2 = 500 kHz।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": "Ch3 slide 56"
+  },
+  {
+   "id": "ds7",
+   "q": "A low-pass channel has bandwidth 100 kHz. Using the first harmonic, its maximum bit rate is:",
+   "options": [
+    "50 kbps",
+    "100 kbps",
+    "200 kbps",
+    "400 kbps"
+   ],
+   "answer": 2,
+   "explainBn": "N = 2B = 200 kbps।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": "Ch3 slide 57"
+  },
+  {
+   "id": "ds8",
+   "q": "Digitized voice at 4 kHz, sampled at twice the highest frequency with 8 bits per sample, needs:",
+   "options": [
+    "32 kbps",
+    "64 kbps",
+    "8 kbps",
+    "128 kbps"
+   ],
+   "answer": 1,
+   "explainBn": "2 × 4000 × 8 = 64 kbps।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": "Ch3 slide 46"
+  },
+  {
+   "id": "ds9",
+   "q": "Why is a 9-level digital signal unrealistic?",
+   "options": [
+    "log₂9 is not an integer (≈ 3.17 bits)",
+    "9 is too large",
+    "It has no DC component",
+    "It needs a bandpass channel"
+   ],
+   "answer": 0,
+   "explainBn": "প্রতি লেভেলে পূর্ণসংখ্যক বিট হয় না।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": "Ch3 slide 44"
+  },
+  {
+   "id": "ds10",
+   "q": "If only a bandpass channel is available, a digital signal must be:",
+   "options": [
+    "Sent unchanged",
+    "Converted to an analog signal (modulated)",
+    "Compressed to one bit",
+    "Sent at zero frequency"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৫৮।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "conceptual",
+   "source": "Ch3 slide 58"
+  }
+ ],
+ "written": [
+  {
+   "id": "ds-w1",
+   "marks": 3,
+   "marksSplit": "1+1+1",
+   "question": "A transmission device operates at a data rate of R = 1000 bps. Assuming each character is represented using 8 bits, solve the following:\n(i) Calculate the time required to transmit 150 bits of data.\n(ii) Find the time required to transmit a single character.\n(iii) A file contains 200,000 characters. Calculate the total time required to transmit the entire file.",
+   "type": "numerical",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "t1",
+      "type": "numeric",
+      "label": "(i) 0.15 s",
+      "marks": 1,
+      "expected": 0.15,
+      "dim": "time",
+      "display": "0.15 s",
+      "relTol": 0.01,
+      "bn": "",
+      "unitMarks": 0.25
+     },
+     {
+      "id": "t2",
+      "type": "numeric",
+      "label": "(ii) 0.008 s",
+      "marks": 1,
+      "expected": 0.008,
+      "dim": "time",
+      "display": "0.008 s (8 ms)",
+      "relTol": 0.01,
+      "bn": "",
+      "unitMarks": 0.25
+     },
+     {
+      "id": "t3",
+      "type": "numeric",
+      "label": "(iii) 1600 s",
+      "marks": 1,
+      "expected": 1600,
+      "dim": "time",
+      "display": "1600 s",
+      "relTol": 0.01,
+      "bn": "",
+      "unitMarks": 0.25
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "(i) 150/1000 = 0.15 s. (ii) 8/1000 = 0.008 s. (iii) 200,000 × 8 = 1,600,000 bits; 1,600,000/1000 = 1600 s."
+   },
+   "hintBn": "",
+   "tags": [
+    "transmission-time"
+   ],
+   "source": "Summer 2026 midterm Q2(b)"
+  },
+  {
+   "id": "ds-w2",
+   "marks": 2,
+   "marksSplit": "2",
+   "question": "We need to download text documents at 100 pages per minute. A page has 24 lines of 80 characters and each character needs 8 bits. What bit rate is required?",
+   "type": "numerical",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 2,
+    "criteria": [
+     {
+      "id": "m",
+      "type": "concepts",
+      "label": "Correct method (bits per minute → per second)",
+      "marks": 0.5,
+      "need": 1,
+      "concepts": [
+       {
+        "name": "divide by 60",
+        "any": [
+         "60",
+         "per second",
+         "per minute"
+        ],
+        "bn": ""
+       }
+      ]
+     },
+     {
+      "id": "r",
+      "type": "numeric",
+      "label": "Bit rate ≈ 25,600 bps",
+      "marks": 1.5,
+      "expected": 25600,
+      "dim": "rate",
+      "display": "25.6 kbps",
+      "relTol": 0.01,
+      "bn": ""
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "Bits per minute = 100 × 24 × 80 × 8 = 1,536,000; bit rate = 1,536,000/60 = 25,600 bps ≈ 25.6 kbps.",
+    "minWords": 0
+   },
+   "hintBn": "",
+   "tags": [
+    "bit-rate"
+   ],
+   "source": "Ch3 slide 45 (Example 3.18)"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "version": 1,
+ "note": "Default scope from your instructions (midterm = up to Chapter 5). Edit in Settings → Syllabus. Flags show where the supplied material disagrees or is incomplete.",
+ "assignments": {
+  "fz-ch1": {
+   "scope": "midterm"
+  },
+  "fz-ch2": {
+   "scope": "midterm"
+  },
+  "fz-ch3": {
+   "scope": "midterm"
+  },
+  "fz-ch4": {
+   "scope": "midterm"
+  },
+  "fz-ch5": {
+   "scope": "midterm"
+  },
+  "fz-ch6": {
+   "scope": "final"
+  },
+  "fz-ch7": {
+   "scope": "final",
+   "flag": "Fiber-optic cable (this chapter) appeared in the Summer 2026 midterm Q1(a). Confirm whether it is also in the final."
+  },
+  "kr-ch6": {
+   "scope": "final",
+   "flag": "Source missing: the uploaded “Chapter 6 Kurose Ross” file actually contains Chapter 7 (Wireless). Upload the Link Layer deck to add lessons."
+  },
+  "kr-ch7": {
+   "scope": "final",
+   "flag": "Assumed final material; no official final syllabus was supplied."
+  }
+ }
+}

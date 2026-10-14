@@ -1,0 +1,43 @@
+{
+ "id": "kr7-wireless-links",
+ "chapterId": "kr-ch7",
+ "order": 1,
+ "title": "Wireless Networks: Elements and Link Characteristics",
+ "titleBn": "ওয়্যারলেস লিংকের বৈশিষ্ট্য",
+ "source": {
+  "file": "Chapter_7_Kurose_Ross_v8_2.pptx",
+  "book": "Kurose & Ross, Computer Networking: A Top-Down Approach 8e",
+  "bookChapter": "Kurose & Ross Ch 7",
+  "slides": [
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "important",
+  "reasons": [
+   "Slide emphasis"
+  ]
+ },
+ "topics": [
+  "Wireless Networks: Elements and Link Characteristics"
+ ],
+ "keyPoints": [
+  "Elements: wireless hosts, base stations, wireless links; infrastructure vs ad hoc mode.",
+  "Fading: free-space path loss ~ (fd)².",
+  "Multipath propagation, interference/noise and the hidden-terminal problem."
+ ]
+}

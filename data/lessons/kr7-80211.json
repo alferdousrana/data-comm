@@ -1,0 +1,44 @@
+{
+ "id": "kr7-80211",
+ "chapterId": "kr-ch7",
+ "order": 3,
+ "title": "IEEE 802.11 Wireless LAN",
+ "titleBn": "IEEE 802.11 ওয়্যারলেস LAN",
+ "source": {
+  "file": "Chapter_7_Kurose_Ross_v8_2.pptx",
+  "book": "Kurose & Ross, Computer Networking: A Top-Down Approach 8e",
+  "bookChapter": "Kurose & Ross Ch 7",
+  "slides": [
+   22,
+   23,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "important",
+  "reasons": [
+   "Slide emphasis"
+  ]
+ },
+ "topics": [
+  "IEEE 802.11 Wireless LAN"
+ ],
+ "keyPoints": [
+  "Architecture: BSS, AP, ad hoc; channels in 2.4 GHz may overlap.",
+  "Association with passive (beacon) or active (probe) scanning.",
+  "MAC: CSMA/CA — no collision detection; DIFS, backoff, ACK after SIFS.",
+  "RTS/CTS reservation; four address fields in the 802.11 frame."
+ ]
+}

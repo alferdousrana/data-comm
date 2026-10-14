@@ -1,0 +1,63 @@
+{
+ "id": "ch2-osi-tcpip",
+ "chapterId": "fz-ch2",
+ "order": 1,
+ "title": "Protocol Layering, the OSI Model and TCP/IP",
+ "titleBn": "প্রোটোকল লেয়ারিং, OSI মডেল ও TCP/IP",
+ "source": {
+  "file": "Chapter-2-Network_Models__5th_edition_.ppt",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 2",
+  "slides": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "important",
+  "reasons": [
+   "Slide emphasis"
+  ]
+ },
+ "topics": [
+  "Protocol Layering, the OSI Model and TCP/IP"
+ ],
+ "keyPoints": [
+  "Two principles of protocol layering: each layer performs two opposite tasks; objects under each layer at both sites are identical (slide 4).",
+  "ISO is the organization; OSI is the model (slide 6).",
+  "Physical: bits hop to hop; data link: frames hop to hop; network: packets source host to destination host; transport: message process to process (slides 9–18).",
+  "Session: dialog control and synchronization; presentation: translation, compression, encryption; application: services to the user (slides 19–22).",
+  "Why OSI did not replace TCP/IP: late arrival, incompletely defined layers, insufficient performance (slide 30)."
+ ]
+}

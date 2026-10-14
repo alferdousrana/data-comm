@@ -1,0 +1,181 @@
+{
+ "id": "ch1-switching",
+ "chapterId": "fz-ch1",
+ "order": 3,
+ "title": "Switching: Circuit-Switched vs Packet-Switched Networks",
+ "titleBn": "সুইচিং: সার্কিট সুইচিং বনাম প্যাকেট সুইচিং",
+ "source": {
+  "file": "Chapter-1-Introduction.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 1 — Introduction",
+  "slides": [
+   20,
+   21,
+   22
+  ]
+ },
+ "estMinutes": 20,
+ "difficulty": "easy",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "Appeared in the supplied Summer 2026 midterm (Q1d, 2 marks)",
+   "Scenario-based “identify and justify” style is common"
+  ]
+ },
+ "topics": [
+  "circuit switching",
+  "packet switching",
+  "dedicated circuit",
+  "store and forward",
+  "queue",
+  "router",
+  "switch"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "Every network must decide how data moves through switches. The exam asks you to pick circuit or packet switching for a scenario and justify it with the working principle.",
+  "objectives": [
+   "Define a switched network, circuit switching and packet switching using slide wording",
+   "Explain how each one works",
+   "Choose the right technique for a scenario (e.g. real-time voice, file download) and justify it"
+  ],
+  "prerequisites": [
+   "What a network, link and node are (Chapter 1.2)"
+  ]
+ },
+ "explain": [
+  {
+   "h": "সুইচ কী করে?",
+   "bn": "ইন্টারনেট একটি **সুইচড নেটওয়ার্ক (switched network)**। এখানে একটি **সুইচ (switch)** অন্তত দুটি লিংককে যুক্ত করে, আর দরকার হলে এক নেটওয়ার্ক থেকে আরেক নেটওয়ার্কে ডেটা ফরোয়ার্ড করে। ডেটা কীভাবে সুইচের মধ্য দিয়ে যাবে — সেটার দুটি প্রধান পদ্ধতি: সার্কিট সুইচিং ও প্যাকেট সুইচিং।"
+  },
+  {
+   "h": "সার্কিট সুইচিং (Circuit Switching)",
+   "bn": "দুই প্রান্তের (end systems) মাঝে একটি **নির্দিষ্ট সংযোগ — সার্কিট (dedicated circuit)** সবসময় থাকে; সুইচ শুধু সেটাকে **active বা inactive** করে। কল শুরুর আগে পথটি ঠিক হয়ে যায়, আর পুরো সময় ধরে ওই পথের ক্যাপাসিটি (bandwidth) শুধু ওই দুজনের জন্য সংরক্ষিত থাকে। ফলে ডেলে স্থির থাকে — রিয়েল-টাইম ভয়েস কলের জন্য এটা আদর্শ। অসুবিধা: কেউ চুপ থাকলেও সার্কিট দখলে থাকে, তাই bandwidth অপচয় হতে পারে।"
+  },
+  {
+   "h": "প্যাকেট সুইচিং (Packet Switching)",
+   "bn": "এখানে ডেটা ছোট ছোট ব্লকে ভাগ হয় — এদের বলে **প্যাকেট (packets)**। নেটওয়ার্কের **রাউটারে একটি queue** থাকে; রাউটার প্যাকেট জমা রেখে পরে ফরোয়ার্ড করে (**store and forward**)। কোনো লিংক কারও জন্য সংরক্ষিত নয় — দরকার অনুযায়ী সবাই শেয়ার করে, তাই লিংক দক্ষভাবে ব্যবহার হয়। কিন্তু queue-তে অপেক্ষার কারণে ডেলে পরিবর্তনশীল হতে পারে।"
+  },
+  {
+   "h": "কোনটা কখন?",
+   "bn": "**গ্যারান্টিড bandwidth ও স্থির ডেলে** দরকার (যেমন রিয়েল-টাইম ভয়েস কল) → সার্কিট সুইচিং। **বার্স্টি ডেটা, অনেক ইউজার একসাথে লিংক শেয়ার** (যেমন ওয়েব ব্রাউজিং, ফাইল ডাউনলোড, ইমেইল) → প্যাকেট সুইচিং।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "An internet is a switched network in which a switch connects at least two links together. A switch needs to forward data from a network to another network when required.",
+   "slide": 20
+  },
+  {
+   "text": "In a circuit-switched network, a dedicated connection, called a circuit, is always available between the two end systems; the switch can only make it active or inactive.",
+   "slide": 21
+  },
+  {
+   "text": "In a computer network, the communication between the two ends is done in blocks of data called packets. A router in a packet-switched network has a queue that can store and forward the packet.",
+   "slide": 22
+  }
+ ],
+ "realLife": {
+  "title": "Landline phone call vs. downloading a PDF",
+  "bn": "পুরোনো ল্যান্ডফোনে কল করলে কল চলাকালীন তোমার আর বন্ধুর মাঝে একটি পথ শুধু তোমাদের জন্য ধরে রাখা হয় — এটাই সার্কিট সুইচিংয়ের ধারণা। আর মোবাইল ডেটায় PDF ডাউনলোড করলে ফাইলটি অনেক প্যাকেটে ভাগ হয়ে, অন্যদের প্যাকেটের সাথে একই লিংক শেয়ার করে আসে।",
+  "link": "The phone call needs a constant, reserved path (circuit). The download tolerates queuing delay and benefits from sharing (packets).",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "diagram",
+   "id": "switching-compare",
+   "caption": "Circuit switching reserves one path end-to-end; packet switching sends packets through routers with queues.",
+   "alt": "Two panels. Left: two telephones joined by a highlighted dedicated path through switches. Right: two computers with packets queued in routers."
+  }
+ ],
+ "formulas": [],
+ "solved": [
+  {
+   "title": "Scenario: video-surveillance uploads vs. a hotline",
+   "given": [
+    "A bank needs (a) a 24×7 voice hotline between two branches with constant delay, and (b) occasional upload of camera clips."
+   ],
+   "required": "Choose the switching technique for each.",
+   "rule": "Guaranteed bandwidth/constant delay → circuit; bursty sharing → packet.",
+   "substitution": [],
+   "calc": [
+    "(a) Voice hotline: needs a reserved path with fixed delay → circuit switching.",
+    "(b) Occasional clips: bursty, delay-tolerant → packet switching (link shared on demand)."
+   ],
+   "answer": "(a) Circuit switching; (b) Packet switching.",
+   "bn": "প্রশ্নে “real-time”, “guaranteed bandwidth”, “constant delay” দেখলে সার্কিট; “bursty”, “many users share”, “efficient use of link” দেখলে প্যাকেট।"
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 2,
+   "question": "A telecom company wants to design a network for real-time voice calls with guaranteed bandwidth. Identify the switching technique (circuit or packet) and justify your choice using its working principle.",
+   "answer": "Circuit switching should be used.\nIn a circuit-switched network, a dedicated connection (circuit) is set up between the two end systems before the call begins, and the switches keep this circuit reserved for the whole call. Because the bandwidth of the circuit is reserved and there is no queuing at intermediate switches, the delay remains small and constant. This guaranteed bandwidth and constant delay are exactly what real-time voice requires."
+  },
+  {
+   "marks": 3,
+   "question": "Differentiate between circuit switching and packet switching.",
+   "answer": "| Basis | Circuit switching | Packet switching |\n|---|---|---|\n| Connection | Dedicated circuit between end systems | No dedicated path; data sent as packets |\n| Resource use | Bandwidth reserved for the whole session | Link shared on demand |\n| Switch/Router role | Switch makes circuit active/inactive | Router queues, stores and forwards packets |\n| Delay | Constant, no queuing | Variable (queuing delay) |\n| Best for | Real-time voice | Bursty data (web, e-mail, files) |"
+  }
+ ],
+ "keywords": [
+  {
+   "term": "switched network",
+   "bn": "যেখানে সুইচ লিংকগুলো যুক্ত করে ডেটা ফরোয়ার্ড করে"
+  },
+  {
+   "term": "dedicated circuit",
+   "bn": "শুধু দুই প্রান্তের জন্য সংরক্ষিত পথ"
+  },
+  {
+   "term": "active / inactive",
+   "bn": "সুইচ সার্কিট চালু বা বন্ধ করে"
+  },
+  {
+   "term": "packets",
+   "bn": "ডেটার ছোট ব্লক"
+  },
+  {
+   "term": "queue",
+   "bn": "রাউটারে প্যাকেট অপেক্ষার সারি"
+  },
+  {
+   "term": "store and forward",
+   "bn": "জমা রেখে তারপর পাঠানো"
+  },
+  {
+   "term": "guaranteed bandwidth",
+   "bn": "নিশ্চিত ক্যাপাসিটি"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Writing only “circuit switching because it is fast”.",
+   "fix": "Justify with the working principle: dedicated circuit, reserved bandwidth, constant delay."
+  },
+  {
+   "m": "Saying packet switching “reserves bandwidth”.",
+   "fix": "Packet switching shares links on demand; reservation is the circuit-switching idea."
+  },
+  {
+   "m": "Confusing the switch (circuit) with the router queue (packet).",
+   "fix": "Slides: switch makes circuit active/inactive; router has a queue to store and forward."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "A switch connects at least two links and forwards data.",
+   "Circuit switching: dedicated circuit, switch makes it active/inactive.",
+   "Packet switching: blocks of data called packets.",
+   "Routers queue, store and forward packets.",
+   "Real-time voice with guaranteed bandwidth → circuit switching."
+  ],
+  "card": "Circuit = reserved road for one car. Packet = shared highway with traffic lights (queues).",
+  "recall": {
+   "q": "Which device in a packet-switched network has a queue?",
+   "a": "The router — it stores and forwards packets."
+  }
+ }
+}

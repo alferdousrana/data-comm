@@ -1,0 +1,308 @@
+{
+ "id": "ch5-ask-fsk-psk",
+ "chapterId": "fz-ch5",
+ "order": 2,
+ "title": "Digital-to-Analog: ASK, FSK and PSK",
+ "titleBn": "ডিজিটাল থেকে অ্যানালগ: ASK, FSK ও PSK",
+ "source": {
+  "file": "Chapter_5_5th_ed.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 5 — Analog Transmission",
+  "slides": [
+   5,
+   9,
+   10,
+   11,
+   12,
+   13,
+   16,
+   17,
+   18,
+   19,
+   20,
+   22,
+   24,
+   25,
+   26,
+   28
+  ]
+ },
+ "estMinutes": 40,
+ "difficulty": "medium",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "ASK vs PSK comparison appeared in the supplied midterm (Q1a OR, 3 marks)",
+   "Drawing ASK, PSK and FSK for 1011 appeared in the supplied midterm (Q3b, 3 marks)"
+  ]
+ },
+ "topics": [
+  "ASK",
+  "FSK",
+  "PSK",
+  "BASK",
+  "OOK",
+  "BFSK",
+  "BPSK",
+  "QAM",
+  "carrier",
+  "bandwidth",
+  "noise",
+  "d factor",
+  "modulation"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "You must draw ASK, FSK and PSK carriers for a bit pattern and compare them, especially on noise robustness.",
+  "objectives": [
+   "Explain how ASK, FSK and PSK change the carrier",
+   "Draw the three waveforms for a bit sequence",
+   "Use the bandwidth formulas B = (1 + d)S and B = (1 + d)S + 2Δf",
+   "Compare ASK and PSK for noise sensitivity (and power efficiency — supplementary)"
+  ],
+  "prerequisites": [
+   "Bit rate vs baud rate",
+   "Sine wave amplitude/frequency/phase"
+  ]
+ },
+ "explain": [
+  {
+   "h": "ASK (Amplitude Shift Keying)",
+   "bn": "ক্যারিয়ারের **amplitude** বদলে বিট বোঝানো হয়। সাধারণত দুই লেভেল — **binary ASK বা on-off keying (OOK)**: এক লেভেলের peak amplitude 0, অন্যটির ক্যারিয়ারের amplitude এর সমান। অর্থাৎ **1 → ক্যারিয়ার আছে, 0 → কোনো সিগন্যাল নেই**। ব্যান্ডউইডথ **B = (1 + d) S**, d = 0 থেকে 1।"
+  },
+  {
+   "h": "FSK (Frequency Shift Keying)",
+   "bn": "ক্যারিয়ারের **frequency** বদলে বিট বোঝানো হয়। BFSK এ দুটি ফ্রিকোয়েন্সি: 1 → **f₁ = fc + Δf**, 0 → **f₂ = fc − Δf** (স্লাইডের উদাহরণ)। amplitude ও phase একই থাকে। ব্যান্ডউইডথ **B = (1 + d) S + 2Δf**। Multilevel FSK এ L টি ফ্রিকোয়েন্সি, B = L × S।"
+  },
+  {
+   "h": "PSK (Phase Shift Keying)",
+   "bn": "ক্যারিয়ারের **phase** বদলে বিট বোঝানো হয়; amplitude ও frequency একই। BPSK: **1 → phase 0°, 0 → phase 180°** (polar NRZ × carrier)। ব্যান্ডউইডথ ASK এর মতোই **B = (1 + d) S**। স্লাইড: **PSK, ASK এর চেয়ে অনেক বেশি robust, কারণ নয়েজ মূলত amplitude বদলায়**।"
+  },
+  {
+   "h": "ASK বনাম PSK — নয়েজ ও পাওয়ার",
+   "bn": "**নয়েজ সংবেদনশীলতা**: নয়েজ সিগন্যালের amplitude পরিবর্তন করে। ASK তথ্য রাখে amplitude এ — তাই সহজেই ভুল হয়। PSK তথ্য রাখে phase এ — amplitude নয়েজে কম প্রভাবিত (স্লাইড ২৪)।\n**পাওয়ার দক্ষতা (অতিরিক্ত পাঠ্য — স্লাইডে সরাসরি নেই)**: PSK এর amplitude স্থির, তাই প্রতিটি বিটে একই শক্তি; একই error rate পেতে ASK এর চেয়ে কম সিগন্যাল পাওয়ার লাগে — PSK বেশি power-efficient। OOK এ 0 বিটে কিছু পাঠানো হয় না, কিন্তু 0 ও 1 এর পার্থক্য শুধু amplitude এ হওয়ায় নির্ভরযোগ্যতার জন্য বেশি পাওয়ার দরকার হয়।\n**সিদ্ধান্ত**: নয়েজি চ্যানেলে **PSK** বেশি robust।"
+  },
+  {
+   "h": "QAM",
+   "bn": "**Quadrature Amplitude Modulation = ASK + PSK এর সমন্বয়** — amplitude ও phase দুটোই বদলায়, তাই প্রতি signal element এ বেশি বিট।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "ASK is normally implemented using only two levels. This is referred to as binary amplitude shift keying or on-off keying (OOK). The peak amplitude of one signal level is 0; the other is the same as the amplitude of the carrier frequency.",
+   "slide": 9
+  },
+  {
+   "text": "In BFSK, two carrier frequencies are considered. We use the first carrier if the data element is 0; we use the second if the data element is 1. For example, a “1” could be represented by f1 = fc + Δf, and a “0” by f2 = fc − Δf.",
+   "slide": 16
+  },
+  {
+   "text": "PSK is much more robust than ASK as it is not that vulnerable to noise, which changes amplitude of the signal.",
+   "slide": 24
+  },
+  {
+   "text": "The 1 bit (positive voltage) is represented by a phase starting at 0°; the 0 bit (negative voltage) is represented by a phase starting at 180°.",
+   "slide": 26
+  },
+  {
+   "text": "Quadrature amplitude modulation is a combination of ASK and PSK.",
+   "slide": 28
+  }
+ ],
+ "realLife": {
+  "title": "Car key fobs and Wi-Fi",
+  "bn": "অনেক সস্তা গাড়ির রিমোট চাবি OOK/ASK ব্যবহার করে — খুব সাধারণ সার্কিট। কিন্তু Wi-Fi এর মতো ব্যস্ত ও নয়েজি পরিবেশে PSK/QAM ধরনের মডুলেশন ব্যবহার হয়, কারণ তা নয়েজে বেশি টেকসই।",
+  "link": "Simple, cheap links can use ASK; noisy, high-rate links prefer phase-based schemes (supplementary example).",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "sim",
+   "id": "modulation",
+   "params": {
+    "bits": "1011",
+    "fc": 1,
+    "bitTime": 1
+   },
+   "caption": "Midterm Q3b: 1011 with fc = 1 Hz, 1 s per bit. FSK frequencies are adjustable — state your assumption in the exam.",
+   "alt": "Three aligned waveforms for 1011: ASK with carrier present for 1 and flat for 0; PSK with phase reversal for 0; FSK with higher frequency for 1."
+  }
+ ],
+ "formulas": [
+  {
+   "name": "ASK / PSK bandwidth",
+   "expr": "B = (1 + d) × S",
+   "vars": [
+    [
+     "d",
+     "modulation/filtering factor (0–1)"
+    ],
+    [
+     "S",
+     "baud rate"
+    ]
+   ],
+   "units": "Hz",
+   "source": "Ch5 slides 10, 24"
+  },
+  {
+   "name": "BFSK bandwidth",
+   "expr": "B = (1 + d) × S + 2Δf",
+   "vars": [
+    [
+     "2Δf",
+     "difference between the two carrier frequencies"
+    ]
+   ],
+   "units": "Hz",
+   "source": "Ch5 slide 18"
+  },
+  {
+   "name": "MFSK bandwidth",
+   "expr": "B = L × S",
+   "vars": [
+    [
+     "L",
+     "number of frequencies"
+    ]
+   ],
+   "units": "Hz",
+   "source": "Ch5 slides 20–22"
+  }
+ ],
+ "solved": [
+  {
+   "title": "Midterm Q3b — 1011, fc = 1 Hz, 1 s per bit",
+   "given": [
+    "Bits 1 0 1 1",
+    "fc = 1 Hz → one carrier cycle per 1-s bit"
+   ],
+   "required": "ASK, PSK, FSK waveforms",
+   "rule": "ASK: 1 = carrier, 0 = no signal. PSK: 1 = 0°, 0 = 180°. FSK: two frequencies.",
+   "substitution": [],
+   "calc": [
+    "ASK: bit 1 → one full cycle at amplitude A; bit 0 → flat line; bits 1, 1 → one cycle each.",
+    "PSK: bit 1 → one cycle starting at 0° (rising); bit 0 → one cycle starting at 180° (falling); bits 1, 1 → 0° again.",
+    "FSK (state assumption): 1 → f₁ = 2 Hz (two cycles per bit), 0 → f₀ = 1 Hz (one cycle per bit), constant amplitude."
+   ],
+   "answer": "Draw the three waveforms aligned under the bits with dashed bit boundaries at 1 s intervals.",
+   "bn": "FSK এর দুটি ফ্রিকোয়েন্সি প্রশ্নে দেওয়া নেই — উত্তরে স্পষ্টভাবে লিখে দাও কোনটা 1 আর কোনটা 0।"
+  },
+  {
+   "title": "Example 5.3 — ASK in 200–300 kHz",
+   "given": [
+    "B = 100 kHz (200–300 kHz)",
+    "d = 1, r = 1"
+   ],
+   "required": "fc and bit rate",
+   "rule": "fc = middle of band; B = (1 + d)S, S = N",
+   "substitution": [
+    "fc = 250 kHz",
+    "100 kHz = 2 × N"
+   ],
+   "calc": [
+    "N = 50 kbps"
+   ],
+   "answer": "fc = 250 kHz, N = 50 kbps",
+   "bn": ""
+  },
+  {
+   "title": "Example 5.6 — MFSK",
+   "given": [
+    "3 bits at a time, N = 3 Mbps, fc = 10 MHz"
+   ],
+   "required": "L, S, B",
+   "rule": "L = 2³; S = N/3; B = L × S",
+   "substitution": [],
+   "calc": [
+    "L = 8, S = 1 Mbaud, B = 8 MHz"
+   ],
+   "answer": "L = 8, S = 1 Mbaud, B = 8 MHz",
+   "bn": ""
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 3,
+   "question": "Compare ASK and PSK in terms of their sensitivity to noise and power efficiency. Additionally, highlight which technique offers greater robustness in a noisy channel.",
+   "answer": "| Basis | ASK | PSK |\n|---|---|---|\n| Information carried in | Amplitude of the carrier | Phase of the carrier |\n| Sensitivity to noise | Highly sensitive — noise mainly changes the amplitude, which is exactly where ASK carries the data | Less sensitive — amplitude changes caused by noise do not change the phase |\n| Power efficiency | Lower — needs more signal power for the same error performance (in OOK no power is sent for 0, but the decision depends only on amplitude) | Higher — constant amplitude, the same energy in every bit, so a lower power achieves the same error rate |\nConclusion: PSK offers greater robustness in a noisy channel, since PSK is not as vulnerable to noise, which changes the amplitude of the signal."
+  },
+  {
+   "marks": 3,
+   "question": "Illustrate the carrier waveforms for the bit sequence 1 0 1 1 using ASK, PSK and FSK. Assume fc = 1 Hz and a bit duration of 1 second per bit.",
+   "answer": "[Draw three aligned waveforms with dashed boundaries every 1 s.]\nASK (OOK): 1 → one cycle of the 1-Hz carrier with amplitude A; 0 → zero amplitude (flat line).\nPSK: 1 → one cycle with phase 0°; 0 → one cycle with phase 180° (inverted); amplitude and frequency constant.\nFSK (assumption stated): 1 → higher frequency f₁ = 2 Hz (two cycles per bit); 0 → lower frequency f₀ = 1 Hz (one cycle per bit); amplitude constant."
+  }
+ ],
+ "keywords": [
+  {
+   "term": "carrier (fc)",
+   "bn": "বাহক সিগন্যাল"
+  },
+  {
+   "term": "on-off keying (OOK)",
+   "bn": "0 এ কোনো সিগন্যাল নেই"
+  },
+  {
+   "term": "fc ± Δf",
+   "bn": "FSK এর দুটি ফ্রিকোয়েন্সি"
+  },
+  {
+   "term": "0° / 180°",
+   "bn": "BPSK এর phase"
+  },
+  {
+   "term": "robust to noise",
+   "bn": "নয়েজে টেকসই"
+  },
+  {
+   "term": "B = (1 + d)S",
+   "bn": "ASK/PSK ব্যান্ডউইডথ"
+  },
+  {
+   "term": "QAM = ASK + PSK",
+   "bn": "দুটোর সমন্বয়"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Drawing ASK with a smaller (not zero) amplitude for 0 without saying so.",
+   "fix": "Slides: binary ASK = OOK, 0 has peak amplitude 0. If you use two non-zero amplitudes, state it."
+  },
+  {
+   "m": "Changing amplitude in PSK.",
+   "fix": "PSK keeps amplitude and frequency constant; only the phase changes."
+  },
+  {
+   "m": "FSK frequencies not stated.",
+   "fix": "Write which frequency represents 1 and which represents 0."
+  },
+  {
+   "m": "Saying ASK is robust in noise.",
+   "fix": "Noise changes amplitude → ASK is the most vulnerable."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "ASK: amplitude; binary ASK = OOK.",
+   "FSK: frequency; 1 = fc + Δf, 0 = fc − Δf.",
+   "PSK: phase; 1 = 0°, 0 = 180°.",
+   "PSK more robust than ASK (noise changes amplitude).",
+   "QAM combines ASK and PSK."
+  ],
+  "card": "A-mplitude · F-requency · P-hase | PSK beats ASK in noise",
+  "recall": {
+   "q": "Bandwidth formula for BFSK?",
+   "a": "B = (1 + d)S + 2Δf"
+  }
+ },
+ "flags": [
+  {
+   "type": "supplementary",
+   "text": "The slides support noise robustness (slide 24). The power-efficiency comparison is standard textbook knowledge but is not stated on the supplied slides — it is marked as supplementary."
+  },
+  {
+   "type": "assumption",
+   "text": "Midterm Q3b gives only fc = 1 Hz for FSK. The app’s model answer assumes f₁ = 2 Hz for 1 and f₀ = 1 Hz for 0; any clearly stated pair of distinct frequencies should be acceptable — confirm with your instructor."
+  }
+ ]
+}

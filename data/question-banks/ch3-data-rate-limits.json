@@ -1,0 +1,377 @@
+{
+ "lessonId": "ch3-data-rate-limits",
+ "mcqs": [
+  {
+   "id": "dr1",
+   "q": "A noiseless 3000-Hz channel sends 2 bits per level. Maximum bit rate?",
+   "options": [
+    "6000 bps",
+    "12,000 bps",
+    "3000 bps",
+    "24,000 bps"
+   ],
+   "answer": 1,
+   "explainBn": "L = 4, N = 2×3000×2।",
+   "explainEn": "Midterm Q1b.",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": "Ch3 slides 80–82"
+  },
+  {
+   "id": "dr2",
+   "q": "Shannon capacity of a channel with SNR ≈ 0 is:",
+   "options": [
+    "Equal to its bandwidth",
+    "Zero, regardless of bandwidth",
+    "Infinite",
+    "Twice the bandwidth"
+   ],
+   "answer": 1,
+   "explainBn": "log₂(1+0) = 0।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "conceptual",
+   "source": "Ch3 slide 85"
+  },
+  {
+   "id": "dr3",
+   "q": "B = 4 kHz and the required rate is 100 kbps. The minimum SNR is:",
+   "options": [
+    "25",
+    "2²⁵ − 1",
+    "10²⁵",
+    "2⁵⁰"
+   ],
+   "answer": 1,
+   "explainBn": "C/B = 25 → SNR = 2²⁵ − 1।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": ""
+  },
+  {
+   "id": "dr4",
+   "q": "SNR = 10,000. SNR_dB is:",
+   "options": [
+    "4 dB",
+    "40 dB",
+    "100 dB",
+    "10 dB"
+   ],
+   "answer": 1,
+   "explainBn": "10 log₁₀ 10⁴ = 40 dB।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "numerical",
+   "source": "Ch3 slide 72"
+  },
+  {
+   "id": "dr5",
+   "q": "Which statement best describes how the Shannon and Nyquist formulas are used together?",
+   "options": [
+    "Nyquist gives the upper limit, Shannon gives the levels",
+    "Shannon gives the upper limit, Nyquist tells how many levels are needed",
+    "They are never used together",
+    "Both give the number of levels"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৯০।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": "Ch3 slide 90"
+  },
+  {
+   "id": "dr6",
+   "q": "Increasing the number of signal levels may:",
+   "options": [
+    "Reduce bandwidth to zero",
+    "Reduce the reliability of the system",
+    "Remove all noise",
+    "Make Shannon capacity infinite"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ৭৮।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "conceptual",
+   "source": "Ch3 slide 78"
+  },
+  {
+   "id": "dr7",
+   "q": "A telephone line has B = 3000 Hz and SNR = 3162. Its capacity is about:",
+   "options": [
+    "3.16 kbps",
+    "34.86 kbps",
+    "9.5 kbps",
+    "316 kbps"
+   ],
+   "answer": 1,
+   "explainBn": "3000 × log₂3163 ≈ 34,860 bps।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": "Ch3 slide 86"
+  },
+  {
+   "id": "dr8",
+   "q": "To send 265 kbps over a noiseless 20-kHz channel, how many levels are needed (rounded to a power of 2 so the rate is still met)?",
+   "options": [
+    "64",
+    "128",
+    "32",
+    "256"
+   ],
+   "answer": 1,
+   "explainBn": "log₂L = 6.625 → 128 লেভেল (280 kbps)।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "numerical",
+   "source": "Ch3 slide 83"
+  },
+  {
+   "id": "dr9",
+   "q": "A signal loses half its power through a medium. The attenuation is about:",
+   "options": [
+    "−3 dB",
+    "−0.5 dB",
+    "+3 dB",
+    "−6 dB"
+   ],
+   "answer": 0,
+   "explainBn": "10 log₁₀(0.5) ≈ −3 dB।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": "Ch3 slide 63"
+  },
+  {
+   "id": "dr10",
+   "q": "A student writes C = 2 MHz × log₂(1 + 36) for SNR_dB = 36. The mistake is:",
+   "options": [
+    "Bandwidth must be in kHz",
+    "SNR_dB was used directly instead of converting to the ratio 10^3.6",
+    "Shannon uses log₁₀",
+    "Nothing is wrong"
+   ],
+   "answer": 1,
+   "explainBn": "আগে dB → অনুপাত।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "scenario",
+   "source": "Ch3 slide 87"
+  }
+ ],
+ "written": [
+  {
+   "id": "dr-w1",
+   "marks": 3,
+   "marksSplit": "3",
+   "question": "Suppose a noiseless channel with a bandwidth of 3000 Hz is transmitting a signal. The signal sends 2 bits for each level. Calculate the maximum bit rate supported by the channel.",
+   "type": "numerical",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "id",
+      "type": "concepts",
+      "label": "Identifies Nyquist and L = 4",
+      "marks": 1,
+      "need": 2,
+      "concepts": [
+       {
+        "name": "Nyquist (noiseless)",
+        "any": [
+         "nyquist",
+         "noiseless"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "L = 4",
+        "any": [
+         "l = 4",
+         "l=4",
+         "4 levels",
+         "four levels",
+         "2^2",
+         "2²"
+        ],
+        "bn": ""
+       }
+      ]
+     },
+     {
+      "id": "f",
+      "type": "formula",
+      "label": "Formula 2 × B × log₂L",
+      "marks": 0.5,
+      "patterns": [
+       "2\\s*[x×*·]?\\s*(B|F|bandwidth|3000)\\s*[x×*·]?\\s*log",
+       "log\\s*[_]?2\\s*\\(?\\s*L"
+      ],
+      "bn": ""
+     },
+     {
+      "id": "n",
+      "type": "numeric",
+      "label": "Answer 12,000 bps",
+      "marks": 1.5,
+      "expected": 12000,
+      "dim": "rate",
+      "display": "12 kbps",
+      "relTol": 0.01,
+      "bn": "",
+      "unitMarks": 0.25
+     }
+    ],
+    "penalties": [
+     {
+      "any": [
+       "l = 2",
+       "l=2",
+       "two levels"
+      ],
+      "deduct": 0.5,
+      "message": "Used L = 2 (but 2 bits per level means L = 4).",
+      "bn": "২ বিট/লেভেল মানে L = 4।"
+     }
+    ],
+    "modelAnswer": "Noiseless → Nyquist. 2 bits per level ⇒ L = 4. N = 2 × 3000 × log₂4 = 12,000 bps.",
+    "minWords": 0
+   },
+   "hintBn": "",
+   "tags": [
+    "nyquist"
+   ],
+   "source": "Summer 2026 midterm Q1(b)"
+  },
+  {
+   "id": "dr-w2",
+   "marks": 3,
+   "marksSplit": "3",
+   "question": "A network engineer is designing a communication system that uses a channel with a bandwidth of 4 kHz. The system must support a data transmission rate of 100 kbps. Determine the minimum SNR required to achieve the desired data rate along with the corresponding value of SNR in decibels (SNR_dB).",
+   "type": "numerical",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "f",
+      "type": "formula",
+      "label": "Shannon formula / rearrangement",
+      "marks": 0.5,
+      "patterns": [
+       "log\\s*[_]?2\\s*\\(\\s*1\\s*\\+\\s*SNR",
+       "2\\s*\\^\\s*\\(?\\s*(C\\s*/\\s*B|25)",
+       "SNR\\s*=\\s*2"
+      ],
+      "bn": ""
+     },
+     {
+      "id": "snr",
+      "type": "numeric",
+      "label": "Minimum SNR = 2²⁵ − 1 ≈ 3.36 × 10⁷",
+      "marks": 1.25,
+      "expected": 33554431,
+      "dim": null,
+      "display": "33,554,431",
+      "relTol": 0.005,
+      "bn": ""
+     },
+     {
+      "id": "db",
+      "type": "numeric",
+      "label": "SNR_dB ≈ 75.26 dB",
+      "marks": 1.25,
+      "expected": 75.257,
+      "dim": "db",
+      "display": "75.26 dB",
+      "relTol": 0.005,
+      "bn": "",
+      "unitMarks": 0.25
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "C = B log₂(1 + SNR) ⇒ log₂(1 + SNR) = 100,000/4000 = 25 ⇒ SNR = 2²⁵ − 1 = 33,554,431. SNR_dB = 10 log₁₀(33,554,431) ≈ 75.26 dB.",
+    "minWords": 0
+   },
+   "hintBn": "",
+   "tags": [
+    "shannon"
+   ],
+   "source": "Summer 2026 midterm Q2(c)"
+  },
+  {
+   "id": "dr-w3",
+   "marks": 4,
+   "marksSplit": "4",
+   "question": "We have a channel with a 1-MHz bandwidth and SNR = 63. What are the appropriate bit rate and number of signal levels?",
+   "type": "numerical",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 4,
+    "criteria": [
+     {
+      "id": "c",
+      "type": "numeric",
+      "label": "Shannon limit 6 Mbps",
+      "marks": 1.5,
+      "expected": 6000000.0,
+      "dim": "rate",
+      "display": "6 Mbps",
+      "relTol": 0.01,
+      "bn": ""
+     },
+     {
+      "id": "choose",
+      "type": "concepts",
+      "label": "Chooses a rate below the limit",
+      "marks": 1,
+      "need": 1,
+      "concepts": [
+       {
+        "name": "lower rate",
+        "any": [
+         "lower",
+         "less than",
+         "below",
+         "4 mbps",
+         "4 mbps"
+        ],
+        "bn": ""
+       }
+      ]
+     },
+     {
+      "id": "l",
+      "type": "numeric",
+      "label": "Levels L = 4 (for 4 Mbps)",
+      "marks": 1.5,
+      "expected": 4,
+      "dim": null,
+      "display": "4",
+      "relTol": 0.01,
+      "bn": ""
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "Shannon: C = 10⁶ log₂(64) = 6 Mbps (upper limit). Choose a lower rate, e.g. 4 Mbps. Nyquist: 4 × 10⁶ = 2 × 10⁶ × log₂L ⇒ L = 4.",
+    "minWords": 0
+   },
+   "hintBn": "",
+   "tags": [
+    "shannon",
+    "nyquist"
+   ],
+   "source": "Ch3 slides 88–89 (Example 3.41)"
+  }
+ ]
+}

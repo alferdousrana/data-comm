@@ -1,0 +1,207 @@
+{
+ "id": "ch2-addressing",
+ "chapterId": "fz-ch2",
+ "order": 2,
+ "title": "Addressing and the Hop-by-Hop Journey of a Message",
+ "titleBn": "অ্যাড্রেসিং ও হপ-বাই-হপ মেসেজের যাত্রা",
+ "source": {
+  "file": "Chapter-2-Network_Models__5th_edition_.ppt",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 2 — Network Models",
+  "slides": [
+   11,
+   12,
+   13,
+   14,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ]
+ },
+ "estMinutes": 30,
+ "difficulty": "medium",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "Appeared in the supplied midterm (Q3c, 4 marks) using exactly the slide figure (A/10 … P/95)",
+   "Tests understanding of physical vs logical addresses"
+  ]
+ },
+ "topics": [
+  "physical address",
+  "logical address",
+  "IP address",
+  "port address",
+  "specific address",
+  "hop",
+  "router",
+  "frame",
+  "encapsulation",
+  "MAC"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "The midterm’s 4-mark trace question uses this figure exactly. You must say which addresses change at every hop and which stay the same.",
+  "objectives": [
+   "Name the four levels of addresses in TCP/IP",
+   "Explain hop-to-hop (data link) vs source-to-destination (network) delivery",
+   "Trace a frame from Host A to Host D through two routers, showing addresses at every hop"
+  ],
+  "prerequisites": [
+   "OSI layers and encapsulation (Chapter 2)"
+  ]
+ },
+ "explain": [
+  {
+   "h": "চার স্তরের অ্যাড্রেস",
+   "bn": "TCP/IP এ চার ধরনের অ্যাড্রেস: **physical (link)**, **logical (IP/network)**, **port**, এবং **specific** অ্যাড্রেস। Physical অ্যাড্রেস ডেটা লিংক লেয়ারে (যেমন ৬-বাইট MAC: 07:01:02:01:2C:4B), logical অ্যাড্রেস নেটওয়ার্ক লেয়ারে, port অ্যাড্রেস ট্রান্সপোর্ট লেয়ারে (কোন প্রসেস), আর specific অ্যাড্রেস অ্যাপ্লিকেশনে (ইমেইল, URL)।"
+  },
+  {
+   "h": "হপ-টু-হপ বনাম এন্ড-টু-এন্ড",
+   "bn": "ডেটা লিংক লেয়ার ফ্রেমকে **এক হপ (node) থেকে পরের হপে** নেয় — তাই physical অ্যাড্রেস প্রতি হপে বদলায়। নেটওয়ার্ক লেয়ার প্যাকেটকে **source host থেকে destination host পর্যন্ত** নেয় — তাই logical অ্যাড্রেস সাধারণত একই থাকে। ট্রান্সপোর্ট লেয়ার **process-to-process** ডেলিভারি করে — port অ্যাড্রেসও একই থাকে।"
+  },
+  {
+   "h": "চিত্রের নোটেশন বোঝা",
+   "bn": "চিত্রে “A/10” মানে **logical address A, physical address 10**। Router 1 এর দুই ইন্টারফেস: LAN 1 এর দিকে F/20, LAN 2 এর দিকে T/99। Router 2: LAN 2 এর দিকে N/33, LAN 3 এর দিকে Z/66। Host D: P/95। ফ্রেমের ফরম্যাট (স্লাইডের চিত্র): **[destination physical | source physical | A P | Data | T2]** — প্রথমে গন্তব্যের physical, তারপর উৎসের physical, তারপর logical source A ও destination P, শেষে trailer T2।"
+  },
+  {
+   "h": "রাউটারে কী ঘটে",
+   "bn": "রাউটার ফ্রেম পেয়ে ডেটা লিংক হেডার/ট্রেইলার খুলে ফেলে (**decapsulation**), নেটওয়ার্ক লেয়ারে destination logical address (P) দেখে কোন দিকে পাঠাবে ঠিক করে (**routing**), তারপর পরের লিংকের জন্য **নতুন physical source ও destination** দিয়ে নতুন ফ্রেম বানায় (**encapsulation**)। logical A→P অপরিবর্তিত থাকে।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "Four levels of addresses in TCP/IP protocols: Physical (link), logical (IP, network), port, and specific addresses.",
+   "slide": 31
+  },
+  {
+   "text": "The data link layer is responsible for moving frames from one hop (node) to the next.",
+   "slide": 11
+  },
+  {
+   "text": "The network layer is responsible for the delivery of packets from the source host to the destination host.",
+   "slide": 14
+  },
+  {
+   "text": "The physical addresses will change from hop to hop, but the logical addresses usually remain the same.",
+   "slide": 34
+  },
+  {
+   "text": "The physical addresses change from hop to hop, but the logical and port addresses usually remain the same.",
+   "slide": 35
+  }
+ ],
+ "realLife": {
+  "title": "Courier parcel through two sorting hubs",
+  "bn": "ঢাকা থেকে সিলেটে পার্সেল পাঠালে বাক্সের উপর প্রাপকের পুরো ঠিকানা (logical) একই থাকে। কিন্তু প্রতিটি ধাপে কুরিয়ার একটি নতুন ট্যাগ লাগায় — “এই ভ্যান থেকে ওই হাবে” (physical, প্রতি হপে বদলায়)।",
+  "link": "Full address on the box = logical (A→P). Per-van tag = physical addresses rewritten at each router.",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "sim",
+   "id": "journey",
+   "caption": "Step through the midterm Figure 1 path: Host A → Router 1 → Router 2 → Host D.",
+   "alt": "Interactive trace showing the frame on LAN 1, LAN 2 and LAN 3 with its physical and logical addresses."
+  }
+ ],
+ "formulas": [],
+ "solved": [
+  {
+   "title": "Trace A/10 → P/95 (midterm Q3c)",
+   "given": [
+    "Host A: A/10",
+    "Router 1: F/20 (LAN 1), T/99 (LAN 2)",
+    "Router 2: N/33 (LAN 2), Z/66 (LAN 3)",
+    "Host D: P/95"
+   ],
+   "required": "Addresses at every hop",
+   "rule": "Physical changes per hop; logical (and port) stay the same.",
+   "substitution": [],
+   "calc": [
+    "Hop 1 (LAN 1): Host A → Router 1 — frame [20 | 10 | A P | Data | T2]",
+    "At Router 1: decapsulate, read P, route to LAN 2, re-encapsulate",
+    "Hop 2 (LAN 2): Router 1 → Router 2 — frame [33 | 99 | A P | Data | T2]",
+    "At Router 2: decapsulate, route to LAN 3, re-encapsulate",
+    "Hop 3 (LAN 3): Router 2 → Host D — frame [95 | 66 | A P | Data | T2]",
+    "At Host D: frame accepted (95 matches), decapsulated up to the upper layers"
+   ],
+   "answer": "Physical: 10→20, 99→33, 66→95. Logical A→P unchanged throughout.",
+   "bn": "প্রতিটি LAN এ শুধু সেই LAN এর দুই প্রান্তের physical address থাকে।"
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 4,
+   "question": "Consider the network in Figure 1. A message is sent from host A to host D through the intermediate routers. Trace the journey of the message across each hop and analyze how the message fields change at every stage of transmission.",
+   "answer": "Notation: logical/physical (e.g. A/10). Frame = [destination physical | source physical | A P | Data | T2].\n1. Host A builds a packet with source logical address A and destination logical address P. Since P is on another network, the frame is sent to Router 1 on LAN 1: [20 | 10 | A P | Data | T2].\n2. Router 1 (F/20) accepts the frame, removes the data-link header and trailer, checks the destination logical address P and forwards the packet to LAN 2. It creates a new frame: [33 | 99 | A P | Data | T2].\n3. Router 2 (N/33) repeats the process and forwards on LAN 3: [95 | 66 | A P | Data | T2].\n4. Host D (P/95) accepts the frame because 95 is its physical address and passes the data to the upper layers.\nAnalysis: the physical (link) addresses change at every hop because the data link layer delivers hop-to-hop, while the logical addresses A and P (and port addresses) remain the same because the network layer delivers from source host to destination host."
+  }
+ ],
+ "keywords": [
+  {
+   "term": "physical (link) address",
+   "bn": "হপ-টু-হপ, প্রতি লিংকে বদলায়"
+  },
+  {
+   "term": "logical (IP) address",
+   "bn": "সোর্স থেকে ডেস্টিনেশন পর্যন্ত একই"
+  },
+  {
+   "term": "port address",
+   "bn": "প্রসেস চিহ্নিত করে, একই থাকে"
+  },
+  {
+   "term": "hop-to-hop delivery",
+   "bn": "ডেটা লিংক লেয়ারের কাজ"
+  },
+  {
+   "term": "decapsulation / encapsulation",
+   "bn": "হেডার খোলা / নতুন হেডার লাগানো"
+  },
+  {
+   "term": "trailer (T2)",
+   "bn": "ডেটা লিংক লেয়ারের শেষ অংশ"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Changing logical addresses A and P at each router.",
+   "fix": "Logical addresses usually stay the same end to end; only physical addresses change."
+  },
+  {
+   "m": "Writing the router’s logical address (F, T) inside the frame.",
+   "fix": "Router interfaces’ physical addresses (20, 99, 33, 66) appear in frames; the packet keeps A and P."
+  },
+  {
+   "m": "Swapping source and destination order.",
+   "fix": "Slide frame shows destination physical first, then source (e.g. 20 10)."
+  },
+  {
+   "m": "Using Router 2’s LAN 3 interface (66) on LAN 2.",
+   "fix": "On LAN 2 the destination is Router 2’s LAN 2 interface — read the figure carefully."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "Four address levels: physical, logical, port, specific.",
+   "Data link: hop-to-hop; network: source-to-destination; transport: process-to-process.",
+   "Physical addresses change at every hop.",
+   "Logical and port addresses usually remain the same.",
+   "Frame on each LAN uses the physical addresses of that LAN’s two ends."
+  ],
+  "card": "10→20 | 99→33 | 66→95, always A→P",
+  "recall": {
+   "q": "Which address changes at every hop?",
+   "a": "The physical (link/MAC) address."
+  }
+ },
+ "flags": [
+  {
+   "type": "figure-reading",
+   "text": "In the photographed exam figure the labels of Router 2 are partly unclear. Forouzan’s Figure 2.18 (the slide source) uses Router 2 = N/33 on the LAN 2 side and Z/66 on the LAN 3 side, giving the frames 33 99 and 95 66. Follow your printed paper if it differs."
+  }
+ ]
+}

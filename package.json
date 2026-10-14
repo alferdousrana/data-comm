@@ -1,0 +1,21 @@
+{
+  "name": "datacomm-academy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Personal Data Communications study PWA for CSE 311 (Green University of Bangladesh)",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "test:e2e": "python3 tests/e2e/e2e.py",
+    "test:rules": "firebase emulators:exec --only firestore \"node --test tests/rules/firestore-rules.spec.mjs\"",
+    "serve": "python3 -m http.server 8080"
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "3.0.4",
+    "firebase": "10.12.2",
+    "firebase-tools": "13.29.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

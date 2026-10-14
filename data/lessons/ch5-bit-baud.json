@@ -1,0 +1,213 @@
+{
+ "id": "ch5-bit-baud",
+ "chapterId": "fz-ch5",
+ "order": 1,
+ "title": "Bit Rate vs Baud Rate in Analog Transmission",
+ "titleBn": "অ্যানালগ ট্রান্সমিশনে বিট রেট বনাম বড রেট",
+ "source": {
+  "file": "Chapter_5_5th_ed.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 5 — Analog Transmission",
+  "slides": [
+   2,
+   3,
+   6,
+   7,
+   8
+  ]
+ },
+ "estMinutes": 20,
+ "difficulty": "easy",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "Appeared in the supplied midterm (Q1c, 2 marks: formula + justify S ≤ N)",
+   "Needed for ASK/FSK/PSK bandwidth problems"
+  ]
+ },
+ "topics": [
+  "bit rate",
+  "baud rate",
+  "signal element",
+  "data element",
+  "r",
+  "L",
+  "log2 L",
+  "S = N/r",
+  "carrier",
+  "digital-to-analog"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "The exam asks you to state the formula linking bit rate N and baud rate S and justify why S ≤ N.",
+  "objectives": [
+   "Define bit rate and baud rate",
+   "Use S = N × (1/r) and r = log₂L",
+   "Justify S ≤ N in analog transmission of digital data"
+  ],
+  "prerequisites": [
+   "Signal element vs data element (Ch4)"
+  ]
+ },
+ "explain": [
+  {
+   "h": "ডিজিটাল থেকে অ্যানালগ",
+   "bn": "ডিজিটাল ডেটা পাঠাতে একটি **carrier signal (fc)** নেওয়া হয়, এবং ডেটা অনুযায়ী তার একটি বৈশিষ্ট্য (amplitude, frequency বা phase) বদলানো হয়।"
+  },
+  {
+   "h": "বিট রেট ও বড রেট",
+   "bn": "**Bit rate (N)** = প্রতি সেকেন্ডে বিটের সংখ্যা (bps)। **Baud rate (S)** = প্রতি সেকেন্ডে **signal element** এর সংখ্যা (baud)। একটি signal element এ r টি বিট থাকলে **S = N × (1/r)**। L টি ভিন্ন signal element থাকলে **r = log₂L**।"
+  },
+  {
+   "h": "কেন S ≤ N?",
+   "bn": "প্রতিটি signal element অন্তত ১টি বিট বহন করে, অর্থাৎ **r ≥ 1**। তাই S = N/r ≤ N। r = 1 (যেমন BASK, BPSK) হলে S = N; r > 1 হলে (যেমন QAM-এ ৪ বিট/এলিমেন্ট) S < N। কম baud মানে কম bandwidth লাগে — তাই বেশি বিট/এলিমেন্ট লাভজনক।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "Bit rate, N, is the number of bits per second (bps). Baud rate is the number of signal elements per second (bauds).",
+   "slide": 6
+  },
+  {
+   "text": "In the analog transmission of digital data, the signal or baud rate is less than or equal to the bit rate. S = N × 1/r bauds, where r is the number of data bits per signal element.",
+   "slide": 6
+  }
+ ],
+ "realLife": {
+  "title": "Buses and passengers",
+  "bn": "একটি বাস = একটি signal element, যাত্রী = বিট। প্রতি মিনিটে কয়টি বাস ছাড়ে = baud rate; প্রতি মিনিটে কতজন যাত্রী যায় = bit rate। প্রতি বাসে ৪ জন বসলে কম বাসেই বেশি যাত্রী যায় — কম baud, বেশি bit rate।",
+  "link": "More bits per signal element (r) → same bit rate with fewer signal elements (lower baud).",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "diagram",
+   "id": "bit-baud",
+   "caption": "r = 1: one bit per signal element (S = N). r = 2: two bits per element (S = N/2).",
+   "alt": "Two rows of signal elements: top row each element labelled with one bit; bottom row each element labelled with two bits, half as many elements."
+  }
+ ],
+ "formulas": [
+  {
+   "name": "Baud rate",
+   "expr": "S = N × (1 / r)",
+   "vars": [
+    [
+     "S",
+     "baud rate (baud)"
+    ],
+    [
+     "N",
+     "bit rate (bps)"
+    ],
+    [
+     "r",
+     "bits per signal element"
+    ]
+   ],
+   "units": "baud",
+   "source": "Ch5 slide 6"
+  },
+  {
+   "name": "Bits per element",
+   "expr": "r = log₂ L",
+   "vars": [
+    [
+     "L",
+     "number of different signal elements"
+    ]
+   ],
+   "units": "bits",
+   "source": "Ch5 slide 8 (Example 5.2)"
+  }
+ ],
+ "solved": [
+  {
+   "title": "Example 5.1",
+   "given": [
+    "r = 4",
+    "S = 1000 baud"
+   ],
+   "required": "N",
+   "rule": "N = S × r",
+   "substitution": [
+    "N = 1000 × 4"
+   ],
+   "calc": [
+    "N = 4000 bps"
+   ],
+   "answer": "4000 bps",
+   "bn": ""
+  },
+  {
+   "title": "Example 5.2",
+   "given": [
+    "N = 8000 bps",
+    "S = 1000 baud"
+   ],
+   "required": "r and L",
+   "rule": "r = N/S; L = 2^r",
+   "substitution": [
+    "r = 8000/1000 = 8"
+   ],
+   "calc": [
+    "L = 2⁸ = 256"
+   ],
+   "answer": "r = 8 bits/element; L = 256",
+   "bn": ""
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 2,
+   "question": "Briefly explain the relationship between bit rate N and baud rate S in analog transmission of digital data, using the appropriate formula, and justify why S is always less than or equal to N.",
+   "answer": "Bit rate N is the number of bits sent per second (bps), while baud rate S is the number of signal elements sent per second (baud). If each signal element carries r bits, then S = N × (1/r), where r = log₂L for L different signal elements.\nSince every signal element carries at least one bit (r ≥ 1), S = N/r ≤ N. S equals N only when r = 1 (e.g. binary ASK/PSK); when r > 1, S < N, which reduces the bandwidth required."
+  }
+ ],
+ "keywords": [
+  {
+   "term": "bit rate (bps)",
+   "bn": "বিট/সেকেন্ড"
+  },
+  {
+   "term": "baud rate (baud)",
+   "bn": "সিগন্যাল এলিমেন্ট/সেকেন্ড"
+  },
+  {
+   "term": "S = N/r",
+   "bn": "মূল সম্পর্ক"
+  },
+  {
+   "term": "r = log₂L",
+   "bn": "প্রতি এলিমেন্টে বিট"
+  },
+  {
+   "term": "r ≥ 1",
+   "bn": "তাই S ≤ N"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Writing S = N × r.",
+   "fix": "S = N / r (more bits per element means fewer elements)."
+  },
+  {
+   "m": "Justifying S ≤ N without mentioning r ≥ 1.",
+   "fix": "The key reason: each signal element carries at least one bit."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "N = bits/s; S = signal elements/s.",
+   "S = N × 1/r.",
+   "r = log₂L.",
+   "r ≥ 1 ⇒ S ≤ N.",
+   "Lower baud → less bandwidth."
+  ],
+  "card": "S = N/r, r = log₂L, r ≥ 1 ⇒ S ≤ N",
+  "recall": {
+   "q": "N = 8000 bps, S = 1000 baud. L?",
+   "a": "r = 8, L = 256"
+  }
+ }
+}

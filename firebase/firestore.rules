@@ -1,0 +1,73 @@
+rules_version = '2';
+// DataComm Academy — Firestore Security Rules
+// Private study data lives under users/{uid}/... and only that user can read/write it.
+// Course content (optional mirror of data/*.json) is public-read, admin-write-only.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
+    // Admins are identified ONLY by a custom claim set server-side with the Admin SDK.
+    // Nothing a client writes can grant this.
+    function isAdmin() { return signedIn() && request.auth.token.admin == true; }
+    function smallDoc() { return request.resource.data.size() <= 60; }
+    function str(f, max) { return !(f in request.resource.data) || (request.resource.data[f] is string && request.resource.data[f].size() <= max); }
+    function num(f) { return !(f in request.resource.data) || request.resource.data[f] is number; }
+
+    match /users/{uid} {
+      allow read: if isOwner(uid);
+      allow create, update: if isOwner(uid) && smallDoc()
+        && request.resource.data.keys().hasOnly(['displayName', 'lastSeenAt'])
+        && str('displayName', 200);
+      allow delete: if isOwner(uid);
+
+      // Append-only history: attempts can be created (and re-sent idempotently with the
+      // same content) but never edited or deleted from a client.
+      match /attempts/{id} {
+        allow read: if isOwner(uid);
+        allow create: if isOwner(uid) && smallDoc() && id.size() <= 120
+          && request.resource.data.id == id
+          && request.resource.data.kind in ['mcq-quiz', 'written', 'numeric', 'exam']
+          && num('createdAt') && str('title', 300) && str('questionId', 120) && str('lessonId', 120)
+          && (!('answer' in request.resource.data) || !('text' in request.resource.data.answer)
+              || request.resource.data.answer.text.size() <= 20000);
+        // Re-upload after a lost acknowledgement: allowed only if nothing changes except the server timestamp.
+        allow update: if isOwner(uid)
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['_syncedAt']);
+        allow delete: if false;
+      }
+
+      match /progress/{lessonId} {
+        allow read: if isOwner(uid);
+        allow create, update: if isOwner(uid) && smallDoc() && lessonId.size() <= 120
+          && request.resource.data.lessonId == lessonId
+          && (!('completed' in request.resource.data) || request.resource.data.completed is bool)
+          && num('readPct') && num('updatedAt') && str('selfRating', 20);
+        allow delete: if isOwner(uid);
+      }
+
+      match /notes/{id} {
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid) && smallDoc() && str('text', 20000) && str('lessonId', 120)
+          && (!('history' in request.resource.data) || request.resource.data.history.size() <= 10);
+      }
+
+      match /{coll}/{id} {
+        // Remaining private collections with generic limits.
+        allow read, delete: if isOwner(uid) && coll in ['bookmarks', 'revision', 'ledger', 'activity', 'settings'];
+        allow create, update: if isOwner(uid) && coll in ['bookmarks', 'revision', 'ledger', 'activity', 'settings']
+          && smallDoc() && id.size() <= 200
+          && str('label', 300) && str('title', 300) && str('aiEndpoint', 500)
+          // XP entries are capped so a modified client cannot mint large XP values.
+          && (coll != 'ledger' || !('amount' in request.resource.data)
+              || (request.resource.data.amount is number && request.resource.data.amount >= 0 && request.resource.data.amount <= 25));
+      }
+    }
+
+    // Optional shared course content (chapters, lessons, questions, questionSets).
+    match /{coll}/{id} {
+      allow read: if coll in ['courses', 'chapters', 'lessons', 'questions', 'questionSets'];
+      allow write: if isAdmin() && coll in ['courses', 'chapters', 'lessons', 'questions', 'questionSets'];
+    }
+  }
+}

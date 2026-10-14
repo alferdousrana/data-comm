@@ -1,0 +1,17 @@
+node_modules/
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+*.local
+.env
+.env.*
+# Never commit service-account credentials
+*service-account*.json
+*-adminsdk-*.json
+functions/node_modules/
+.DS_Store
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore

@@ -1,0 +1,298 @@
+{
+ "lessonId": "ch2-addressing",
+ "mcqs": [
+  {
+   "id": "ad1",
+   "q": "Which address changes from hop to hop?",
+   "options": [
+    "Logical (IP) address",
+    "Port address",
+    "Physical (link) address",
+    "Specific address (e-mail)"
+   ],
+   "answer": 2,
+   "explainBn": "ডেটা লিংক লেয়ার হপ-টু-হপ কাজ করে, তাই physical অ্যাড্রেস বদলায়।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch2 slide 34"
+  },
+  {
+   "id": "ad2",
+   "q": "How many levels of addresses are used in TCP/IP according to the slides?",
+   "options": [
+    "Two",
+    "Three",
+    "Four",
+    "Seven"
+   ],
+   "answer": 2,
+   "explainBn": "Physical, logical, port, specific — চারটি।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch2 slide 31"
+  },
+  {
+   "id": "ad3",
+   "q": "In the figure A/10 → P/95, what frame travels on LAN 2?",
+   "options": [
+    "20 10 | A P",
+    "33 99 | A P",
+    "95 66 | A P",
+    "33 99 | F T"
+   ],
+   "answer": 1,
+   "explainBn": "LAN 2 তে Router 1 (99) থেকে Router 2 (33) — logical A P অপরিবর্তিত।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "diagram",
+   "source": "Ch2 slide 34"
+  },
+  {
+   "id": "ad4",
+   "q": "The port address identifies:",
+   "options": [
+    "The network interface card",
+    "A process on the host",
+    "The router interface",
+    "The cable segment"
+   ],
+   "answer": 1,
+   "explainBn": "ট্রান্সপোর্ট লেয়ার process-to-process ডেলিভারি করে।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch2 slides 16, 35"
+  },
+  {
+   "id": "ad5",
+   "q": "A physical address such as 07:01:02:01:2C:4B has how many bytes?",
+   "options": [
+    "4",
+    "6",
+    "8",
+    "12"
+   ],
+   "answer": 1,
+   "explainBn": "১২টি হেক্স ডিজিট = ৬ বাইট।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch2 slide 33"
+  },
+  {
+   "id": "ad6",
+   "q": "What does a router do with an arriving frame before forwarding it?",
+   "options": [
+    "Changes the destination logical address to its own",
+    "Removes the data-link header/trailer, checks the logical destination and builds a new frame",
+    "Forwards the same frame unchanged",
+    "Changes the port address"
+   ],
+   "answer": 1,
+   "explainBn": "decapsulate → route → re-encapsulate।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": ""
+  },
+  {
+   "id": "ad7",
+   "q": "Which layer is responsible for source-to-destination delivery of packets?",
+   "options": [
+    "Physical",
+    "Data link",
+    "Network",
+    "Session"
+   ],
+   "answer": 2,
+   "explainBn": "স্লাইড ১৪।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch2 slide 14"
+  },
+  {
+   "id": "ad8",
+   "q": "www.kbs.co.kr is an example of which address?",
+   "options": [
+    "Physical",
+    "Logical",
+    "Port",
+    "Specific"
+   ],
+   "answer": 3,
+   "explainBn": "URL ইউজার-ফ্রেন্ডলি specific address।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch2 slide 36"
+  },
+  {
+   "id": "ad9",
+   "q": "On LAN 3 of the figure, the frame’s source physical address is:",
+   "options": [
+    "10",
+    "99",
+    "66",
+    "95"
+   ],
+   "answer": 2,
+   "explainBn": "LAN 3 তে প্রেরক Router 2 এর LAN 3 ইন্টারফেস (Z/66)।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "diagram",
+   "source": ""
+  },
+  {
+   "id": "ad10",
+   "q": "A student writes that the frame on LAN 2 is “T F | Data”. What is wrong?",
+   "options": [
+    "Nothing",
+    "Logical router addresses were used instead of physical ones and A/P were dropped",
+    "Only the trailer is missing",
+    "The data should be encrypted"
+   ],
+   "answer": 1,
+   "explainBn": "ফ্রেমে physical (৩৩, ৯৯) থাকে, আর প্যাকেটে A ও P অবশ্যই থাকবে।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "scenario",
+   "source": ""
+  }
+ ],
+ "written": [
+  {
+   "id": "ad-w1",
+   "marks": 4,
+   "marksSplit": "4",
+   "question": "Consider the network topology in Figure 1 (Host A = A/10; Router 1: F/20 on LAN 1, T/99 on LAN 2; Router 2: N/33 on LAN 2, Z/66 on LAN 3; Host D = P/95). A message is sent from host A to host D through the intermediate routers. Trace the journey of the message across each hop and analyze how the message fields change at every stage of transmission.",
+   "type": "trace",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 4,
+    "criteria": [
+     {
+      "id": "hops",
+      "type": "concepts",
+      "label": "Frame at each hop (physical addresses)",
+      "marks": 2,
+      "need": 3,
+      "concepts": [
+       {
+        "name": "LAN 1 frame 20 10",
+        "any": [
+         "20 10",
+         "20, 10",
+         "destination 20",
+         "dest 20"
+        ],
+        "bn": "LAN 1: 20 10"
+       },
+       {
+        "name": "LAN 2 frame 33 99",
+        "any": [
+         "33 99",
+         "33, 99",
+         "destination 33",
+         "dest 33"
+        ],
+        "bn": "LAN 2: 33 99"
+       },
+       {
+        "name": "LAN 3 frame 95 66",
+        "any": [
+         "95 66",
+         "95, 66",
+         "destination 95",
+         "dest 95"
+        ],
+        "bn": "LAN 3: 95 66"
+       }
+      ]
+     },
+     {
+      "id": "logical",
+      "type": "concepts",
+      "label": "Logical addresses A and P unchanged",
+      "marks": 1,
+      "need": 1,
+      "concepts": [
+       {
+        "name": "logical addresses stay the same",
+        "any": [
+         "logical address remain",
+         "logical addresses remain",
+         "logical address same",
+         "logical addresses do not change",
+         "ip address remain",
+         "a and p remain",
+         "a p unchanged",
+         "logical addresses unchanged",
+         "logical address unchanged",
+         "remain the same",
+         "remains the same",
+         "do not change",
+         "unchanged"
+        ],
+        "bn": "A ও P অপরিবর্তিত থাকে"
+       }
+      ]
+     },
+     {
+      "id": "router",
+      "type": "concepts",
+      "label": "Router processing explained",
+      "marks": 1,
+      "need": 2,
+      "concepts": [
+       {
+        "name": "physical changes hop to hop",
+        "any": [
+         "hop to hop",
+         "every hop",
+         "each hop"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "decapsulate / new frame / re-encapsulate",
+        "any": [
+         "decapsulat",
+         "new frame",
+         "encapsulat",
+         "removes the header",
+         "header and trailer"
+        ],
+        "bn": ""
+       }
+      ]
+     }
+    ],
+    "penalties": [
+     {
+      "any": [
+       "logical address changes",
+       "logical addresses change",
+       "ip address changes at each"
+      ],
+      "deduct": 0.5,
+      "message": "Claims the logical address changes at each hop.",
+      "bn": "logical অ্যাড্রেস প্রতি হপে বদলায় না।"
+     }
+    ],
+    "modelAnswer": "Hop 1 (LAN 1): [20 | 10 | A P | Data | T2]. Router 1 decapsulates, checks P, re-encapsulates. Hop 2 (LAN 2): [33 | 99 | A P | Data | T2]. Router 2 repeats. Hop 3 (LAN 3): [95 | 66 | A P | Data | T2]; Host D accepts. Physical addresses change at every hop; logical addresses A and P (and port addresses) remain the same.",
+    "minWords": 40
+   },
+   "hintBn": "",
+   "tags": [
+    "addressing",
+    "trace"
+   ],
+   "source": "Summer 2026 midterm Q3(c); Forouzan Fig. 2.18 (Ch2 slide 34)"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "id": "ch5-analog-to-analog",
+ "chapterId": "fz-ch5",
+ "order": 3,
+ "title": "Analog-to-Analog Conversion: AM, FM, PM",
+ "titleBn": "অ্যানালগ থেকে অ্যানালগ: AM, FM, PM",
+ "source": {
+  "file": "Chapter_5_5th_ed.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 5",
+  "slides": [
+   29,
+   30,
+   31,
+   33,
+   35,
+   36,
+   37,
+   38
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "important",
+  "reasons": [
+   "Slide emphasis"
+  ]
+ },
+ "topics": [
+  "Analog-to-Analog Conversion: AM, FM, PM"
+ ],
+ "keyPoints": [
+  "AM: only the amplitude of the carrier changes; bandwidth is twice the modulating signal’s bandwidth (slide 31).",
+  "FM: carrier frequency follows the modulating voltage; amplitude and phase constant (slide 33).",
+  "B_PM = 2(1 + β)B (slide 36).",
+  "FM: Δf = kf·Am, independent of fm; PM: Δφ = kp·Am, equivalent Δf = kp·Am·fm (slides 37–38)."
+ ]
+}

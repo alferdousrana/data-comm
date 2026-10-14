@@ -1,0 +1,234 @@
+{
+ "id": "ch4-scrambling",
+ "chapterId": "fz-ch4",
+ "order": 2,
+ "title": "Scrambling: B8ZS and HDB3",
+ "titleBn": "স্ক্র্যাম্বলিং: B8ZS ও HDB3",
+ "source": {
+  "file": "Data_Com_Chapter-4__5th_Edition.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 4 — Digital Transmission",
+  "slides": [
+   25,
+   39,
+   40,
+   41
+  ]
+ },
+ "estMinutes": 30,
+ "difficulty": "hard",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "B8ZS on a 17-bit sequence appeared in the supplied midterm (Q3a, 3 marks)",
+   "Requires exact polarity tracking"
+  ]
+ },
+ "topics": [
+  "scrambling",
+  "B8ZS",
+  "HDB3",
+  "AMI",
+  "violation",
+  "bipolar",
+  "000VB0VB",
+  "000V",
+  "B00V",
+  "long sequence of zeros",
+  "synchronization"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "Long runs of zeros in AMI make the receiver lose synchronization. Scrambling replaces those zeros with a recognisable pattern without adding extra bits.",
+  "objectives": [
+   "Explain why scrambling is needed with AMI",
+   "Apply B8ZS: 8 zeros → 000VB0VB",
+   "Apply HDB3: 4 zeros → 000V or B00V depending on pulses since the last substitution",
+   "Write encoded output in +, −, 0 notation"
+  ],
+  "prerequisites": [
+   "AMI encoding (line-coding lesson)"
+  ]
+ },
+ "explain": [
+  {
+   "h": "কেন স্ক্র্যাম্বলিং?",
+   "bn": "AMI তে 0 মানে শূন্য ভোল্টেজ। অনেকগুলো 0 পরপর এলে লাইন দীর্ঘ সময় শূন্যে থাকে — রিসিভার বিট গোনায় সিনক্রোনাইজেশন হারায়। **Scrambling** সেই 0 গুলোর জায়গায় কিছু **ইচ্ছাকৃত পালস** বসায় যাতে লাইনে পরিবর্তন থাকে, আবার রিসিভার চিনে নিয়ে আসল 0 ফিরিয়ে আনতে পারে।"
+  },
+  {
+   "h": "V আর B মানে কী?",
+   "bn": "**V (violation)**: একটি nonzero পালস যা AMI নিয়ম **ভাঙে** — আগের পালসের **একই polarity**। **B (bipolar)**: একটি nonzero পালস যা AMI নিয়ম **মানে** — আগের পালসের **বিপরীত polarity**। রিসিভার V দেখেই বুঝে যায় এটা আসল 1 নয়, স্ক্র্যাম্বলিং প্যাটার্ন।"
+  },
+  {
+   "h": "B8ZS (উত্তর আমেরিকায় প্রচলিত)",
+   "bn": "পরপর **৮টি শূন্য** → **000VB0VB**। ধরো আগের nonzero পালস P:\n• V = P (একই দিকে — নিয়ম ভাঙা)\n• B = −P (V এর বিপরীত)\n• 0\n• V = −P (আগের B এর একই দিকে — আবার ভাঙা)\n• B = +P\nআগের পালস ধনাত্মক হলে: **0 0 0 + − 0 − +**; ঋণাত্মক হলে: **0 0 0 − + 0 + −** (Figure 4.19)।"
+  },
+  {
+   "h": "HDB3 (উত্তর আমেরিকার বাইরে)",
+   "bn": "পরপর **৪টি শূন্য** → **000V** বা **B00V**। নিয়ম: শেষ substitution এর পর কয়টি nonzero পালস এসেছে গুনো।\n• **বিজোড় (odd)** হলে → **000V** (V = আগের পালসের একই polarity)\n• **জোড় (even)** হলে → **B00V** (B = আগের পালসের বিপরীত, V = B এর একই)\nউদ্দেশ্য: প্রতিটি substitution এর পর মোট nonzero পালস জোড় রাখা (Figure 4.20)।"
+  },
+  {
+   "h": "ধাপে ধাপে কাজের পদ্ধতি",
+   "bn": "১) বাম থেকে ডানে পড়ো, AMI প্রয়োগ করো, শেষ পালসের polarity মনে রাখো।\n২) ৮টি (B8ZS) বা ৪টি (HDB3) পরপর শূন্য পেলে প্যাটার্ন বসাও।\n৩) প্যাটার্নের শেষ পালসই এখন “আগের পালস”।\n৪) চার বা কম শূন্য (B8ZS এ) থাকলে কিছু বদলাবে না — সাধারণ AMI।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "B8ZS: eight consecutive zero-level voltages are replaced by the sequence 000VB0VB. V denotes violation — a nonzero voltage that breaks an AMI rule of encoding (same polarity as the previous). B denotes bipolar — a nonzero voltage in accordance with the AMI rule.",
+   "slide": 40
+  },
+  {
+   "text": "HDB3: four consecutive zero-level voltages are replaced with 000V or B00V. If the number of nonzero pulses after the last substitution is odd, the pattern is 000V; if even, B00V — making the total number of nonzero pulses even.",
+   "slide": 41
+  }
+ ],
+ "realLife": {
+  "title": "T-1 telephone lines",
+  "bn": "উত্তর আমেরিকার T-1 লাইনে B8ZS ব্যবহার হয় — চুপচাপ কলের সময় (শুধু শূন্য) লাইনে কোনো পালস না থাকলে সিনক্রোনাইজেশন হারাত। B8ZS সেই শূন্যের ভিতরে নিয়ম-ভাঙা পালস বসিয়ে ঘড়ি সচল রাখে।",
+  "link": "Scrambling keeps transitions on the line during long zero runs (supplementary example).",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "sim",
+   "id": "linecoding",
+   "params": {
+    "bits": "00001000000001000",
+    "scheme": "b8zs",
+    "lastPulse": 1
+   },
+   "caption": "Midterm Q3a pre-filled. V and B pulses are labelled on the waveform.",
+   "alt": "B8ZS waveform of 00001000000001000 with the substituted 000VB0VB pattern highlighted."
+  }
+ ],
+ "formulas": [
+  {
+   "name": "B8ZS pattern",
+   "expr": "00000000 → 000VB0VB",
+   "vars": [
+    [
+     "V",
+     "violation: same polarity as previous pulse"
+    ],
+    [
+     "B",
+     "bipolar: opposite polarity to previous pulse"
+    ]
+   ],
+   "units": "",
+   "source": "Ch4 slide 40"
+  },
+  {
+   "name": "HDB3 patterns",
+   "expr": "0000 → 000V (odd pulses since last substitution) | B00V (even)",
+   "vars": [],
+   "units": "",
+   "source": "Ch4 slide 41"
+  }
+ ],
+ "solved": [
+  {
+   "title": "Midterm Q3a — B8ZS",
+   "given": [
+    "0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0",
+    "Last nonzero pulse before the sequence: positive"
+   ],
+   "required": "Encoded output in +, −, 0",
+   "rule": "AMI + replace 8 zeros by 000VB0VB",
+   "substitution": [],
+   "calc": [
+    "Bits 1–4: 0 0 0 0 — only four zeros, no substitution → 0 0 0 0",
+    "Bit 5: 1 → opposite of + → −",
+    "Bits 6–13: eight zeros, previous pulse = − → 000VB0VB = 0 0 0 − + 0 + −",
+    "Bit 14: 1 → opposite of last (−) → +",
+    "Bits 15–17: 0 0 0"
+   ],
+   "answer": "0 0 0 0 − 0 0 0 − + 0 + − + 0 0 0",
+   "bn": "প্যাটার্নের শেষ B (−) এর পর পরের 1 অবশ্যই + হবে।"
+  },
+  {
+   "title": "HDB3 — Figure 4.20 (1 1 0000 1 0000 0000)",
+   "given": [
+    "Bits 110000100000000",
+    "Previous pulse before sequence: negative; count starts even"
+   ],
+   "required": "HDB3 output",
+   "rule": "Count pulses since last substitution",
+   "substitution": [],
+   "calc": [
+    "1 → +, 1 → − (2 pulses, even)",
+    "0000 → B00V: B = + (opposite of −), V = + ⇒ + 0 0 +; count reset",
+    "1 → − (1 pulse, odd)",
+    "0000 → 000V: V = − ⇒ 0 0 0 −; count reset (even)",
+    "0000 → B00V: B = +, V = + ⇒ + 0 0 +"
+   ],
+   "answer": "+ − + 0 0 + − 0 0 0 − + 0 0 +",
+   "bn": "প্রতিটি substitution এর পর গণনা শূন্য থেকে শুরু।"
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 3,
+   "question": "Apply B8ZS to 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0. Select the appropriate substitution pattern at each occurrence and show the complete encoded output in +, −, 0 notation. Assume the last non-zero pulse before the sequence was positive.",
+   "answer": "B8ZS replaces eight consecutive zeros with 000VB0VB, where V repeats the polarity of the previous pulse (violation) and B follows the AMI rule (bipolar).\n• First four zeros: fewer than eight, so no substitution → 0 0 0 0.\n• Bit 1: previous pulse +, so AMI gives −.\n• Next eight zeros: previous pulse −, so 000VB0VB = 0 0 0 − + 0 + −.\n• Bit 1: previous pulse (B) −, so +.\n• Last three zeros → 0 0 0.\nEncoded output: 0 0 0 0 − 0 0 0 − + 0 + − + 0 0 0"
+  }
+ ],
+ "keywords": [
+  {
+   "term": "scrambling",
+   "bn": "দীর্ঘ শূন্যের জায়গায় প্যাটার্ন"
+  },
+  {
+   "term": "violation (V)",
+   "bn": "আগের পালসের একই polarity"
+  },
+  {
+   "term": "bipolar (B)",
+   "bn": "আগের পালসের বিপরীত"
+  },
+  {
+   "term": "000VB0VB",
+   "bn": "B8ZS প্যাটার্ন"
+  },
+  {
+   "term": "000V / B00V",
+   "bn": "HDB3 প্যাটার্ন"
+  },
+  {
+   "term": "synchronization",
+   "bn": "রিসিভারের ঘড়ি মেলানো"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Substituting four zeros in B8ZS.",
+   "fix": "B8ZS needs exactly eight consecutive zeros."
+  },
+  {
+   "m": "Choosing V with opposite polarity.",
+   "fix": "V = same polarity as the previous nonzero pulse."
+  },
+  {
+   "m": "Continuing AMI after the pattern from the pulse before the pattern.",
+   "fix": "The last B of the pattern becomes the reference."
+  },
+  {
+   "m": "HDB3: not resetting the count after a substitution.",
+   "fix": "Count pulses since the last substitution only."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "Scrambling fixes AMI’s long-zero synchronization problem.",
+   "V breaks AMI (same polarity); B obeys AMI.",
+   "B8ZS: 8 zeros → 000VB0VB.",
+   "HDB3: 4 zeros → 000V (odd) / B00V (even).",
+   "After a pattern, its last pulse is the new reference."
+  ],
+  "card": "prev + → 000+−0−+ | prev − → 000−+0+−",
+  "recall": {
+   "q": "B8ZS output for 1 00000000 when the previous pulse was negative?",
+   "a": "+ 0 0 0 + − 0 − + (the first 1 becomes +, then pattern with P = +)."
+  }
+ }
+}

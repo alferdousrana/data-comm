@@ -1,0 +1,287 @@
+{
+ "id": "ch4-line-coding",
+ "chapterId": "fz-ch4",
+ "order": 1,
+ "title": "Line Coding: NRZ-L, NRZ-I, RZ, Manchester, AMI",
+ "titleBn": "লাইন কোডিং: NRZ-L, NRZ-I, RZ, ম্যানচেস্টার, AMI",
+ "source": {
+  "file": "Data_Com_Chapter-4__5th_Edition.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 4 — Digital Transmission",
+  "slides": [
+   2,
+   4,
+   5,
+   6,
+   8,
+   10,
+   11,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   31
+  ]
+ },
+ "estMinutes": 40,
+ "difficulty": "medium",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "Drawing NRZ-L, NRZ-I and RZ appeared in the supplied midterm (Q1b OR, 3 marks)",
+   "Foundation for B8ZS/HDB3 scrambling"
+  ]
+ },
+ "topics": [
+  "line coding",
+  "NRZ-L",
+  "NRZ-I",
+  "RZ",
+  "Manchester",
+  "differential Manchester",
+  "AMI",
+  "pseudoternary",
+  "unipolar",
+  "polar",
+  "bipolar",
+  "signal element",
+  "data element",
+  "self-synchronization",
+  "DC component",
+  "baud"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "Line coding turns bits into a digital signal. Waveform drawing questions are frequent and lose marks for one wrong transition.",
+  "objectives": [
+   "Distinguish data element vs signal element, data rate vs signal rate",
+   "Draw NRZ-L, NRZ-I, RZ, Manchester, differential Manchester, AMI and pseudoternary using the slide conventions",
+   "Explain DC component and self-synchronization problems"
+  ],
+  "prerequisites": [
+   "Bit rate and baud (Ch3)"
+  ]
+ },
+ "explain": [
+  {
+   "h": "ডেটা এলিমেন্ট বনাম সিগন্যাল এলিমেন্ট",
+   "bn": "**Data element** = তথ্যের ক্ষুদ্রতম একক — বিট। **Signal element** = ডিজিটাল সিগন্যালের ক্ষুদ্রতম (সময়ের দিক থেকে) অংশ। “ডেটা এলিমেন্ট বহন হয়, সিগন্যাল এলিমেন্ট বাহক।” r = প্রতি সিগন্যাল এলিমেন্টে কত ডেটা এলিমেন্ট। গড় সিগন্যাল রেট **S_ave = c × N × (1/r)** baud, যেখানে c = case factor (গড়ে ½)।"
+  },
+  {
+   "h": "Unipolar, Polar, Bipolar",
+   "bn": "**Unipolar**: সব লেভেল সময়-অক্ষের এক পাশে। **Polar**: ভোল্টেজ দুই পাশে (+ ও −)। **Bipolar**: তিন লেভেল — +, 0, −।"
+  },
+  {
+   "h": "NRZ-L ও NRZ-I (polar)",
+   "bn": "**NRZ-L**: ভোল্টেজের **লেভেল** বিটের মান ঠিক করে। স্লাইডের Figure 4.6: **0 → ধনাত্মক, 1 → ঋণাত্মক**।\n**NRZ-I**: লেভেল **উল্টানো বা না-উল্টানো** বিট ঠিক করে — বিটের শুরুতে পরিবর্তন হলে 1, পরিবর্তন না হলে 0।\nদুটোরই গড় সিগন্যাল রেট N/2 এবং দুটোতেই **DC component** সমস্যা আছে।"
+  },
+  {
+   "h": "RZ (Return-to-Zero)",
+   "bn": "বিটের **মাঝখানে** সিগন্যাল শূন্যে ফিরে আসে — তিনটি মান (+, 0, −)। Figure 4.7: **1 → প্রথম অর্ধেক +, তারপর 0; 0 → প্রথম অর্ধেক −, তারপর 0**। প্রতি বিটে পরিবর্তন থাকায় সিনক্রোনাইজেশন ভালো, কিন্তু প্রতি বিটে দুটি পরিবর্তন — বেশি bandwidth লাগে।"
+  },
+  {
+   "h": "Manchester ও Differential Manchester (biphase)",
+   "bn": "দুটোতেই **বিটের মাঝখানে transition** থাকে — এটা সিনক্রোনাইজেশনের জন্য। **Manchester** (Figure 4.8): **0 = উপর থেকে নিচে (high→low), 1 = নিচ থেকে উপরে (low→high)**। **Differential Manchester**: বিটের **শুরুতে transition থাকলে 0, না থাকলে 1**; মাঝখানে সবসময় transition। DC component নেই, কিন্তু ন্যূনতম bandwidth NRZ এর দ্বিগুণ।"
+  },
+  {
+   "h": "AMI ও Pseudoternary (bipolar)",
+   "bn": "**AMI**: 0 → শূন্য ভোল্টেজ; 1 → পর্যায়ক্রমে + ও −। **Pseudoternary**: উল্টো — 1 → শূন্য; 0 → পর্যায়ক্রমে + ও −। DC component নেই। কিন্তু AMI তে লম্বা 0 এর সারিতে সিনক্রোনাইজেশন হারায় — এর সমাধান **scrambling** (B8ZS, HDB3)।"
+  },
+  {
+   "h": "আঁকার কৌশল",
+   "bn": "প্রথমে বিটের উপরে সংখ্যা লেখো, প্রতিটি বিটের সীমায় ড্যাশ লাইন টানো, তারপর এক বিট করে নিয়ম প্রয়োগ করো। NRZ-I এর জন্য প্রশ্নে বলা **শুরুর লেভেল** (যেমন “positive”) মনে রাখো — প্রথম বিট 1 হলে সেখানেই উল্টাবে।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "Data elements are being carried; signal elements are the carriers.",
+   "slide": 4
+  },
+  {
+   "text": "In NRZ-L the level of the voltage determines the value of the bit. In NRZ-I the inversion or the lack of inversion determines the value of the bit.",
+   "slide": 17
+  },
+  {
+   "text": "NRZ-L and NRZ-I both have an average signal rate of N/2 Bd. NRZ-L and NRZ-I both have a DC component problem.",
+   "slide": 18
+  },
+  {
+   "text": "In Manchester and differential Manchester encoding, the transition at the middle of the bit is used for synchronization.",
+   "slide": 23
+  },
+  {
+   "text": "In bipolar encoding, we use three levels: positive, zero, and negative.",
+   "slide": 24
+  }
+ ],
+ "realLife": {
+  "title": "Ethernet cables",
+  "bn": "পুরোনো 10 Mbps Ethernet ম্যানচেস্টার কোডিং ব্যবহার করত — প্রতিটি বিটের মাঝের transition দেখে রিসিভার তার ঘড়ি মিলিয়ে নিত। তাই দীর্ঘ 0 বা 1 এর সারিতেও বিট গোনায় ভুল হত না।",
+  "link": "Mid-bit transitions give self-synchronization (supplementary example).",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "sim",
+   "id": "linecoding",
+   "params": {
+    "bits": "10110001",
+    "scheme": "nrz-i"
+   },
+   "caption": "Line-coding simulator — change bits and scheme; midterm sequence pre-filled.",
+   "alt": "Waveform of 10110001 in the selected line-coding scheme with bit boundaries and levels."
+  }
+ ],
+ "formulas": [
+  {
+   "name": "Average signal (baud) rate",
+   "expr": "S_ave = c × N × (1/r)",
+   "vars": [
+    [
+     "c",
+     "case factor (average ½)"
+    ],
+    [
+     "N",
+     "data rate (bps)"
+    ],
+    [
+     "r",
+     "data elements per signal element"
+    ]
+   ],
+   "units": "baud",
+   "source": "Ch4 slide 6"
+  },
+  {
+   "name": "Minimum bandwidth",
+   "expr": "B_min = c × N × (1/r)",
+   "vars": [],
+   "units": "Hz",
+   "source": "Ch4 slide 8"
+  }
+ ],
+ "solved": [
+  {
+   "title": "Midterm: 10110001 in NRZ-L, NRZ-I, RZ (start positive)",
+   "given": [
+    "Bits: 1 0 1 1 0 0 0 1",
+    "NRZ-I reference level before the first bit: positive"
+   ],
+   "required": "Three waveforms",
+   "rule": "NRZ-L: 0=+, 1=−. NRZ-I: invert on 1. RZ: 1 = +→0, 0 = −→0.",
+   "substitution": [],
+   "calc": [
+    "NRZ-L: − + − − + + + −",
+    "NRZ-I: start +; 1→invert(−), 0→stay(−), 1→(+), 1→(−), 0(−), 0(−), 0(−), 1→(+) ⇒ − − + − − − − +",
+    "RZ: +0 −0 +0 +0 −0 −0 −0 +0 (each half-bit)"
+   ],
+   "answer": "See the simulator for the drawn waveforms.",
+   "bn": "NRZ-I তে শুধু 1 এ লেভেল উল্টায় — 0 এ আগের লেভেলই থাকে।"
+  },
+  {
+   "title": "Example 4.4",
+   "given": [
+    "NRZ-I at 10 Mbps"
+   ],
+   "required": "Average signal rate and minimum bandwidth",
+   "rule": "S = N/2; B_min = S",
+   "substitution": [
+    "S = 10 Mbps / 2"
+   ],
+   "calc": [
+    "S = 5 Mbaud; B_min = 5 MHz"
+   ],
+   "answer": "S_ave = 5 Mbaud, B_min = 5 MHz",
+   "bn": "স্লাইডে লেখা 500 kbaud/500 kHz — 10 Mbps/2 আসলে 5 Mbaud; পরীক্ষায় হিসাব করে লিখবে।"
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 3,
+   "question": "Draw the waveform for 1 0 1 1 0 0 0 1 using NRZ-L, NRZ-I and RZ. Assume the signal starts at a positive level and there is no transition for an initial reference bit while using NRZ-I.",
+   "answer": "[Draw three aligned waveforms with dashed bit boundaries and the bits written on top.]\nNRZ-L (0 = +V, 1 = −V): − + − − + + + −\nNRZ-I (reference level +V; a 1 inverts the level at the start of the bit, a 0 keeps it): − − + − − − − +\nRZ (1 = +V for the first half then 0; 0 = −V for the first half then 0): +0 −0 +0 +0 −0 −0 −0 +0"
+  }
+ ],
+ "keywords": [
+  {
+   "term": "signal element / data element",
+   "bn": "বাহক / বহনকৃত"
+  },
+  {
+   "term": "NRZ-L: level",
+   "bn": "লেভেল দিয়ে বিট"
+  },
+  {
+   "term": "NRZ-I: inversion",
+   "bn": "উল্টানো দিয়ে বিট"
+  },
+  {
+   "term": "mid-bit transition",
+   "bn": "মাঝে পরিবর্তন — সিনক"
+  },
+  {
+   "term": "DC component",
+   "bn": "শূন্য ফ্রিকোয়েন্সির উপাদান"
+  },
+  {
+   "term": "self-synchronization",
+   "bn": "সিগন্যালেই সময়ের তথ্য"
+  },
+  {
+   "term": "bipolar (AMI)",
+   "bn": "তিন লেভেল, 1 পর্যায়ক্রমে"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Inverting NRZ-I on 0s.",
+   "fix": "Only a 1 causes inversion."
+  },
+  {
+   "m": "Drawing NRZ-L with 1 = positive.",
+   "fix": "The slide figure uses 0 = positive, 1 = negative. If a question states another convention, follow the question."
+  },
+  {
+   "m": "RZ returning to zero at the bit boundary instead of mid-bit.",
+   "fix": "RZ returns to zero in the middle of the bit."
+  },
+  {
+   "m": "Manchester direction reversed.",
+   "fix": "Slides: 0 = high-to-low, 1 = low-to-high."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "Signal elements carry data elements; S_ave = c·N/r.",
+   "NRZ-L: level; NRZ-I: inversion on 1.",
+   "RZ: three levels, returns to 0 mid-bit.",
+   "Manchester/diff. Manchester: mid-bit transition for sync; double bandwidth.",
+   "AMI: 1s alternate ±; long 0s lose sync → scrambling."
+  ],
+  "card": "NRZ-L 0=+ 1=− | NRZ-I flip on 1 | RZ 1=+0 0=−0 | Manch 0=↘ 1=↗",
+  "recall": {
+   "q": "In differential Manchester, what does a transition at the start of the bit mean?",
+   "a": "Bit 0."
+  }
+ },
+ "flags": [
+  {
+   "type": "convention",
+   "text": "NRZ-I wording in the midterm (“starts at a positive level… no transition for an initial reference bit”) is read here as: the reference level before the first bit is +V. The simulator lets you change the starting level if your instructor used another reading."
+  },
+  {
+   "type": "slide-arithmetic",
+   "text": "Slide 19 (Example 4.4) states 500 kbaud / 500 kHz for 10 Mbps NRZ-I; N/2 for 10 Mbps is 5 Mbaud / 5 MHz. The app uses the formula result and flags the discrepancy."
+  }
+ ]
+}

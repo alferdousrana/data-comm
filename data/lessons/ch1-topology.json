@@ -1,0 +1,241 @@
+{
+ "id": "ch1-topology",
+ "chapterId": "fz-ch1",
+ "order": 2,
+ "title": "Physical Topologies: Mesh, Star, Bus, Ring and Hybrid",
+ "titleBn": "ফিজিক্যাল টপোলজি: মেশ, স্টার, বাস, রিং ও হাইব্রিড",
+ "source": {
+  "file": "Chapter-1-Introduction.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 1 — Introduction",
+  "slides": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ]
+ },
+ "estMinutes": 25,
+ "difficulty": "easy",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "Hybrid topology construction appeared in the supplied midterm (Q3a OR, 3 marks)",
+   "Mesh link formula is a quick numerical question"
+  ]
+ },
+ "topics": [
+  "mesh",
+  "star",
+  "bus",
+  "ring",
+  "hybrid",
+  "point-to-point",
+  "multipoint",
+  "n(n-1)/2",
+  "backbone",
+  "hub"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "Topology is how devices are physically connected. You may be asked to draw a hybrid network, count mesh links, or compare topologies.",
+  "objectives": [
+   "Distinguish point-to-point and multipoint connections",
+   "Describe mesh, star, bus and ring topologies",
+   "Use n(n − 1)/2 for a fully connected mesh",
+   "Construct a hybrid topology from a description"
+  ],
+  "prerequisites": [
+   "Node and link (Chapter 1.2)"
+  ]
+ },
+ "explain": [
+  {
+   "h": "সংযোগের ধরন (Type of Connection)",
+   "bn": "**Point-to-point**: একটি লিংক শুধু দুটি ডিভাইসের মধ্যে — একজন ট্রান্সমিটার, একজন রিসিভার। **Multipoint (multidrop)**: একটি লিংক একাধিক ডিভাইস শেয়ার করে — একটি ট্রান্সমিশন অনেকে পায়।"
+  },
+  {
+   "h": "মেশ (Mesh)",
+   "bn": "প্রতিটি ডিভাইস বাকি সব ডিভাইসের সাথে আলাদা point-to-point লিংকে যুক্ত। n টি ডিভাইসে **n(n − 1)/2 টি duplex লিংক** লাগে, আর প্রতিটি ডিভাইসে n − 1 টি I/O পোর্ট। সুবিধা: একটি লিংক নষ্ট হলে বাকিগুলো চলে (robust), ডেডিকেটেড লিংক তাই ট্রাফিক সমস্যা কম। অসুবিধা: অনেক কেবল ও পোর্ট — খরচ বেশি।"
+  },
+  {
+   "h": "স্টার (Star)",
+   "bn": "প্রতিটি ডিভাইস শুধু একটি কেন্দ্রীয় ডিভাইসের (hub/switch) সাথে point-to-point লিংকে যুক্ত। ডিভাইসগুলো একে অপরের সাথে সরাসরি যুক্ত নয় — সব যোগাযোগ hub হয়ে যায়। হাব নষ্ট হলে পুরো নেটওয়ার্ক বন্ধ।"
+  },
+  {
+   "h": "বাস (Bus) ও রিং (Ring)",
+   "bn": "**বাস**: একটি লম্বা কেবল **backbone** হিসেবে কাজ করে, সব ডিভাইস drop line ও tap দিয়ে তাতে যুক্ত — এটা multipoint। backbone কাটা গেলে সব বন্ধ। **রিং**: প্রতিটি ডিভাইস শুধু দুই পাশের প্রতিবেশীর সাথে যুক্ত; সিগন্যাল এক দিকে ডিভাইস থেকে ডিভাইসে ঘোরে, প্রতিটি ডিভাইসে repeater থাকে।"
+  },
+  {
+   "h": "হাইব্রিড (Hybrid)",
+   "bn": "একাধিক টপোলজি একসাথে। স্লাইডের উদাহরণ: **star backbone, যার সাথে তিনটি bus নেটওয়ার্ক** যুক্ত (Figure 1.9)। পরীক্ষায় উল্টোও আসতে পারে — যেমন “main backbone = bus, তার সাথে একটি star ও দুটি ring”। আঁকার নিয়ম: আগে backbone আঁকো ও লেবেল দাও, তারপর প্রতিটি sub-network কোথায় যুক্ত সেটা স্পষ্ট দেখাও।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "Point to Point — single transmitter and receiver; Multipoint — multiple recipients of single transmission.",
+   "slide": 7
+  },
+  {
+   "text": "In a mesh topology, we need n (n – 1) / 2 duplex-mode links.",
+   "slide": 10
+  },
+  {
+   "text": "Figure 1.9: A hybrid topology — a star backbone with three bus networks.",
+   "slide": 14
+  }
+ ],
+ "realLife": {
+  "title": "Your university computer lab",
+  "bn": "ল্যাবের প্রতিটি পিসি একটি সুইচে আলাদা কেবলে যুক্ত — এটা star। কয়েকটি ল্যাবের সুইচ যদি একটি মূল ক্যাম্পাস কেবলে (backbone) যুক্ত হয়, পুরো ক্যাম্পাস নেটওয়ার্ক হয় হাইব্রিড।",
+  "link": "Each lab is a star; joining several stars to one backbone creates a hybrid topology.",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "diagram",
+   "id": "topologies",
+   "caption": "The four basic physical topologies.",
+   "alt": "Four small diagrams: mesh with every pair connected, star with a central hub, bus with drop lines from a backbone, ring with each node linked to two neighbours."
+  },
+  {
+   "kind": "diagram",
+   "id": "hybrid-bus-star-rings",
+   "caption": "Exam-style hybrid: a bus backbone connecting one star and two rings.",
+   "alt": "A horizontal bus backbone with three drop lines: one to the hub of a star network and two to ring networks."
+  }
+ ],
+ "formulas": [
+  {
+   "name": "Mesh links",
+   "expr": "Links = n(n − 1) / 2",
+   "vars": [
+    [
+     "n",
+     "number of devices"
+    ]
+   ],
+   "units": "count",
+   "source": "Ch1 slide 10"
+  },
+  {
+   "name": "Ports per device (mesh)",
+   "expr": "Ports = n − 1",
+   "vars": [
+    [
+     "n",
+     "number of devices"
+    ]
+   ],
+   "units": "count",
+   "source": "Supplementary (follows from the mesh definition)"
+  }
+ ],
+ "solved": [
+  {
+   "title": "Mesh with 5 devices (Figure 1.4)",
+   "given": [
+    "n = 5"
+   ],
+   "required": "Number of duplex links",
+   "rule": "n(n − 1)/2",
+   "substitution": [
+    "5 × 4 / 2"
+   ],
+   "calc": [
+    "= 20 / 2 = 10"
+   ],
+   "answer": "10 duplex-mode links; each device needs 4 ports.",
+   "bn": "প্রতিটি জোড়া একবারই গোনা হয় বলে ২ দিয়ে ভাগ।"
+  },
+  {
+   "title": "Construct: bus backbone + one star + two rings",
+   "given": [
+    "Main backbone uses bus topology",
+    "Connects one star and two ring networks"
+   ],
+   "required": "Hybrid network diagram",
+   "rule": "Draw backbone first; attach each sub-network with a drop line/tap.",
+   "substitution": [],
+   "calc": [
+    "1. Draw a long horizontal line labelled “Bus backbone” with terminators at both ends.",
+    "2. Drop line 1 → a hub; connect 3–4 stations to the hub individually (star).",
+    "3. Drop line 2 → one station of ring 1; draw 4 stations in a closed loop.",
+    "4. Drop line 3 → ring 2 likewise.",
+    "5. Label every part: backbone, tap/drop line, hub, star, ring 1, ring 2."
+   ],
+   "answer": "See the hybrid diagram above.",
+   "bn": "লেবেল না দিলে নম্বর কাটে — backbone, hub, ring স্পষ্ট লিখবে।"
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 3,
+   "question": "A training institute is setting up a network where the main backbone uses a bus topology, connecting one star topology and two ring topologies. Construct the hybrid network diagram.",
+   "answer": "[Draw] A horizontal bus backbone (with terminators) and three drop lines. Drop line 1 connects to a hub; four stations are each linked to the hub (star). Drop lines 2 and 3 each connect to a ring of four stations, where every station is linked to its two neighbours.\nBrief note: A hybrid topology combines two or more topologies. Here the bus acts as the backbone; the star depends on its hub and each ring passes the signal from device to device in one direction."
+  },
+  {
+   "marks": 2,
+   "question": "How many duplex links are required to connect 8 devices in a fully connected mesh?",
+   "answer": "Links = n(n − 1)/2 = 8 × 7 / 2 = 28 duplex-mode links (each device needs 7 I/O ports)."
+  }
+ ],
+ "keywords": [
+  {
+   "term": "point-to-point",
+   "bn": "দুটি ডিভাইসের জন্য একক লিংক"
+  },
+  {
+   "term": "multipoint",
+   "bn": "একটি লিংক অনেক ডিভাইসের"
+  },
+  {
+   "term": "backbone",
+   "bn": "মূল কেবল যার সাথে সবাই যুক্ত"
+  },
+  {
+   "term": "hub",
+   "bn": "স্টারের কেন্দ্রীয় ডিভাইস"
+  },
+  {
+   "term": "duplex-mode links",
+   "bn": "দুই দিকে ডেটা চলা লিংক"
+  },
+  {
+   "term": "hybrid topology",
+   "bn": "একাধিক টপোলজির মিশ্রণ"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Using n(n − 1) for mesh links.",
+   "fix": "Duplex links: divide by 2 → n(n − 1)/2."
+  },
+  {
+   "m": "Drawing star devices connected to each other.",
+   "fix": "In a star every device connects only to the hub."
+  },
+  {
+   "m": "Unlabelled hybrid diagram.",
+   "fix": "Label backbone, hub, rings and drop lines."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "Point-to-point vs multipoint connections.",
+   "Mesh: n(n − 1)/2 duplex links.",
+   "Star: every device → hub.",
+   "Bus: one backbone, multipoint; Ring: neighbour-to-neighbour.",
+   "Hybrid: combination; slide example = star backbone + three buses."
+  ],
+  "card": "Mesh=everyone↔everyone · Star=all→hub · Bus=one backbone · Ring=closed loop",
+  "recall": {
+   "q": "How many duplex links for 6 devices in mesh?",
+   "a": "6 × 5 / 2 = 15"
+  }
+ }
+}

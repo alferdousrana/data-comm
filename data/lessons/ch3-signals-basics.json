@@ -1,0 +1,46 @@
+{
+ "id": "ch3-signals-basics",
+ "chapterId": "fz-ch3",
+ "order": 1,
+ "title": "Analog and Digital Data and Signals; Periodic Signals",
+ "titleBn": "অ্যানালগ ও ডিজিটাল ডেটা ও সিগন্যাল",
+ "source": {
+  "file": "Chapter-3-Data_and_Signals__2_.ppt",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 3",
+  "slides": [
+   3,
+   4,
+   5,
+   6,
+   8,
+   9,
+   10,
+   11,
+   12,
+   21,
+   22,
+   23,
+   25
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "supporting",
+  "reasons": [
+   "Supporting concept for other topics"
+  ]
+ },
+ "topics": [
+  "Analog and Digital Data and Signals; Periodic Signals"
+ ],
+ "keyPoints": [
+  "Data can be analog (continuous) or digital (discrete); so can signals.",
+  "We commonly use periodic analog signals and nonperiodic digital signals (slide 9).",
+  "Sine wave properties: peak amplitude, frequency, phase.",
+  "Phase describes the position of the waveform relative to time 0.",
+  "Wavelength = propagation speed × period = propagation speed / frequency."
+ ]
+}

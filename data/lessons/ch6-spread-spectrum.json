@@ -1,0 +1,36 @@
+{
+ "id": "ch6-spread-spectrum",
+ "chapterId": "fz-ch6",
+ "order": 3,
+ "title": "Spread Spectrum: FHSS and DSSS",
+ "titleBn": "স্প্রেড স্পেকট্রাম",
+ "source": {
+  "file": "Chapter-6-multiplexing.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 6",
+  "slides": [
+   59,
+   60,
+   61,
+   62,
+   66
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "supporting",
+  "reasons": [
+   "Supporting concept for other topics"
+  ]
+ },
+ "topics": [
+  "Spread Spectrum: FHSS and DSSS"
+ ],
+ "keyPoints": [
+  "Goals: prevent eavesdropping and jamming by adding redundancy (slide 59).",
+  "A signal of bandwidth B is spread to Bss; signals use different codes (slide 60).",
+  "FHSS hops between frequencies; DSSS replaces each bit with a chip code (slides 62–67)."
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "id": "ch3-composite-bandwidth",
+ "chapterId": "fz-ch3",
+ "order": 2,
+ "title": "Composite Signals, Frequency Domain and Bandwidth",
+ "titleBn": "কম্পোজিট সিগন্যাল, ফ্রিকোয়েন্সি ডোমেইন ও ব্যান্ডউইডথ",
+ "source": {
+  "file": "Chapter-3-Data_and_Signals__2_.ppt",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 3 — Introduction to Physical Layer (Data and Signals)",
+  "slides": [
+   11,
+   13,
+   19,
+   20,
+   26,
+   27,
+   28,
+   29,
+   30,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39
+  ]
+ },
+ "estMinutes": 30,
+ "difficulty": "medium",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "Appeared in the supplied midterm (Q2a, 4 marks: bandwidth + two frequency-domain sketches)",
+   "Bandwidth = fh − fl is needed for Nyquist/Shannon problems"
+  ]
+ },
+ "topics": [
+  "composite signal",
+  "frequency domain",
+  "time domain",
+  "bandwidth",
+  "periodic",
+  "nonperiodic",
+  "spectrum",
+  "Fourier",
+  "fh fl",
+  "frequency",
+  "period",
+  "phase"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "Real data signals are composite. You must find bandwidth (fh − fl) and draw the frequency-domain plot — spikes for periodic, a continuous curve for nonperiodic.",
+  "objectives": [
+   "Relate frequency and period (f = 1/T)",
+   "Read and draw time-domain and frequency-domain plots",
+   "Explain why periodic composites give discrete frequencies and nonperiodic ones continuous frequencies",
+   "Calculate bandwidth B = fh − fl"
+  ],
+  "prerequisites": [
+   "Sine wave: amplitude, frequency, phase (Ch3 slides 10–22)"
+  ]
+ },
+ "explain": [
+  {
+   "h": "সাইন ওয়েভের তিনটি বৈশিষ্ট্য",
+   "bn": "প্রতিটি সিগন্যালের তিনটি বৈশিষ্ট্য: **peak amplitude**, **frequency**, **phase**। Frequency ও period একে অপরের বিপরীত: **f = 1/T**। অল্প সময়ে দ্রুত পরিবর্তন = উচ্চ ফ্রিকোয়েন্সি। একদম না বদলালে ফ্রিকোয়েন্সি শূন্য (DC), তাৎক্ষণিক বদলালে অসীম।"
+  },
+  {
+   "h": "টাইম ডোমেইন বনাম ফ্রিকোয়েন্সি ডোমেইন",
+   "bn": "**Time domain** প্লটে x-অক্ষে সময়, y-অক্ষে amplitude — সিগন্যাল সময়ের সাথে কেমন বদলায়। **Frequency domain** প্লটে x-অক্ষে ফ্রিকোয়েন্সি, y-অক্ষে peak amplitude — একটি সাইন ওয়েভ মানে একটি মাত্র **spike**। অনেক সাইন ওয়েভ থাকলে ফ্রিকোয়েন্সি ডোমেইন অনেক বেশি সংক্ষিপ্ত ও কাজের (Example 3.7)।"
+  },
+  {
+   "h": "কম্পোজিট সিগন্যাল (Composite Signal)",
+   "bn": "একটি মাত্র ফ্রিকোয়েন্সির সাইন ওয়েভ দিয়ে ডেটা পাঠানো যায় না; তাই আমরা অনেক সাইন ওয়েভ দিয়ে তৈরি **composite signal** পাঠাই। **Fourier analysis** অনুযায়ী যেকোনো composite signal ভিন্ন ভিন্ন ফ্রিকোয়েন্সি, phase ও amplitude এর সাইন ওয়েভের যোগফল।\n• **Periodic** composite → **discrete** ফ্রিকোয়েন্সি (আলাদা আলাদা spike)।\n• **Nonperiodic** composite → **continuous** ফ্রিকোয়েন্সি (একটানা বক্ররেখা), যেমন মাইক্রোফোনে কথা বলা।"
+  },
+  {
+   "h": "ব্যান্ডউইডথ (Bandwidth)",
+   "bn": "Composite signal এর **bandwidth = সর্বোচ্চ ফ্রিকোয়েন্সি − সর্বনিম্ন ফ্রিকোয়েন্সি**, অর্থাৎ **B = fh − fl**। মনে রাখো — amplitude দিয়ে bandwidth হিসাব হয় না। 0 Hz থাকলে fl = 0 (এটা DC component)।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "Frequency and period are the inverse of each other.",
+   "slide": 13
+  },
+  {
+   "text": "If the composite signal is periodic, the decomposition gives a series of signals with discrete frequencies; if the composite signal is nonperiodic, the decomposition gives a combination of sine waves with continuous frequencies.",
+   "slide": 29
+  },
+  {
+   "text": "The bandwidth of a composite signal is the difference between the highest and the lowest frequencies contained in that signal.",
+   "slide": 33
+  }
+ ],
+ "realLife": {
+  "title": "A music equalizer display",
+  "bn": "গান চালালে মোবাইলের equalizer বারগুলো ওঠানামা করে — প্রতিটি বার একটি ফ্রিকোয়েন্সি রেঞ্জের শক্তি দেখায়। এটাই ফ্রিকোয়েন্সি ডোমেইনের ধারণা: সময়ের বদলে ফ্রিকোয়েন্সি অনুযায়ী সিগন্যাল দেখা। গান nonperiodic, তাই তার স্পেকট্রাম একটানা।",
+  "link": "The equalizer shows amplitude per frequency (frequency domain); speech/music are nonperiodic so the spectrum is continuous.",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "sim",
+   "id": "spectrum",
+   "params": {
+    "freqs": [
+     0,
+     4,
+     8,
+     12,
+     16
+    ],
+    "amps": [
+     3,
+     10,
+     20,
+     10,
+     5
+    ],
+    "periodic": false
+   },
+   "caption": "Midterm Q2a: components 0–16 Hz. Toggle periodic/nonperiodic to compare spikes vs a continuous spectrum.",
+   "alt": "Frequency-domain plot from 0 to 16 Hz with amplitude 3 V at 0 Hz, 20 V at 8 Hz and 5 V at 16 Hz; bandwidth arrow 16 Hz."
+  }
+ ],
+ "formulas": [
+  {
+   "name": "Frequency–period",
+   "expr": "f = 1 / T,  T = 1 / f",
+   "vars": [
+    [
+     "f",
+     "frequency (Hz)"
+    ],
+    [
+     "T",
+     "period (s)"
+    ]
+   ],
+   "units": "Hz ↔ s",
+   "source": "Ch3 slide 13"
+  },
+  {
+   "name": "Bandwidth",
+   "expr": "B = f_h − f_l",
+   "vars": [
+    [
+     "f_h",
+     "highest frequency"
+    ],
+    [
+     "f_l",
+     "lowest frequency"
+    ]
+   ],
+   "units": "Hz",
+   "source": "Ch3 slides 33–36"
+  },
+  {
+   "name": "Wavelength",
+   "expr": "λ = propagation speed × period = c / f",
+   "vars": [
+    [
+     "λ",
+     "wavelength (m)"
+    ],
+    [
+     "c",
+     "propagation speed (m/s)"
+    ]
+   ],
+   "units": "m",
+   "source": "Ch3 slide 25"
+  }
+ ],
+ "solved": [
+  {
+   "title": "Example 3.10",
+   "given": [
+    "Components: 100, 300, 500, 700, 900 Hz, each 10 V",
+    "Periodic signal"
+   ],
+   "required": "Bandwidth and spectrum",
+   "rule": "B = fh − fl",
+   "substitution": [
+    "B = 900 − 100"
+   ],
+   "calc": [
+    "B = 800 Hz"
+   ],
+   "answer": "B = 800 Hz; five spikes of 10 V at 100, 300, 500, 700 and 900 Hz.",
+   "bn": "Periodic, তাই শুধু পাঁচটি spike — মাঝখানে কিছু নেই।"
+  },
+  {
+   "title": "Midterm Q2a (non-periodic, 0–16 Hz)",
+   "given": [
+    "Components 0, 4, 8, 12, 16 Hz",
+    "Terminal amplitudes 3 V (0 Hz) and 5 V (16 Hz)",
+    "Centre (8 Hz) peak 20 V"
+   ],
+   "required": "(i) bandwidth (ii) frequency domain (iii) periodic version",
+   "rule": "B = fh − fl; nonperiodic → continuous; periodic → discrete spikes",
+   "substitution": [
+    "B = 16 − 0"
+   ],
+   "calc": [
+    "(i) B = 16 Hz",
+    "(ii) Draw a continuous curve from 0 to 16 Hz: 3 V at 0 Hz, rising to 20 V at 8 Hz, falling to 5 V at 16 Hz. Mark B = 16 Hz under the axis.",
+    "(iii) Draw five vertical spikes at 0, 4, 8, 12, 16 Hz with heights 3 V, (unspecified), 20 V, (unspecified), 5 V; mark B = 16 Hz."
+   ],
+   "answer": "B = 16 Hz; continuous spectrum for (ii), discrete spikes for (iii).",
+   "bn": "৪ ও ১২ Hz এর amplitude প্রশ্নে দেওয়া নেই — যেকোনো যুক্তিসংগত উচ্চতায় আঁকো এবং লিখে দাও “amplitude not specified”।"
+  },
+  {
+   "title": "Example 3.12",
+   "given": [
+    "Nonperiodic, B = 200 kHz, middle frequency 140 kHz, peak 20 V",
+    "Two extreme frequencies have amplitude 0"
+   ],
+   "required": "Lowest and highest frequency",
+   "rule": "Middle ± B/2",
+   "substitution": [
+    "fl = 140 − 100",
+    "fh = 140 + 100"
+   ],
+   "calc": [
+    "fl = 40 kHz, fh = 240 kHz"
+   ],
+   "answer": "Continuous spectrum from 40 kHz to 240 kHz peaking at 20 V at 140 kHz.",
+   "bn": "মাঝের ফ্রিকোয়েন্সির দুই পাশে B এর অর্ধেক করে।"
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 1,
+   "question": "Determine the bandwidth of a composite signal with components at 0, 4, 8, 12 and 16 Hz.",
+   "answer": "B = fh − fl = 16 − 0 = 16 Hz."
+  },
+  {
+   "marks": 2,
+   "question": "Sketch the frequency-domain representation of the non-periodic signal, clearly indicating the bandwidth.",
+   "answer": "[Sketch] x-axis: frequency (Hz) 0–16; y-axis: amplitude (V). Because the signal is nonperiodic its spectrum is continuous: a smooth curve starting at 3 V at 0 Hz, peaking at 20 V at 8 Hz and ending at 5 V at 16 Hz. A double-headed arrow under the axis from 0 to 16 Hz is labelled “Bandwidth = 16 Hz”."
+  },
+  {
+   "marks": 1,
+   "question": "Draw the revised frequency-domain representation if the signal is periodic.",
+   "answer": "[Sketch] A periodic composite signal has discrete frequencies, so draw only five vertical spikes at 0, 4, 8, 12 and 16 Hz: 3 V at 0 Hz, 20 V at 8 Hz, 5 V at 16 Hz (amplitudes at 4 and 12 Hz are not specified). Bandwidth is still 16 Hz."
+  }
+ ],
+ "keywords": [
+  {
+   "term": "composite signal",
+   "bn": "অনেক সাইন ওয়েভের সমষ্টি"
+  },
+  {
+   "term": "frequency domain",
+   "bn": "ফ্রিকোয়েন্সি বনাম amplitude প্লট"
+  },
+  {
+   "term": "discrete frequencies",
+   "bn": "আলাদা spike — periodic"
+  },
+  {
+   "term": "continuous frequencies",
+   "bn": "একটানা — nonperiodic"
+  },
+  {
+   "term": "bandwidth = fh − fl",
+   "bn": "সর্বোচ্চ − সর্বনিম্ন ফ্রিকোয়েন্সি"
+  },
+  {
+   "term": "Fourier analysis",
+   "bn": "সাইন ওয়েভে বিভাজন"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Using amplitudes (20 − 3) to get bandwidth.",
+   "fix": "Bandwidth uses frequencies only: fh − fl."
+  },
+  {
+   "m": "Drawing spikes for a nonperiodic signal.",
+   "fix": "Nonperiodic → continuous curve; periodic → spikes."
+  },
+  {
+   "m": "Ignoring the 0 Hz component.",
+   "fix": "0 Hz is a real (DC) component, so fl = 0."
+  },
+  {
+   "m": "Forgetting axis labels and the bandwidth arrow.",
+   "fix": "Label Frequency (Hz), Amplitude (V), and mark B."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "f = 1/T.",
+   "Frequency domain: x = frequency, y = peak amplitude.",
+   "Periodic → discrete spikes; nonperiodic → continuous.",
+   "B = fh − fl (frequencies, not amplitudes).",
+   "A single-frequency sine wave alone is not useful for data."
+  ],
+  "card": "Spikes = periodic | Curve = nonperiodic | B = fh − fl",
+  "recall": {
+   "q": "A signal has B = 20 Hz and fh = 60 Hz. What is fl?",
+   "a": "40 Hz (slide 35)."
+  }
+ },
+ "flags": [
+  {
+   "type": "question-wording",
+   "text": "The midterm calls a sum of five sinusoids “non-periodic”. Following the slides, answer (ii) with a continuous spectrum and (iii) with discrete spikes, as the question intends."
+  }
+ ]
+}

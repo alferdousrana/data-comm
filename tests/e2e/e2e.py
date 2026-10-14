@@ -1,0 +1,133 @@
+import json, re
+from playwright.sync_api import sync_playwright
+import os
+BASE=os.environ.get('BASE','http://127.0.0.1:8080/')
+errs=[]; results=[]
+def check(name, cond, info=''):
+    results.append((name, bool(cond))); print(('PASS ' if cond else 'FAIL ')+name, info)
+def ok_dialog(pg):
+    pg.wait_for_selector('dialog[open] button[value=ok]', timeout=4000); pg.click('dialog[open] button[value=ok]')
+with sync_playwright() as p:
+    b=p.chromium.launch(); ctx=b.new_context(viewport={'width':1280,'height':900}, accept_downloads=True); pg=ctx.new_page()
+    pg.on('pageerror', lambda e: errs.append(str(e)))
+    pg.goto(BASE); pg.wait_for_timeout(1500)
+    check('first launch shows welcome', 'welcome' in pg.url)
+    pg.click('#setup button[type=submit]'); pg.wait_for_timeout(1000)
+    check('onboarding goes to dashboard', 'আজকের পড়া' in pg.inner_text('#view'))
+    # lesson complete
+    pg.goto(BASE+'#/lesson/ch1-switching'); pg.wait_for_timeout(1200)
+    pg.click('[data-complete]'); pg.wait_for_timeout(1000)
+    check('lesson completion toast with XP', '+20 XP' in pg.inner_text('.toast-host'))
+    pg.click('[data-complete]', force=True) if pg.is_enabled('[data-complete]') else None
+    # quiz exam mode
+    pg.goto(BASE+'#/quiz/ch1-switching'); pg.wait_for_timeout(1000)
+    body=pg.inner_text('#view')
+    check('exam mode hides explanations before submit', 'স্লাইড অনুযায়ী' not in body)
+    for i in range(10): pg.click(f'.option[data-q="{i}"][data-o="0"]')
+    pg.click('[data-submit]'); pg.wait_for_timeout(1500)
+    res=pg.inner_text('#result')
+    m=re.search(r'(\d+) / 10', res); check('quiz scored', m, res[:60])
+    check('double submit blocked', pg.is_disabled('[data-submit]'))
+    # written good answer
+    pg.goto(BASE+'#/written/sw-w1'); pg.wait_for_timeout(1000)
+    pg.fill('textarea[data-k=text]', 'Circuit switching should be used. In circuit switching a dedicated circuit is set up between the two end systems before the call, and the bandwidth is reserved, so it is guaranteed. There is no queuing at switches, so the delay is constant, which is what real-time voice needs.')
+    pg.click('[data-submit]'); pg.wait_for_timeout(1200)
+    out=pg.inner_text('#out'); check('written strong answer full marks', 'Score: 2 / 2' in out or 'স্কোর: 2 / 2' in out, out[:80])
+    check('model answer shown after submission', 'Circuit switching should be used' in out)
+    # written keyword stuffing
+    pg.click('[data-retry]'); pg.wait_for_timeout(800)
+    pg.fill('textarea[data-k=text]', 'circuit switching dedicated setup guaranteed bandwidth voice')
+    pg.click('[data-submit]'); pg.wait_for_timeout(1200)
+    out=pg.inner_text('#out'); check('keyword-only answer not full marks', '2 / 2' not in out, re.search(r'\d+(\.\d+)? / 2', out).group(0))
+    # waveform levels question
+    pg.goto(BASE+'#/written/lc-w1'); pg.wait_for_timeout(1000)
+    pg.fill('[data-k="lv:nrz-l"]','- + - - + + + -'); pg.fill('[data-k="lv:nrz-i"]','- - + - - - - +'); pg.fill('[data-k="lv:rz"]','+0 -0 +0 +0 -0 -0 -0 +0')
+    pg.click('[data-submit]'); pg.wait_for_timeout(1200)
+    check('line-coding levels full marks', '3 / 3' in pg.inner_text('#out'))
+    # B8ZS question
+    pg.goto(BASE+'#/written/sc-w1'); pg.wait_for_timeout(1000)
+    pg.fill('[data-k=levels]','0 0 0 0 - 0 0 0 - + 0 + - + 0 0 0'); pg.fill('textarea[data-k=text]','Eight zeros replaced by 000VB0VB pattern.')
+    pg.click('[data-submit]'); pg.wait_for_timeout(1200)
+    check('B8ZS full marks', '3 / 3' in pg.inner_text('#out'))
+    # numeric wrong then solution
+    pg.goto(BASE+'#/practice/numeric/nyquist'); pg.wait_for_timeout(800)
+    pg.fill('[name=p0]','1'); pg.click('#nf button[type=submit]'); pg.wait_for_timeout(800)
+    t=pg.inner_text('#view'); check('numeric wrong answer explained', 'expected' in t.lower() or 'প্রত্যাশিত' in t); check('numeric full solution shown', 'N_max' in t)
+    # simulator interaction
+    pg.goto(BASE+'#/sim/linecoding'); pg.wait_for_timeout(800)
+    pg.fill('[name=bits]','100000000'); pg.select_option('[name=scheme]','b8zs'); pg.select_option('[name=last]','1'); pg.wait_for_timeout(400)
+    check('simulator B8ZS notation', pg.inner_text('[data-notation]')=='− 0 0 0 − + 0 + −', pg.inner_text('[data-notation]'))
+    pg.fill('[name=bits]','10a'); pg.wait_for_timeout(300); check('simulator rejects bad bits', 'only 0 and 1' in pg.inner_text('#lc-err'))
+    # journey
+    pg.goto(BASE+'#/sim/journey'); pg.wait_for_timeout(600)
+    for _ in range(3): pg.click('[data-next]')
+    check('journey hop LAN2 frame 33/99', '33' in pg.inner_text('[data-frame]') and '99' in pg.inner_text('[data-frame]'))
+    # label exercise
+    pg.goto(BASE+'#/sim/label'); pg.wait_for_timeout(600)
+    ans={'1':'Core','2':'Cladding','3':'Plastic buffer','4':'Kevlar strength members','5':'Outer jacket'}
+    first=pg.locator('#sim')
+    for s,l in ans.items():
+        first.locator(f'[data-label="{l}"]').click(); first.locator(f'[data-slot="{s}"]').click()
+    first.locator('[data-check]').click(); check('label exercise scores 5/5', '5 / 5' in first.inner_text())
+    # dashboard real stats
+    pg.goto(BASE+'#/'); pg.wait_for_timeout(1200); d=pg.inner_text('#view')
+    check('dashboard shows 1 completed lesson', '1/11' in d); check('dashboard MCQ accuracy computed', re.search(r'\d+%\s*\n?\s*MCQ', d) is not None or 'MCQ নির্ভুলতা' in d)
+    pg.goto(BASE+'#/achievements'); pg.wait_for_timeout(1000); a=pg.inner_text('#view')
+    check('first-lesson badge earned', '🏅 First Lesson Completed' in a); check('100-MCQ badge still locked', '🔒 100 MCQs Answered' in a)
+    pg.goto(BASE+'#/revision'); pg.wait_for_timeout(1000)
+    check('revision queue has items', 'due' in pg.inner_text('#view').lower() or 'missed' in pg.inner_text('#view'))
+    # export
+    pg.goto(BASE+'#/settings'); pg.wait_for_timeout(1000)
+    with pg.expect_download() as dl: pg.click('[data-export]')
+    data=json.load(open(dl.value.path())); check('export contains attempts', len(data['stores']['attempts'])>=5, len(data['stores']['attempts']))
+    json.dump(data, open('/tmp/export.json','w'))
+    # theme persists
+    pg.select_option('[name=theme]','dark'); pg.wait_for_timeout(500); pg.reload(); pg.wait_for_timeout(1200)
+    check('dark theme persists after reload', pg.get_attribute('html','data-theme')=='dark')
+    pg.screenshot(path='/tmp/shot-settings-dark.png', full_page=False)
+    pg.select_option('[name=theme]','light'); pg.wait_for_timeout(300)
+    # offline
+    pg.click('[data-dl]'); pg.wait_for_timeout(3000)
+    check('offline download completes', '27/27' in pg.inner_text('#view') or 'downloaded' in pg.inner_text('#view'))
+    pg.goto(BASE+'#/'); pg.wait_for_timeout(1500)
+    ctx.set_offline(True)
+    pg.reload(); pg.wait_for_timeout(2000)
+    check('app shell loads offline', 'DataComm' in pg.inner_text('header'))
+    pg.goto(BASE+'#/lesson/ch3-data-rate-limits'); pg.wait_for_timeout(1500)
+    check('downloaded lesson opens offline', 'Nyquist' in pg.inner_text('#view'))
+    pg.goto(BASE+'#/written/dr-w2'); pg.wait_for_timeout(1500)
+    pg.fill('textarea[data-k=text]','C = B log2(1 + SNR), so SNR = 2^(C/B) - 1 = 2^25 - 1 = 33,554,431. SNR_dB = 10 log10(33554431) = 75.26 dB')
+    pg.click('[data-submit]'); pg.wait_for_timeout(1500)
+    check('offline local evaluation of Shannon answer', '3 / 3' in pg.inner_text('#out'))
+    pg.close(); pg=ctx.new_page(); pg.on('pageerror', lambda e: errs.append(str(e)))
+    pg.goto(BASE+'#/results'); pg.wait_for_timeout(2000)
+    check('attempt persists after closing app offline', 'minimum SNR' in pg.inner_text('#view') or 'network engineer' in pg.inner_text('#view'))
+    # mock exam (offline too)
+    pg.goto(BASE+'#/exam/midterm-summer-2026'); pg.wait_for_timeout(1500); ok_dialog(pg); pg.wait_for_timeout(1500)
+    check('exam hides model answers', 'Exam-ready improved answer' not in pg.inner_text('#view') and 'উন্নত উত্তর' not in pg.inner_text('#view'))
+    check('exam countdown visible', '⏱' in pg.inner_text('#view'))
+    pg.fill('[name="q3o0-text"]','Circuit switching, because a dedicated circuit is set up and bandwidth is reserved, guaranteed, with constant delay for real-time voice.')
+    pg.wait_for_timeout(900)
+    pg.reload(); pg.wait_for_timeout(2000)
+    check('exam draft recovered after reload', 'Circuit switching' in pg.input_value('[name="q3o0-text"]'))
+    pg.click('[data-submit]'); ok_dialog(pg); pg.wait_for_timeout(400); ok_dialog(pg); pg.wait_for_timeout(2500)
+    r=pg.inner_text('#exres'); check('exam result computed', '/ 30' in r, r[:60])
+    pg.goto(BASE+'#/lesson/ch4-line-coding'); pg.wait_for_timeout(1200)
+    pg.set_viewport_size({'width':390,'height':844}); pg.wait_for_timeout(500)
+    pg.screenshot(path='/tmp/shot-mobile-lesson.png')
+    ctx.set_offline(False)
+    pg.goto(BASE+'#/'); pg.wait_for_timeout(1500); pg.screenshot(path='/tmp/shot-mobile-dash.png')
+    pg.set_viewport_size({'width':1280,'height':900}); pg.wait_for_timeout(400); pg.screenshot(path='/tmp/shot-desktop-dash.png')
+    pg.goto(BASE+'#/sim/linecoding'); pg.wait_for_timeout(800); pg.screenshot(path='/tmp/shot-sim.png')
+    # import into a fresh context
+    ctx2=b.new_context(); p2=ctx2.new_page(); p2.on('pageerror', lambda e: errs.append('ctx2 '+str(e)))
+    p2.goto(BASE+'#/settings'); p2.wait_for_timeout(1500)
+    p2.set_input_files('[data-import]','/tmp/export.json'); p2.wait_for_timeout(2000)
+    check('import into fresh device', 'Import complete' in p2.inner_text('[data-imsg]') or 'ইমপোর্ট সম্পন্ন' in p2.inner_text('[data-imsg]'), p2.inner_text('[data-imsg]'))
+    p2.set_input_files('[data-import]','/tmp/export.json'); p2.wait_for_timeout(2000)
+    check('re-import does not duplicate attempts', re.search(r'0 added', p2.inner_text('[data-imsg]')) is not None, p2.inner_text('[data-imsg]'))
+    open('/tmp/bad.json','w').write('{"format":"x"}'); p2.set_input_files('[data-import]','/tmp/bad.json'); p2.wait_for_timeout(800)
+    check('invalid import rejected with message', 'Not a DataComm' in p2.inner_text('[data-imsg]'))
+    b.close()
+print('\nPAGE ERRORS:', errs)
+print(f"{sum(r[1] for r in results)}/{len(results)} passed")

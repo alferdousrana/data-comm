@@ -1,0 +1,300 @@
+{
+ "lessonId": "ch7-guided-media",
+ "mcqs": [
+  {
+   "id": "gm1",
+   "q": "The working principle of optical fiber is:",
+   "options": [
+    "Electromagnetic induction",
+    "Total internal reflection",
+    "Amplitude modulation",
+    "Diffraction"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ১৯।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch7 slide 19"
+  },
+  {
+   "id": "gm2",
+   "q": "The cladding of an optical fiber has:",
+   "options": [
+    "A higher refractive index than the core",
+    "A lower refractive index than the core",
+    "No refractive index",
+    "The same refractive index as the core"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ১৯।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch7 slide 19"
+  },
+  {
+   "id": "gm3",
+   "q": "Which is NOT a guided medium?",
+   "options": [
+    "Twisted pair",
+    "Coaxial cable",
+    "Fiber-optic cable",
+    "Microwave"
+   ],
+   "answer": 3,
+   "explainBn": "মাইক্রোওয়েভ আনগাইডেড।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch7 slide 8"
+  },
+  {
+   "id": "gm4",
+   "q": "Wires in twisted-pair cable are twisted mainly to:",
+   "options": [
+    "Increase weight",
+    "Reduce noise and crosstalk",
+    "Carry light",
+    "Increase attenuation"
+   ],
+   "answer": 1,
+   "explainBn": "পেঁচানোর ফলে নয়েজ দুই তারে প্রায় সমানভাবে লাগে এবং রিসিভারে বাতিল হয়।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "conceptual",
+   "source": "Ch7 slide 9"
+  },
+  {
+   "id": "gm5",
+   "q": "In Figure 7.14, the layer that provides strength is:",
+   "options": [
+    "Cladding",
+    "Kevlar",
+    "Core",
+    "Plastic buffer"
+   ],
+   "answer": 1,
+   "explainBn": "“DuPont Kevlar for strength”।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "diagram",
+   "source": "Ch7 slide 23"
+  },
+  {
+   "id": "gm6",
+   "q": "Main difference between UTP and STP:",
+   "options": [
+    "STP has a metal foil or braided shield",
+    "UTP carries light",
+    "STP has no conductors",
+    "UTP uses BNC connectors"
+   ],
+   "answer": 0,
+   "explainBn": "STP = Shielded; UTP এ কোনো shield নেই।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch7 slide 10"
+  },
+  {
+   "id": "gm7",
+   "q": "A link must pass next to heavy machinery producing strong electromagnetic interference. The best medium is:",
+   "options": [
+    "UTP",
+    "Fiber-optic cable",
+    "Unshielded parallel wires",
+    "Radio waves"
+   ],
+   "answer": 1,
+   "explainBn": "আলো EMI এ প্রভাবিত হয় না।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "scenario",
+   "source": ""
+  },
+  {
+   "id": "gm8",
+   "q": "The BNC connector is used with:",
+   "options": [
+    "Twisted pair",
+    "Coaxial cable",
+    "Fiber",
+    "Infrared"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ১৬।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch7 slide 16"
+  },
+  {
+   "id": "gm9",
+   "q": "Which is a disadvantage of fiber-optic cable?",
+   "options": [
+    "Very low bandwidth",
+    "Higher installation cost and expertise",
+    "Strong EMI pickup",
+    "Easy to tap"
+   ],
+   "answer": 1,
+   "explainBn": "ফাইবারের দাম ও ইনস্টলেশনে দক্ষতা বেশি লাগে; বাকি তিনটি আসলে ফাইবারের বৈশিষ্ট্য নয়।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": ""
+  },
+  {
+   "id": "gm10",
+   "q": "In a coaxial cable, the outer metallic conductor also acts as:",
+   "options": [
+    "The core of light",
+    "A shield against noise",
+    "A refractive layer",
+    "The plastic jacket"
+   ],
+   "answer": 1,
+   "explainBn": "বাইরের ধাতব conductor বাইরের নয়েজ থেকে ভিতরের conductor কে রক্ষা করে।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": "Ch7 slide 14"
+  }
+ ],
+ "written": [
+  {
+   "id": "gm-w1",
+   "marks": 3,
+   "marksSplit": "2+1",
+   "question": "Label the basic parts of a fiber optic cable with a proper diagram. Compare the significance of the optical fiber cable over the twisted-pair cable.",
+   "type": "diagram-compare",
+   "inputs": [
+    "canvas",
+    "selfcheck",
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 3,
+    "criteria": [
+     {
+      "id": "d",
+      "type": "selfcheck",
+      "label": "Labelled diagram",
+      "marks": 1,
+      "items": [
+       {
+        "id": "core",
+        "label": "Core labelled",
+        "marks": 0.25,
+        "bn": ""
+       },
+       {
+        "id": "clad",
+        "label": "Cladding labelled",
+        "marks": 0.25,
+        "bn": ""
+       },
+       {
+        "id": "buf",
+        "label": "Buffer/coating labelled",
+        "marks": 0.25,
+        "bn": ""
+       },
+       {
+        "id": "jk",
+        "label": "Strength member (Kevlar) and outer jacket labelled",
+        "marks": 0.25,
+        "bn": ""
+       }
+      ]
+     },
+     {
+      "id": "parts",
+      "type": "concepts",
+      "label": "Parts explained",
+      "marks": 1,
+      "need": 2,
+      "concepts": [
+       {
+        "name": "core carries light",
+        "any": [
+         "core",
+         "light travel"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "cladding lower refractive index / total internal reflection",
+        "any": [
+         "refractive index",
+         "total internal reflection",
+         "cladding"
+        ],
+        "bn": ""
+       }
+      ]
+     },
+     {
+      "id": "cmp",
+      "type": "concepts",
+      "label": "Significance over twisted pair",
+      "marks": 1,
+      "need": 3,
+      "concepts": [
+       {
+        "name": "higher bandwidth",
+        "any": [
+         "bandwidth",
+         "higher data rate",
+         "high data rate"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "less attenuation / longer distance",
+        "any": [
+         "attenuation",
+         "longer distance",
+         "long distance",
+         "repeater"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "immune to electromagnetic interference",
+        "any": [
+         "electromagnetic interference",
+         "emi",
+         "noise immun",
+         "immune"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "light weight / secure",
+        "any": [
+         "light weight",
+         "lightweight",
+         "tap",
+         "secure",
+         "security"
+        ],
+        "bn": ""
+       }
+      ]
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "Core (light), cladding (lower refractive index; total internal reflection), buffer, Kevlar, jacket. Fiber offers higher bandwidth, less attenuation (longer distances), immunity to EMI, light weight and better security than twisted pair.",
+    "minWords": 25
+   },
+   "hintBn": "",
+   "tags": [
+    "media",
+    "diagram"
+   ],
+   "source": "Summer 2026 midterm Q1(a)"
+  }
+ ]
+}

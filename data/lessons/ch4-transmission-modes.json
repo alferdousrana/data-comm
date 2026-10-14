@@ -1,0 +1,41 @@
+{
+ "id": "ch4-transmission-modes",
+ "chapterId": "fz-ch4",
+ "order": 4,
+ "title": "Transmission Modes: Parallel and Serial",
+ "titleBn": "ট্রান্সমিশন মোড: প্যারালেল ও সিরিয়াল",
+ "source": {
+  "file": "Data_Com_Chapter-4__5th_Edition.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 4",
+  "slides": [
+   66,
+   67,
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "supporting",
+  "reasons": [
+   "Supporting concept for other topics"
+  ]
+ },
+ "topics": [
+  "Transmission Modes: Parallel and Serial"
+ ],
+ "keyPoints": [
+  "Parallel: multiple bits per clock tick; serial: one bit per clock tick (slide 66).",
+  "Asynchronous: 1 start bit (0), one or more stop bits (1s), possible gaps between bytes (slide 70).",
+  "Asynchronous at the byte level, but bits are still synchronized (slide 71).",
+  "Synchronous: bits sent one after another with no start/stop bits or gaps; receiver groups the bits (slide 73)."
+ ]
+}

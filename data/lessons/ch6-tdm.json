@@ -1,0 +1,48 @@
+{
+ "id": "ch6-tdm",
+ "chapterId": "fz-ch6",
+ "order": 2,
+ "title": "Time-Division Multiplexing",
+ "titleBn": "টাইম-ডিভিশন মাল্টিপ্লেক্সিং",
+ "source": {
+  "file": "Chapter-6-multiplexing.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 6",
+  "slides": [
+   24,
+   25,
+   27,
+   28,
+   29,
+   30,
+   33,
+   35,
+   39,
+   41,
+   42,
+   46,
+   48,
+   50,
+   56
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "important",
+  "reasons": [
+   "Slide emphasis"
+  ]
+ },
+ "topics": [
+  "Time-Division Multiplexing"
+ ],
+ "keyPoints": [
+  "TDM is a digital technique combining several low-rate channels into one high-rate one (slide 25).",
+  "In synchronous TDM the link rate is n times faster and the unit duration n times shorter (slide 27).",
+  "Frame duration equals the duration of an input unit (slide 29).",
+  "Data rate management: multilevel, multislot, pulse stuffing (slide 42).",
+  "Framing (synchronization) bits are overhead (slide 46)."
+ ]
+}

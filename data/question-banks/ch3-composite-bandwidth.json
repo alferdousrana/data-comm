@@ -1,0 +1,318 @@
+{
+ "lessonId": "ch3-composite-bandwidth",
+ "mcqs": [
+  {
+   "id": "cb1",
+   "q": "A periodic composite signal contains components at 100, 300, 500, 700 and 900 Hz. Its bandwidth is:",
+   "options": [
+    "900 Hz",
+    "800 Hz",
+    "500 Hz",
+    "2500 Hz"
+   ],
+   "answer": 1,
+   "explainBn": "900 − 100 = 800 Hz।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "numerical",
+   "source": "Ch3 slide 36"
+  },
+  {
+   "id": "cb2",
+   "q": "The frequency-domain plot of a nonperiodic composite signal is:",
+   "options": [
+    "A set of discrete spikes",
+    "A continuous curve over a range of frequencies",
+    "A single spike at 0 Hz",
+    "A square wave"
+   ],
+   "answer": 1,
+   "explainBn": "Nonperiodic → continuous frequencies।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "conceptual",
+   "source": "Ch3 slide 29"
+  },
+  {
+   "id": "cb3",
+   "q": "The period of a signal is 100 ms. Its frequency is:",
+   "options": [
+    "10 Hz",
+    "0.1 Hz",
+    "100 Hz",
+    "1 kHz"
+   ],
+   "answer": 0,
+   "explainBn": "f = 1/0.1 s = 10 Hz = 10⁻² kHz।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "numerical",
+   "source": "Ch3 slide 18"
+  },
+  {
+   "id": "cb4",
+   "q": "A signal has a bandwidth of 20 Hz and its highest frequency is 60 Hz. The lowest frequency is:",
+   "options": [
+    "80 Hz",
+    "40 Hz",
+    "30 Hz",
+    "3 Hz"
+   ],
+   "answer": 1,
+   "explainBn": "fl = fh − B = 40 Hz।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "numerical",
+   "source": "Ch3 slide 35"
+  },
+  {
+   "id": "cb5",
+   "q": "In a frequency-domain plot, the vertical axis shows:",
+   "options": [
+    "Time",
+    "Phase only",
+    "Peak amplitude",
+    "Wavelength"
+   ],
+   "answer": 2,
+   "explainBn": "x = frequency, y = peak amplitude।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "diagram",
+   "source": "Ch3 slide 26"
+  },
+  {
+   "id": "cb6",
+   "q": "If a signal does not change at all, its frequency is:",
+   "options": [
+    "Infinite",
+    "Zero",
+    "1 Hz",
+    "Equal to its amplitude"
+   ],
+   "answer": 1,
+   "explainBn": "স্লাইড ২০।",
+   "explainEn": "",
+   "difficulty": "easy",
+   "type": "definition",
+   "source": "Ch3 slide 20"
+  },
+  {
+   "id": "cb7",
+   "q": "A sine wave is offset 1/6 cycle with respect to time 0. Its phase is:",
+   "options": [
+    "30°",
+    "60°",
+    "90°",
+    "120°"
+   ],
+   "answer": 1,
+   "explainBn": "360° × 1/6 = 60° = π/3 rad।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": "Ch3 slide 23"
+  },
+  {
+   "id": "cb8",
+   "q": "Why is a single-frequency sine wave not useful for data communication?",
+   "options": [
+    "It has infinite bandwidth",
+    "It cannot carry changing information; we need a composite signal",
+    "It cannot travel through cables",
+    "It always has zero amplitude"
+   ],
+   "answer": 1,
+   "explainBn": "একটি অপরিবর্তিত সাইন ওয়েভ কোনো তথ্য বহন করে না।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "conceptual",
+   "source": "Ch3 slide 31"
+  },
+  {
+   "id": "cb9",
+   "q": "A nonperiodic signal has B = 200 kHz centred at 140 kHz. Its frequency range is:",
+   "options": [
+    "0 to 200 kHz",
+    "40 to 240 kHz",
+    "140 to 340 kHz",
+    "70 to 270 kHz"
+   ],
+   "answer": 1,
+   "explainBn": "140 ± 100 kHz।",
+   "explainEn": "",
+   "difficulty": "hard",
+   "type": "numerical",
+   "source": "Ch3 slide 38"
+  },
+  {
+   "id": "cb10",
+   "q": "Components at 0, 4, 8, 12, 16 Hz have amplitudes 3, 6, 20, 6, 5 V. The bandwidth is:",
+   "options": [
+    "17 Hz",
+    "16 Hz",
+    "20 Hz",
+    "12 Hz"
+   ],
+   "answer": 1,
+   "explainBn": "Amplitude দিয়ে নয় — 16 − 0 = 16 Hz।",
+   "explainEn": "",
+   "difficulty": "medium",
+   "type": "numerical",
+   "source": ""
+  }
+ ],
+ "written": [
+  {
+   "id": "cb-w1",
+   "marks": 4,
+   "marksSplit": "1+2+1",
+   "question": "A non-periodic composite signal is formed by combining five sinusoidal components with frequencies of 0 Hz, 4 Hz, 8 Hz, 12 Hz and 16 Hz. The two terminal frequency components have peak amplitudes of 3 V and 5 V respectively, while the center frequency component has a peak amplitude of 20 V.\n(i) Determine the bandwidth of the composite signal. [1]\n(ii) Sketch the frequency-domain representation of the signal, clearly indicating the bandwidth. [2]\n(iii) Now assume the signal is periodic and draw the revised frequency-domain representation. [1]",
+   "type": "diagram-numerical",
+   "inputs": [
+    "text",
+    "canvas",
+    "selfcheck",
+    "spikes"
+   ],
+   "rubric": {
+    "totalMarks": 4,
+    "criteria": [
+     {
+      "id": "bw",
+      "type": "numeric",
+      "label": "(i) Bandwidth = 16 Hz",
+      "marks": 1,
+      "expected": 16,
+      "dim": "freq",
+      "display": "16 Hz",
+      "relTol": 0.01,
+      "bn": "",
+      "unitMarks": 0.25
+     },
+     {
+      "id": "np",
+      "type": "selfcheck",
+      "label": "(ii) Nonperiodic sketch",
+      "marks": 2,
+      "items": [
+       {
+        "id": "cont",
+        "label": "Continuous curve (not spikes) from 0 to 16 Hz",
+        "marks": 0.75,
+        "bn": "একটানা বক্ররেখা"
+       },
+       {
+        "id": "amps",
+        "label": "Amplitudes 3 V at 0 Hz, 20 V at 8 Hz, 5 V at 16 Hz marked",
+        "marks": 0.5,
+        "bn": ""
+       },
+       {
+        "id": "axes",
+        "label": "Axes labelled: frequency (Hz) and amplitude (V)",
+        "marks": 0.25,
+        "bn": ""
+       },
+       {
+        "id": "bwmark",
+        "label": "Bandwidth 16 Hz indicated with an arrow",
+        "marks": 0.5,
+        "bn": ""
+       }
+      ]
+     },
+     {
+      "id": "per",
+      "type": "spikes",
+      "label": "(iii) Periodic spikes",
+      "marks": 1,
+      "freqs": [
+       0,
+       4,
+       8,
+       12,
+       16
+      ],
+      "amps": {
+       "0": 3,
+       "8": 20,
+       "16": 5
+      }
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "(i) B = fh − fl = 16 − 0 = 16 Hz. (ii) Continuous spectrum 0–16 Hz: 3 V at 0 Hz, peak 20 V at 8 Hz, 5 V at 16 Hz; B = 16 Hz marked. (iii) Periodic → five discrete spikes at 0, 4, 8, 12, 16 Hz (3 V, unspecified, 20 V, unspecified, 5 V).",
+    "minWords": 3
+   },
+   "hintBn": "",
+   "tags": [
+    "bandwidth",
+    "frequency-domain"
+   ],
+   "source": "Summer 2026 midterm Q2(a)"
+  },
+  {
+   "id": "cb-w2",
+   "marks": 2,
+   "marksSplit": "2",
+   "question": "Distinguish between the frequency-domain representations of periodic and nonperiodic composite signals.",
+   "type": "compare",
+   "inputs": [
+    "text"
+   ],
+   "rubric": {
+    "totalMarks": 2,
+    "criteria": [
+     {
+      "id": "pd",
+      "type": "concepts",
+      "label": "Periodic vs nonperiodic",
+      "marks": 2,
+      "need": 3,
+      "concepts": [
+       {
+        "name": "periodic gives discrete frequencies",
+        "any": [
+         "discrete"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "nonperiodic gives continuous frequencies",
+        "any": [
+         "continuous"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "spikes",
+        "any": [
+         "spike",
+         "vertical line"
+        ],
+        "bn": ""
+       },
+       {
+        "name": "Fourier decomposition into sine waves",
+        "any": [
+         "fourier",
+         "sine wave",
+         "sinusoid"
+        ],
+        "bn": ""
+       }
+      ]
+     }
+    ],
+    "penalties": [],
+    "modelAnswer": "By Fourier analysis, a periodic composite signal decomposes into sine waves with discrete frequencies, so its frequency domain shows separate spikes. A nonperiodic composite signal decomposes into sine waves with continuous frequencies, so its frequency domain is a continuous curve over a range (e.g. speech)."
+   },
+   "hintBn": "",
+   "tags": [
+    "frequency-domain"
+   ],
+   "source": "Ch3 slides 29–34"
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+/* App shell: sidebar on desktop, bottom bar on mobile */
+.shell { min-height: 100vh; min-height: 100dvh; display: grid; grid-template-columns: 1fr; }
+.topbar {
+  position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: .75rem;
+  padding: calc(.6rem + env(safe-area-inset-top, 0px)) 1rem .6rem; background: var(--surface); border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: .5rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+.brand svg { width: 28px; height: 28px; }
+.topbar .spacer { flex: 1; }
+.status-pill { display: inline-flex; align-items: center; gap: .35rem; font-size: var(--step--1); padding: .2rem .6rem; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--line); }
+.status-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-2); }
+.status-pill[data-state="online"] .dot { background: var(--ok); }
+.status-pill[data-state="offline"] .dot { background: var(--warn); }
+.status-pill[data-state="error"] .dot { background: var(--bad); }
+
+.sidenav { display: none; }
+main#view { padding: 1rem 1rem calc(var(--nav-h) + 1.5rem + env(safe-area-inset-bottom, 0px)); max-width: 980px; width: 100%; margin: 0 auto; }
+main#view:focus { outline: none; }
+
+.bottomnav {
+  position: fixed; inset: auto 0 0 0; z-index: 30; display: grid; grid-template-columns: repeat(5, 1fr);
+  background: var(--surface); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.bottomnav a {
+  min-height: var(--nav-h); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  color: var(--ink-2); text-decoration: none; font-size: .75rem;
+}
+.bottomnav a svg, .sidenav a svg { width: 22px; height: 22px; }
+.bottomnav a[aria-current="page"], .sidenav a[aria-current="page"] { color: var(--primary); font-weight: 650; }
+
+@media (min-width: 900px) {
+  .shell { grid-template-columns: 236px 1fr; grid-template-rows: auto 1fr; }
+  .topbar { grid-column: 1 / -1; }
+  .sidenav {
+    display: flex; flex-direction: column; gap: 2px; padding: 1rem .75rem; border-right: 1px solid var(--line);
+    background: var(--surface); position: sticky; top: 57px; height: calc(100vh - 57px); overflow: auto;
+  }
+  .sidenav a { display: flex; align-items: center; gap: .65rem; padding: .55rem .75rem; border-radius: var(--radius-s); color: var(--ink); text-decoration: none; }
+  .sidenav a:hover { background: var(--surface-2); }
+  .sidenav a[aria-current="page"] { background: var(--primary-soft); }
+  .sidenav .group { margin: .9rem .75rem .25rem; font-size: var(--step--1); color: var(--ink-2); }
+  .bottomnav { display: none; }
+  main#view { padding: 1.5rem 2rem 3rem; }
+}
+
+.grid { display: grid; gap: 1rem; }
+.grid.two { grid-template-columns: 1fr; }
+.grid.three { grid-template-columns: 1fr; }
+@media (min-width: 640px) { .grid.two { grid-template-columns: 1fr 1fr; } .grid.three { grid-template-columns: repeat(3, 1fr); } }
+.row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+.row.between { justify-content: space-between; }
+.stack > * + * { margin-top: 1rem; }
+.page-head { margin-bottom: 1.25rem; }
+.page-head p { color: var(--ink-2); margin: 0; }
+/* Prevent grid children from forcing horizontal page scroll on phones */
+.shell > *, main#view, .reader, .card, .grid > * { min-width: 0; }
+h1, h2, h3 { overflow-wrap: anywhere; }

@@ -1,0 +1,275 @@
+{
+ "id": "ch3-digital-signals",
+ "chapterId": "fz-ch3",
+ "order": 3,
+ "title": "Digital Signals: Levels, Bit Rate and Transmission Time",
+ "titleBn": "ডিজিটাল সিগন্যাল: লেভেল, বিট রেট ও ট্রান্সমিশন সময়",
+ "source": {
+  "file": "Chapter-3-Data_and_Signals__2_.ppt",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Chapter 3 — Introduction to Physical Layer (Data and Signals)",
+  "slides": [
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   49,
+   54,
+   55,
+   56,
+   57
+  ]
+ },
+ "estMinutes": 25,
+ "difficulty": "easy",
+ "importance": {
+  "level": "very-important",
+  "reasons": [
+   "Transmission-time calculation appeared in the supplied midterm (Q2b, 3 marks)",
+   "log₂L and bit rate are used in Nyquist and baud-rate problems"
+  ]
+ },
+ "topics": [
+  "bit rate",
+  "bit interval",
+  "bit length",
+  "signal levels",
+  "log2 L",
+  "transmission time",
+  "baseband",
+  "bandwidth",
+  "characters",
+  "bits per character"
+ ],
+ "status": "complete",
+ "intro": {
+  "why": "Digital signals carry bits. You will compute bits per level, bit rate and how long a transmission takes — easy marks if units are handled carefully.",
+  "objectives": [
+   "Compute bits per level = log₂L",
+   "Compute bit rate from real data (pages, voice, HDTV)",
+   "Compute transmission time = bits / bit rate",
+   "State baseband bandwidth relationships (B = N/2 minimum)"
+  ],
+  "prerequisites": [
+   "Bits and bytes; powers of 2"
+  ]
+ },
+ "explain": [
+  {
+   "h": "লেভেল ও বিট",
+   "bn": "একটি ডিজিটাল সিগন্যালে দুইয়ের বেশি লেভেল থাকতে পারে। L টি লেভেল থাকলে প্রতিটি লেভেল **log₂L বিট** বহন করে। ৮ লেভেল → ৩ বিট; ১৬ → ৪ বিট। ৯ লেভেল হলে log₂9 ≈ ৩.১৭ — বাস্তবসম্মত নয়, তাই লেভেল সংখ্যা সাধারণত ২ এর ঘাত হয় (Example 3.17)।"
+  },
+  {
+   "h": "বিট রেট ও বিট ইন্টারভাল",
+   "bn": "**Bit rate** = প্রতি সেকেন্ডে পাঠানো বিটের সংখ্যা (bps)। **Bit interval** = একটি বিট পাঠাতে লাগা সময় = 1/bit rate। যেমন 1000 bps হলে প্রতিটি বিট 1 ms।"
+  },
+  {
+   "h": "ট্রান্সমিশন সময়",
+   "bn": "**সময় = মোট বিট ÷ বিট রেট**। ক্যারেক্টার দেওয়া থাকলে আগে বিটে রূপান্তর করো: মোট বিট = ক্যারেক্টার × প্রতি ক্যারেক্টারের বিট। সবচেয়ে বড় ফাঁদ — বাইট আর বিট গুলিয়ে ফেলা, এবং ms আর s মিশিয়ে ফেলা।"
+  },
+  {
+   "h": "বেসব্যান্ড ট্রান্সমিশন ও ব্যান্ডউইডথ",
+   "bn": "ডিজিটাল সিগন্যালকে অ্যানালগে না বদলে পাঠানো = **baseband transmission** (যেমন LAN)। এর জন্য **low-pass channel** দরকার। ন্যূনতম ব্যান্ডউইডথ (প্রথম হারমোনিক) **B = N/2**; আরও ভালো আকৃতির জন্য 3N/2 বা 5N/2। অর্থাৎ বিট রেট বাড়লে ব্যান্ডউইডথও বেশি লাগে। ব্যান্ডপাস চ্যানেল হলে মডুলেশন করে অ্যানালগে নিতে হয় (broadband)।"
+  }
+ ],
+ "slideDefs": [
+  {
+   "text": "In baseband transmission, the required bandwidth is proportional to the bit rate; if we need to send bits faster, we need more bandwidth.",
+   "slide": 54
+  },
+  {
+   "text": "If the available channel is a bandpass channel, we cannot send the digital signal directly to the channel; we need to convert the digital signal to an analog signal before transmission.",
+   "slide": 58
+  }
+ ],
+ "realLife": {
+  "title": "Sending a 200,000-character document over a slow link",
+  "bn": "একটি টেক্সট ফাইলে ২,০০,০০০ ক্যারেক্টার, প্রতিটি ৮ বিট — মোট ১৬ লক্ষ বিট। 1000 bps লিংকে এটা পাঠাতে ১৬০০ সেকেন্ড, প্রায় ২৭ মিনিট লাগবে। একই ফাইল 1 Mbps এ মাত্র ১.৬ সেকেন্ড।",
+  "link": "Time = total bits / bit rate — higher bit rate, shorter time.",
+  "illustrative": true
+ },
+ "visuals": [
+  {
+   "kind": "sim",
+   "id": "linecoding",
+   "params": {
+    "bits": "10110001",
+    "scheme": "nrz-l"
+   },
+   "caption": "A two-level digital signal: each bit occupies one bit interval.",
+   "alt": "NRZ-L waveform of 10110001 with bit boundaries."
+  }
+ ],
+ "formulas": [
+  {
+   "name": "Bits per level",
+   "expr": "n = log₂ L",
+   "vars": [
+    [
+     "L",
+     "number of signal levels"
+    ],
+    [
+     "n",
+     "bits per level"
+    ]
+   ],
+   "units": "bits",
+   "source": "Ch3 slide 43"
+  },
+  {
+   "name": "Bit interval",
+   "expr": "bit interval = 1 / bit rate",
+   "vars": [],
+   "units": "s",
+   "source": "Ch3 slide 42"
+  },
+  {
+   "name": "Transmission time",
+   "expr": "time = total bits / bit rate",
+   "vars": [
+    [
+     "total bits",
+     "characters × bits per character"
+    ]
+   ],
+   "units": "s",
+   "source": "Ch3 bit-rate examples (supplementary rearrangement)"
+  },
+  {
+   "name": "Baseband minimum bandwidth",
+   "expr": "B_min = N / 2 (first harmonic); 3N/2, 5N/2 for better shape",
+   "vars": [
+    [
+     "N",
+     "bit rate"
+    ]
+   ],
+   "units": "Hz",
+   "source": "Ch3 slides 52–57"
+  }
+ ],
+ "solved": [
+  {
+   "title": "Midterm Q2b",
+   "given": [
+    "R = 1000 bps",
+    "8 bits per character",
+    "File = 200,000 characters"
+   ],
+   "required": "(i) time for 150 bits (ii) time for one character (iii) time for the file",
+   "rule": "time = bits / R",
+   "substitution": [
+    "(i) 150 / 1000",
+    "(ii) 8 / 1000",
+    "(iii) 200,000 × 8 = 1,600,000 bits; 1,600,000 / 1000"
+   ],
+   "calc": [
+    "(i) 0.15 s = 150 ms",
+    "(ii) 0.008 s = 8 ms",
+    "(iii) 1600 s ≈ 26.67 min"
+   ],
+   "answer": "0.15 s, 0.008 s, 1600 s",
+   "bn": "প্রতিটি অংশে একক লিখবে — s বা ms।"
+  },
+  {
+   "title": "Example 3.18",
+   "given": [
+    "100 pages per minute",
+    "24 lines × 80 characters per page",
+    "8 bits per character"
+   ],
+   "required": "Bit rate",
+   "rule": "bits per minute ÷ 60",
+   "substitution": [
+    "100 × 24 × 80 × 8 = 1,536,000 bits/min"
+   ],
+   "calc": [
+    "1,536,000 / 60 = 25,600 bps"
+   ],
+   "answer": "≈ 25.6 kbps",
+   "bn": "প্রতি মিনিট থেকে প্রতি সেকেন্ডে আনতে ৬০ দিয়ে ভাগ।"
+  },
+  {
+   "title": "Example 3.19 — digitized voice",
+   "given": [
+    "4-kHz voice",
+    "sample at 2 × highest frequency",
+    "8 bits per sample"
+   ],
+   "required": "Bit rate",
+   "rule": "bit rate = 2 × 4000 × 8",
+   "substitution": [],
+   "calc": [
+    "= 64,000 bps"
+   ],
+   "answer": "64 kbps",
+   "bn": ""
+  }
+ ],
+ "examAnswers": [
+  {
+   "marks": 3,
+   "question": "A transmission device operates at R = 1000 bps. Each character is 8 bits. (i) Time for 150 bits? (ii) Time for one character? (iii) Time for a 200,000-character file?",
+   "answer": "Time = number of bits / data rate.\n(i) t = 150 / 1000 = 0.15 s (150 ms).\n(ii) One character = 8 bits; t = 8 / 1000 = 0.008 s (8 ms).\n(iii) Total bits = 200,000 × 8 = 1,600,000 bits; t = 1,600,000 / 1000 = 1600 s (≈ 26.7 minutes)."
+  }
+ ],
+ "keywords": [
+  {
+   "term": "bit rate (bps)",
+   "bn": "প্রতি সেকেন্ডে বিট"
+  },
+  {
+   "term": "bit interval",
+   "bn": "একটি বিটের সময়"
+  },
+  {
+   "term": "log₂ L",
+   "bn": "প্রতি লেভেলে বিট"
+  },
+  {
+   "term": "baseband",
+   "bn": "ডিজিটাল সিগন্যাল সরাসরি পাঠানো"
+  },
+  {
+   "term": "low-pass channel",
+   "bn": "0 থেকে কোনো ফ্রিকোয়েন্সি পর্যন্ত পাস করে"
+  },
+  {
+   "term": "bandpass channel",
+   "bn": "নির্দিষ্ট ব্যান্ড পাস করে — মডুলেশন লাগে"
+  }
+ ],
+ "mistakes": [
+  {
+   "m": "Dividing characters (not bits) by bps.",
+   "fix": "Convert characters to bits first."
+  },
+  {
+   "m": "Writing 0.008 without a unit.",
+   "fix": "Always give seconds (or ms)."
+  },
+  {
+   "m": "Treating 1 kbps as 1024 bps.",
+   "fix": "In data rates, k = 1000."
+  }
+ ],
+ "revision": {
+  "takeaways": [
+   "log₂L bits per level.",
+   "Bit interval = 1/bit rate.",
+   "Time = bits / bit rate.",
+   "Baseband needs a low-pass channel; B_min = N/2.",
+   "Bandpass channel → modulate to analog."
+  ],
+  "card": "bits = chars × 8 → time = bits / R",
+  "recall": {
+   "q": "How many bits per level for 64 levels?",
+   "a": "log₂64 = 6"
+  }
+ }
+}

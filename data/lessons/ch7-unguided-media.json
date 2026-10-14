@@ -1,0 +1,39 @@
+{
+ "id": "ch7-unguided-media",
+ "chapterId": "fz-ch7",
+ "order": 2,
+ "title": "Unguided Media: Radio Waves, Microwaves, Infrared",
+ "titleBn": "আনগাইডেড মিডিয়া",
+ "source": {
+  "file": "Chapter-7-Transmission_Media.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 7",
+  "slides": [
+   26,
+   27,
+   28,
+   31,
+   33,
+   35,
+   36
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "important",
+  "reasons": [
+   "Slide emphasis"
+  ]
+ },
+ "topics": [
+  "Unguided Media: Radio Waves, Microwaves, Infrared"
+ ],
+ "keyPoints": [
+  "Unguided media transport electromagnetic waves without a physical conductor (slide 26).",
+  "Radio waves: multicast (radio, TV, paging), penetrate walls, omnidirectional antennas (slide 31).",
+  "Microwaves: unicast (cellular, satellite, WLAN), line-of-sight, directional antennas (slide 33).",
+  "Infrared: short range in a closed area, line of sight (slide 35)."
+ ]
+}

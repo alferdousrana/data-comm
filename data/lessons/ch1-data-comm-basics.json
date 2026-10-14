@@ -1,0 +1,42 @@
+{
+ "id": "ch1-data-comm-basics",
+ "chapterId": "fz-ch1",
+ "order": 1,
+ "title": "Data Communications, Networks and Protocols",
+ "titleBn": "ডেটা কমিউনিকেশন, নেটওয়ার্ক ও প্রোটোকল",
+ "source": {
+  "file": "Chapter-1-Introduction.pptx",
+  "book": "Forouzan, Data Communications and Networking 5e",
+  "bookChapter": "Forouzan Ch 1",
+  "slides": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   15,
+   26,
+   27
+  ]
+ },
+ "estMinutes": 15,
+ "difficulty": "medium",
+ "status": "outline",
+ "importance": {
+  "level": "important",
+  "reasons": [
+   "Slide emphasis"
+  ]
+ },
+ "topics": [
+  "Data Communications, Networks and Protocols"
+ ],
+ "keyPoints": [
+  "Data communications = exchange of data between two devices via a transmission medium.",
+  "Four fundamental characteristics: delivery, accuracy, timeliness, jitter (slide 2).",
+  "Components of a data communication system (Figure 1.1) and data flow: simplex, half-duplex, full-duplex (Figure 1.2).",
+  "Network criteria: performance (delay, throughput), reliability, security (slide 6).",
+  "Categories: LAN, WAN, MAN (slide 15).",
+  "Protocol elements: syntax, semantics, timing (slide 27)."
+ ]
+}

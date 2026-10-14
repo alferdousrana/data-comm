@@ -1,0 +1,131 @@
+{
+ "id": "midterm-summer-2026",
+ "title": "Mid Term Examination, Summer 2026 (replica)",
+ "durationMin": 90,
+ "totalMarks": 30,
+ "note": "Questions reproduced from your photographed paper for personal practice. “OR” items let you choose one option, as in the paper.",
+ "items": [
+  {
+   "label": "Q1(a)",
+   "marks": 3,
+   "co": "CO1",
+   "options": [
+    {
+     "lessonId": "ch7-guided-media",
+     "qid": "gm-w1"
+    },
+    {
+     "lessonId": "ch5-ask-fsk-psk",
+     "qid": "mk-w1"
+    }
+   ]
+  },
+  {
+   "label": "Q1(b)",
+   "marks": 3,
+   "co": "CO1",
+   "options": [
+    {
+     "lessonId": "ch3-data-rate-limits",
+     "qid": "dr-w1"
+    },
+    {
+     "lessonId": "ch4-line-coding",
+     "qid": "lc-w1"
+    }
+   ]
+  },
+  {
+   "label": "Q1(c)",
+   "marks": 2,
+   "co": "CO1",
+   "options": [
+    {
+     "lessonId": "ch5-bit-baud",
+     "qid": "bb-w1"
+    }
+   ]
+  },
+  {
+   "label": "Q1(d)",
+   "marks": 2,
+   "co": "CO1",
+   "options": [
+    {
+     "lessonId": "ch1-switching",
+     "qid": "sw-w1"
+    }
+   ]
+  },
+  {
+   "label": "Q2(a)",
+   "marks": 4,
+   "co": "CO1",
+   "options": [
+    {
+     "lessonId": "ch3-composite-bandwidth",
+     "qid": "cb-w1"
+    }
+   ]
+  },
+  {
+   "label": "Q2(b)",
+   "marks": 3,
+   "co": "CO1",
+   "options": [
+    {
+     "lessonId": "ch3-digital-signals",
+     "qid": "ds-w1"
+    }
+   ]
+  },
+  {
+   "label": "Q2(c)",
+   "marks": 3,
+   "co": "CO1",
+   "options": [
+    {
+     "lessonId": "ch3-data-rate-limits",
+     "qid": "dr-w2"
+    }
+   ]
+  },
+  {
+   "label": "Q3(a)",
+   "marks": 3,
+   "co": "CO2",
+   "options": [
+    {
+     "lessonId": "ch4-scrambling",
+     "qid": "sc-w1"
+    },
+    {
+     "lessonId": "ch1-topology",
+     "qid": "tp-w1"
+    }
+   ]
+  },
+  {
+   "label": "Q3(b)",
+   "marks": 3,
+   "co": "CO2",
+   "options": [
+    {
+     "lessonId": "ch5-ask-fsk-psk",
+     "qid": "mk-w2"
+    }
+   ]
+  },
+  {
+   "label": "Q3(c)",
+   "marks": 4,
+   "co": "CO2",
+   "options": [
+    {
+     "lessonId": "ch2-addressing",
+     "qid": "ad-w1"
+    }
+   ]
+  }
+ ]
+}
